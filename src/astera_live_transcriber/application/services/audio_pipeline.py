@@ -64,6 +64,8 @@ class AudioPipeline:
         self._pending_partial: _PartialSnapshot | None = None
         self._last_transcribed_audio_end_ms = 0
         self._inference_count = 0
+        self._started_at = time.perf_counter()
+        self._first_partial_recorded = False
         self.metrics.set_gauge("partial_window_ms", config.partial_window_ms)
         self.metrics.set_gauge("partial_overlap_ms", config.partial_overlap_ms)
         self.metrics.set_gauge("active_sessions", 1)
@@ -213,6 +215,12 @@ class AudioPipeline:
         self._record_audio_lag()
         if event is not None:
             self.metrics.increment("revisions_per_segment")
+            if not self._first_partial_recorded:
+                self.metrics.observe(
+                    "time_to_first_partial_ms",
+                    (time.perf_counter() - self._started_at) * 1000,
+                )
+                self._first_partial_recorded = True
         return event
 
     def _snapshot_partial(self) -> _PartialSnapshot:
@@ -365,6 +373,7 @@ class AudioPipeline:
             "audio_lag_ms",
             lag_ms,
         )
+        self.metrics.observe("audio_lag_ms", float(lag_ms))
         self.metrics.set_gauge("audio_lag_max_ms", max_lag_ms)
 
     def _record_vad_metric(self, event_type: VadEventType, duration_ms: int) -> None:
