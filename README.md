@@ -114,6 +114,19 @@ temporariamente em disco durante a sessão; nenhum PCM completo é materializado
 O endpoint `POST /v1/audio/transcriptions` permanece apenas como API de
 compatibilidade secundária.
 
+Para testar sem montar manualmente o upload e o WebSocket, use o cliente único:
+
+```bash
+python scripts/transcribe_file.py /caminho/consulta.mp3
+```
+
+Esse comando usa `realtime` por padrão e imprime `partial`, `revised` e `committed`.
+Para executar rapidamente sem esperar a duração real do arquivo:
+
+```bash
+python scripts/transcribe_file.py /caminho/consulta.mp3 --mode accelerated
+```
+
 ## Docker
 
 ```bash
