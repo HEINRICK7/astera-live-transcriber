@@ -165,9 +165,11 @@ O deploy de produção ainda não está automatizado de propósito.
   podem ser puladas em ambientes sem esse executável.
 - O limiar RMS do VAD é configurável; o default `0.03` acompanha níveis típicos de
   voz em PCM16 e pode ser ajustado em `ASTERA_TRANSCRIBER_VAD_THRESHOLD`.
-- As revisões parciais do Parakeet são espaçadas em 5 segundos por padrão para evitar
-  reprocessamento excessivo no CPU; ajuste `ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`
-  se precisar de mais atualizações.
+- As revisões parciais usam uma janela rolling de 4 segundos, com atualizações a cada
+  2 segundos por padrão; o segmento completo continua sendo usado no `committed`.
+  Ajuste `ASTERA_TRANSCRIBER_PARTIAL_WINDOW_MS`,
+  `ASTERA_TRANSCRIBER_PARTIAL_OVERLAP_MS` e `ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`
+  conforme o equilíbrio entre latência e CPU.
 - O pipeline registra `audio_lag_ms`, `audio_lag_max_ms` e
   `inferences_per_audio_minute` no snapshot de métricas do benchmark.
 - O cancelamento de uma sessão passa por `cancelling` e aguarda no máximo

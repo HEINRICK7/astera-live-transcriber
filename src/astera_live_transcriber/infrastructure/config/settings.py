@@ -30,8 +30,11 @@ class Settings(BaseSettings):
     engine_threads: int = 4
     engine_debug: bool = False
     engine_warmup: bool = True
-    partial_interval_ms: int = 5_000
+    partial_interval_ms: int = 2_000
+    partial_window_ms: int = 4_000
+    partial_overlap_ms: int = 1_000
     inference_cancel_grace_ms: int = 1_500
+    emit_vad_debug_events: bool = False
     max_concurrent_inferences: int = 1
     audio_chunk_ms: int = 100
     file_event_queue_size: int = 100

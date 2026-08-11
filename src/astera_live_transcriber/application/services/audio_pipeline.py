@@ -23,7 +23,9 @@ logger = logging.getLogger(__name__)
 class AudioPipelineConfig:
     prefix_padding_ms: int
     max_segment_duration_ms: int
-    partial_interval_ms: int = 1_000
+    partial_interval_ms: int = 2_000
+    partial_window_ms: int = 4_000
+    partial_overlap_ms: int = 1_000
     inference_cancel_grace_ms: int = 1_500
 
 
@@ -62,6 +64,8 @@ class AudioPipeline:
         self._pending_partial: _PartialSnapshot | None = None
         self._last_transcribed_audio_end_ms = 0
         self._inference_count = 0
+        self.metrics.set_gauge("partial_window_ms", config.partial_window_ms)
+        self.metrics.set_gauge("partial_overlap_ms", config.partial_overlap_ms)
         self.metrics.set_gauge("active_sessions", 1)
 
     async def process(self, chunk: AudioChunk) -> list[TranscriptEvent]:
@@ -212,8 +216,14 @@ class AudioPipeline:
         return event
 
     def _snapshot_partial(self) -> _PartialSnapshot:
+        segment_start_ms = self.session.segment_started_at_ms or 0
+        window_start_ms = max(
+            segment_start_ms,
+            self.session.last_audio_timestamp_ms - self._config.partial_window_ms,
+        )
+        window = self._buffer.read_window(start_ms=window_start_ms)
         return _PartialSnapshot(
-            audio=b"".join(chunk.data for chunk in self._buffer.read_window()),
+            audio=b"".join(chunk.data for chunk in window),
             end_ms=self.session.last_audio_timestamp_ms,
         )
 

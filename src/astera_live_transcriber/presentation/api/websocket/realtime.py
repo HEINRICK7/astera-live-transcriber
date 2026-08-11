@@ -44,6 +44,11 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
             )
             if event is None:
                 break
+            if (
+                not websocket.app.state.settings.emit_vad_debug_events
+                and event.type is TranscriptEventType.SPEECH_STOP_CANDIDATE
+            ):
+                continue
             await websocket.send_json(_event_payload(event))
             if event.type is TranscriptEventType.ERROR:
                 break
@@ -117,7 +122,11 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 )
                 sequence += 1
                 timestamp_ms += duration_ms
-                await _send_events(websocket, await pipeline.process(chunk))
+                await _send_events(
+                    websocket,
+                    await pipeline.process(chunk),
+                    include_vad_debug=settings.emit_vad_debug_events,
+                )
                 continue
 
             text = message.get("text")
@@ -165,11 +174,19 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 )
                 sequence = chunk.sequence + 1
                 timestamp_ms = chunk.end_timestamp_ms
-                await _send_events(websocket, await pipeline.process(chunk))
+                await _send_events(
+                    websocket,
+                    await pipeline.process(chunk),
+                    include_vad_debug=settings.emit_vad_debug_events,
+                )
             elif event_type == "session.close":
                 if pipeline is not None:
                     session_id = pipeline.session.id
-                    await _send_events(websocket, await pipeline.flush())
+                    await _send_events(
+                        websocket,
+                        await pipeline.flush(),
+                        include_vad_debug=settings.emit_vad_debug_events,
+                    )
                     await pipeline.close()
                     await websocket.send_json({"type": "session.closed", "session_id": session_id})
                 await websocket.close()
@@ -192,8 +209,17 @@ async def realtime_transcription(websocket: WebSocket) -> None:
             await pipeline.close()
 
 
-async def _send_events(websocket: WebSocket, events: list[TranscriptEvent]) -> None:
+async def _send_events(
+    websocket: WebSocket,
+    events: list[TranscriptEvent],
+    include_vad_debug: bool = False,
+) -> None:
     for event in events:
+        if (
+            not include_vad_debug
+            and event.type is TranscriptEventType.SPEECH_STOP_CANDIDATE
+        ):
+            continue
         await websocket.send_json(_event_payload(event))
 
 
