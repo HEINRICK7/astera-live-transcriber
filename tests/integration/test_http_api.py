@@ -18,6 +18,13 @@ def test_health_endpoint() -> None:
     }
 
 
+def test_frontend_is_served_at_root() -> None:
+    response = TestClient(create_app()).get("/")
+
+    assert response.status_code == 200
+    assert "ASTERA Live Transcriber" in response.text
+
+
 def test_models_endpoint() -> None:
     response = TestClient(create_app()).get("/v1/models")
 

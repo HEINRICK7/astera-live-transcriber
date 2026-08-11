@@ -20,11 +20,16 @@ from astera_live_transcriber.infrastructure.observability.metrics import Pipelin
 from astera_live_transcriber.presentation.api.dependencies import create_realtime_pipeline
 
 
-async def run(path: Path, model_path: str, mode: AudioStreamMode) -> None:
+async def run(
+    path: Path,
+    model_path: str,
+    mode: AudioStreamMode,
+    partial_interval_ms: int,
+) -> None:
     settings = Settings(
         engine="parakeet",
         model_path=model_path,
-        partial_interval_ms=1_000,
+        partial_interval_ms=partial_interval_ms,
     )
     runtime = build_engine_runtime(settings)
     await runtime.start()
@@ -84,8 +89,16 @@ def main() -> None:
         choices=[mode.value for mode in AudioStreamMode],
         default="accelerated",
     )
+    parser.add_argument("--partial-interval-ms", type=int, default=2_000)
     args = parser.parse_args()
-    asyncio.run(run(args.file, args.model_path, AudioStreamMode(args.mode)))
+    asyncio.run(
+        run(
+            args.file,
+            args.model_path,
+            AudioStreamMode(args.mode),
+            args.partial_interval_ms,
+        )
+    )
 
 
 if __name__ == "__main__":

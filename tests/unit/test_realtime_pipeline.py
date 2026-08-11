@@ -1,3 +1,4 @@
+import asyncio
 import struct
 
 import pytest
@@ -34,6 +35,27 @@ class ScriptedEngine:
         text = self._texts[min(self._index, len(self._texts) - 1)]
         self._index += 1
         return TranscriptionResult(text=text, language=language or "pt-BR", duration_ms=0)
+
+
+class SlowEngine(ScriptedEngine):
+    def __init__(self) -> None:
+        super().__init__(["fala contínua"])
+        self.active = 0
+        self.max_active = 0
+
+    async def transcribe(
+        self,
+        audio: bytes,
+        language: str | None = None,
+        context: TranscriptionContext | None = None,
+    ) -> TranscriptionResult:
+        self.active += 1
+        self.max_active = max(self.max_active, self.active)
+        try:
+            await asyncio.sleep(0.05)
+            return await super().transcribe(audio, language, context)
+        finally:
+            self.active -= 1
 
 
 def make_chunk(
@@ -104,6 +126,7 @@ async def test_short_and_intermediate_pauses_keep_the_same_segment_open() -> Non
     await feed(pipeline, 5, 500, False, count=4)
     await feed(pipeline, 9, 900, True)
     assert pipeline.session.active_segment_id == "seg_0001"
+    await pipeline.close()
 
 
 @pytest.mark.asyncio
@@ -191,5 +214,27 @@ async def test_partial_inference_respects_configured_audio_cadence() -> None:
         for event in events
         if event.type in (TranscriptEventType.PARTIAL, TranscriptEventType.REVISED)
     ]
-    assert len(revisions) == 3
-    assert engine._index == 3
+    assert len(revisions) >= 2
+    assert engine._index <= 3
+    await pipeline.close()
+
+
+@pytest.mark.asyncio
+async def test_partial_scheduler_keeps_one_inference_in_flight_and_coalesces() -> None:
+    engine = SlowEngine()
+    pipeline = build_pipeline(["unused"])
+    pipeline._engine = engine
+    pipeline._config = AudioPipelineConfig(
+        prefix_padding_ms=300,
+        max_segment_duration_ms=30_000,
+        partial_interval_ms=0,
+    )
+
+    await feed(pipeline, 0, 0, True, count=20)
+    await pipeline.flush()
+
+    assert engine.max_active == 1
+    assert engine._index < 20
+    assert pipeline.metrics.gauges["inferences_per_audio_minute"] > 0
+    assert pipeline.metrics.gauges["audio_lag_max_ms"] >= 0
+    await pipeline.close()

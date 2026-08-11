@@ -1,6 +1,7 @@
 import base64
 import binascii
 import json
+import logging
 import uuid
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
@@ -16,6 +17,7 @@ from astera_live_transcriber.infrastructure.engines.parakeet.exceptions import P
 from astera_live_transcriber.presentation.api.dependencies import create_realtime_pipeline
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 
 @router.websocket("/v1/realtime/transcription/{session_id}")
@@ -37,14 +39,46 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
         )
         while True:
             event = await file_session.queue.get()
+            file_session.pipeline.metrics.set_gauge(
+                "queue_size", file_session.queue.qsize()
+            )
             if event is None:
                 break
+            if (
+                not websocket.app.state.settings.emit_vad_debug_events
+                and event.type is TranscriptEventType.SPEECH_STOP_CANDIDATE
+            ):
+                continue
             await websocket.send_json(_event_payload(event))
             if event.type is TranscriptEventType.ERROR:
                 break
             if event.type is TranscriptEventType.SESSION_COMPLETED:
                 break
-    except (FileSessionError, WebSocketDisconnect):
+    except FileSessionError:
+        logger.exception(
+            "file_websocket_session_failed",
+            extra={"session_id": session_id},
+        )
+        if cancel_on_disconnect and file_session is not None and not file_session.completed:
+            await manager.cancel(session_id)
+        if file_session is None:
+            try:
+                await websocket.send_json({"type": "error", "code": "session_not_found"})
+            except WebSocketDisconnect:
+                pass
+    except WebSocketDisconnect as exc:
+        if file_session is not None:
+            file_session.pipeline.metrics.set_gauge(
+                "websocket_close_code", exc.code
+            )
+        logger.warning(
+            "file_websocket_disconnected "
+            "session_id=%s close_code=%s close_reason=%r session_state=%s",
+            session_id,
+            exc.code,
+            exc.reason,
+            file_session.session.state if file_session else None,
+        )
         if cancel_on_disconnect and file_session is not None and not file_session.completed:
             await manager.cancel(session_id)
         if file_session is None:
@@ -88,7 +122,11 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 )
                 sequence += 1
                 timestamp_ms += duration_ms
-                await _send_events(websocket, await pipeline.process(chunk))
+                await _send_events(
+                    websocket,
+                    await pipeline.process(chunk),
+                    include_vad_debug=settings.emit_vad_debug_events,
+                )
                 continue
 
             text = message.get("text")
@@ -136,10 +174,19 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 )
                 sequence = chunk.sequence + 1
                 timestamp_ms = chunk.end_timestamp_ms
-                await _send_events(websocket, await pipeline.process(chunk))
+                await _send_events(
+                    websocket,
+                    await pipeline.process(chunk),
+                    include_vad_debug=settings.emit_vad_debug_events,
+                )
             elif event_type == "session.close":
                 if pipeline is not None:
                     session_id = pipeline.session.id
+                    await _send_events(
+                        websocket,
+                        await pipeline.flush(),
+                        include_vad_debug=settings.emit_vad_debug_events,
+                    )
                     await pipeline.close()
                     await websocket.send_json({"type": "session.closed", "session_id": session_id})
                 await websocket.close()
@@ -162,8 +209,17 @@ async def realtime_transcription(websocket: WebSocket) -> None:
             await pipeline.close()
 
 
-async def _send_events(websocket: WebSocket, events: list[TranscriptEvent]) -> None:
+async def _send_events(
+    websocket: WebSocket,
+    events: list[TranscriptEvent],
+    include_vad_debug: bool = False,
+) -> None:
     for event in events:
+        if (
+            not include_vad_debug
+            and event.type is TranscriptEventType.SPEECH_STOP_CANDIDATE
+        ):
+            continue
         await websocket.send_json(_event_payload(event))
 
 

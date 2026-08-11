@@ -1,7 +1,6 @@
 """Realtime session domain objects."""
 
 from .entities import TranscriptionSession, TurnState
-from .value_objects import TurnDecision
+from .value_objects import SessionState, TurnDecision
 
-__all__ = ["TranscriptionSession", "TurnDecision", "TurnState"]
-
+__all__ = ["SessionState", "TranscriptionSession", "TurnDecision", "TurnState"]

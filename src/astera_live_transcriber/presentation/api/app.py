@@ -1,6 +1,8 @@
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 
 from astera_live_transcriber import __version__
 from astera_live_transcriber.infrastructure.audio.file_session_manager import FileSessionManager
@@ -18,6 +20,8 @@ from astera_live_transcriber.presentation.api.routes import (
     transcriptions,
 )
 from astera_live_transcriber.presentation.api.websocket import realtime
+
+WEB_DIR = Path(__file__).resolve().parent.parent / "web"
 
 
 def create_app(settings: Settings | None = None, runtime: EngineRuntime | None = None) -> FastAPI:
@@ -50,4 +54,9 @@ def create_app(settings: Settings | None = None, runtime: EngineRuntime | None =
     app.include_router(files.router)
     app.include_router(engine.router)
     app.include_router(realtime.router)
+
+    @app.get("/", include_in_schema=False)
+    async def frontend() -> FileResponse:
+        return FileResponse(WEB_DIR / "index.html")
+
     return app

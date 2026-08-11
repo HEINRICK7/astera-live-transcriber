@@ -114,6 +114,26 @@ temporariamente em disco durante a sessão; nenhum PCM completo é materializado
 O endpoint `POST /v1/audio/transcriptions` permanece apenas como API de
 compatibilidade secundária.
 
+Para testar sem montar manualmente o upload e o WebSocket, use o cliente único:
+
+```bash
+python scripts/transcribe_file.py /caminho/consulta.mp3
+```
+
+Esse comando usa `realtime` por padrão e imprime `partial`, `revised` e `committed`.
+Para executar rapidamente sem esperar a duração real do arquivo:
+
+```bash
+python scripts/transcribe_file.py /caminho/consulta.mp3 --mode accelerated
+```
+
+### Interface web local
+
+Com o servidor local rodando, abra `http://127.0.0.1:8001/` no navegador. A interface
+permite selecionar um MP3/WAV, acompanhar os eventos e revisões na tela, ou ligar o
+microfone para falar diretamente. Ao parar o microfone, o trecho aberto é confirmado
+antes do encerramento da sessão.
+
 ## Docker
 
 ```bash
@@ -143,4 +163,16 @@ O deploy de produção ainda não está automatizado de propósito.
   recursos de CI. O workflow `CI` normal continua sem o peso do modelo.
 - A fonte de arquivo depende do binário `ffmpeg`, instalado no Docker; fixtures locais
   podem ser puladas em ambientes sem esse executável.
+- O limiar RMS do VAD é configurável; o default `0.03` acompanha níveis típicos de
+  voz em PCM16 e pode ser ajustado em `ASTERA_TRANSCRIBER_VAD_THRESHOLD`.
+- As revisões parciais usam uma janela rolling de 4 segundos, com atualizações a cada
+  2 segundos por padrão; o segmento completo continua sendo usado no `committed`.
+  Ajuste `ASTERA_TRANSCRIBER_PARTIAL_WINDOW_MS`,
+  `ASTERA_TRANSCRIBER_PARTIAL_OVERLAP_MS` e `ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`
+  conforme o equilíbrio entre latência e CPU.
+- O pipeline registra `audio_lag_ms`, `audio_lag_max_ms` e
+  `inferences_per_audio_minute` no snapshot de métricas do benchmark.
+- O cancelamento de uma sessão passa por `cancelling` e aguarda no máximo
+  `ASTERA_TRANSCRIBER_INFERENCE_CANCEL_GRACE_MS` pela inferência em voo; resultados
+  tardios são descartados e contabilizados em `late_inference_result_total`.
 - O deploy de produção ainda não está automatizado; staging permanece isolado.

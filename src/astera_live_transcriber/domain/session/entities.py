@@ -7,6 +7,8 @@ from astera_live_transcriber.domain.audio import (
     AudioStreamMode,
 )
 
+from .value_objects import SessionState
+
 
 @dataclass(frozen=True, slots=True)
 class TurnState:
@@ -44,8 +46,12 @@ class TranscriptionSession:
     segment_started_at_ms: int | None = None
     last_audio_timestamp_ms: int = 0
     dropped_chunks: int = 0
-    closed: bool = False
+    state: SessionState = SessionState.ACTIVE
     source_metadata: AudioSourceMetadata = field(default_factory=AudioSourceMetadata)
+
+    @property
+    def closed(self) -> bool:
+        return self.state is not SessionState.ACTIVE
 
     @property
     def source_type(self) -> AudioSourceType:
@@ -63,7 +69,7 @@ class TranscriptionSession:
         return filename.rsplit(".", 1)[-1].lower()
 
     def begin_segment(self, segment_id: str, start_ms: int) -> None:
-        if self.closed:
+        if self.state is not SessionState.ACTIVE:
             raise RuntimeError("cannot start a segment on a closed session")
         self.active_segment_id = segment_id
         self.segment_revision = 0
@@ -105,6 +111,18 @@ class TranscriptionSession:
             max_segment_duration_ms=max_segment_duration_ms,
         )
 
+    def begin_cancelling(self) -> None:
+        if self.state is SessionState.ACTIVE:
+            self.state = SessionState.CANCELLING
+
+    def mark_completed(self) -> None:
+        if self.state is SessionState.ACTIVE:
+            self.state = SessionState.COMPLETED
+
+    def mark_failed(self) -> None:
+        if self.state is not SessionState.CLOSED:
+            self.state = SessionState.FAILED
+
     def close(self) -> None:
-        self.closed = True
+        self.state = SessionState.CLOSED
         self.clear_active_segment()

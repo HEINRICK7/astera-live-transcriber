@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import time
 from dataclasses import dataclass
@@ -7,6 +8,7 @@ from astera_live_transcriber.application.ports.turn_detection import TurnDetecti
 from astera_live_transcriber.application.ports.vad import VadPort
 from astera_live_transcriber.domain.audio import AudioChunk, VadEventType
 from astera_live_transcriber.domain.session import TranscriptionSession, TurnDecision
+from astera_live_transcriber.domain.transcription import TranscriptionResult
 from astera_live_transcriber.domain.transcription.events import TranscriptEvent, TranscriptEventType
 from astera_live_transcriber.infrastructure.audio.buffer import RingBuffer
 from astera_live_transcriber.infrastructure.audio.normalizer import AudioNormalizer
@@ -21,7 +23,16 @@ logger = logging.getLogger(__name__)
 class AudioPipelineConfig:
     prefix_padding_ms: int
     max_segment_duration_ms: int
-    partial_interval_ms: int = 1_000
+    partial_interval_ms: int = 2_000
+    partial_window_ms: int = 4_000
+    partial_overlap_ms: int = 1_000
+    inference_cancel_grace_ms: int = 1_500
+
+
+@dataclass(frozen=True, slots=True)
+class _PartialSnapshot:
+    audio: bytes
+    end_ms: int
 
 
 class AudioPipeline:
@@ -49,11 +60,18 @@ class AudioPipeline:
         self._config = config
         self.metrics = metrics or PipelineMetrics()
         self._last_partial_inference_at_ms: int | None = None
+        self._partial_task: asyncio.Task[tuple[_PartialSnapshot, TranscriptionResult]] | None = None
+        self._pending_partial: _PartialSnapshot | None = None
+        self._last_transcribed_audio_end_ms = 0
+        self._inference_count = 0
+        self.metrics.set_gauge("partial_window_ms", config.partial_window_ms)
+        self.metrics.set_gauge("partial_overlap_ms", config.partial_overlap_ms)
         self.metrics.set_gauge("active_sessions", 1)
 
     async def process(self, chunk: AudioChunk) -> list[TranscriptEvent]:
         if self.session.closed:
             return []
+        events = await self._drain_partial()
         normalized = self._normalizer.normalize(chunk)
         self.metrics.increment("audio_received_ms", normalized.duration_ms)
         if not self._buffer.append(normalized):
@@ -64,9 +82,9 @@ class AudioPipeline:
         self.metrics.set_gauge("buffer_size", self._buffer.size)
 
         self.session.mark_audio(normalized.end_timestamp_ms)
+        self._record_audio_lag()
         vad_event = await self._vad.process(normalized)
         self._record_vad_metric(vad_event.type, normalized.duration_ms)
-        events: list[TranscriptEvent] = []
 
         if vad_event.type is VadEventType.SPEECH_STARTED:
             start_ms = max(0, normalized.timestamp_ms - self._config.prefix_padding_ms)
@@ -108,10 +126,8 @@ class AudioPipeline:
                 >= self._config.partial_interval_ms
             )
             if should_infer:
-                partial_event = await self._publish_partial()
+                self._request_partial()
                 self._last_partial_inference_at_ms = elapsed_ms
-                if partial_event is not None:
-                    events.append(partial_event)
 
         decision = await self._turn_detector.evaluate(
             self.session.turn_state(
@@ -124,9 +140,15 @@ class AudioPipeline:
             committed_event = await self._commit()
             if committed_event is not None:
                 events.append(committed_event)
+        if self._partial_task is not None:
+            await asyncio.sleep(0)
+            await asyncio.sleep(0)
+            events.extend(await self._drain_partial())
         return events
 
     async def close(self) -> None:
+        self.session.begin_cancelling()
+        await self._cancel_partial_scheduler()
         self._buffer.reset()
         self._lifecycle.clear(self.session)
         reset = getattr(self._vad, "reset", None)
@@ -146,20 +168,68 @@ class AudioPipeline:
         committed = await self._commit()
         return [committed] if committed is not None else []
 
-    async def _publish_partial(self) -> TranscriptEvent | None:
-        audio = b"".join(chunk.data for chunk in self._buffer.read_window())
-        result = await self._transcribe(audio)
+    def _request_partial(self) -> None:
+        snapshot = self._snapshot_partial()
+        if self._partial_task is None:
+            self._partial_task = asyncio.create_task(self._run_partial(snapshot))
+        else:
+            self._pending_partial = snapshot
+
+    async def _run_partial(
+        self, snapshot: _PartialSnapshot
+    ) -> tuple[_PartialSnapshot, TranscriptionResult]:
+        return snapshot, await self._transcribe(snapshot.audio)
+
+    async def _drain_partial(self) -> list[TranscriptEvent]:
+        if self._partial_task is None or not self._partial_task.done():
+            return []
+        task = self._partial_task
+        self._partial_task = None
+        snapshot, result = task.result()
+        events: list[TranscriptEvent] = []
+        event = self._publish_partial_result(snapshot, result)
+        if event is not None:
+            events.append(event)
+        if self._pending_partial is not None and not self.session.closed:
+            pending = self._pending_partial
+            self._pending_partial = None
+            self._partial_task = asyncio.create_task(self._run_partial(pending))
+        return events
+
+    def _publish_partial_result(
+        self, snapshot: _PartialSnapshot, result: TranscriptionResult
+    ) -> TranscriptEvent | None:
+        if self.session.closed:
+            self.metrics.increment("late_inference_result_total")
+            return None
         event = self._lifecycle.publish(
             self.session,
             result,
-            end_ms=self.session.last_audio_timestamp_ms,
+            end_ms=snapshot.end_ms,
         )
+        self._last_transcribed_audio_end_ms = max(
+            self._last_transcribed_audio_end_ms, snapshot.end_ms
+        )
+        self._record_audio_lag()
         if event is not None:
             self.metrics.increment("revisions_per_segment")
         return event
 
+    def _snapshot_partial(self) -> _PartialSnapshot:
+        segment_start_ms = self.session.segment_started_at_ms or 0
+        window_start_ms = max(
+            segment_start_ms,
+            self.session.last_audio_timestamp_ms - self._config.partial_window_ms,
+        )
+        window = self._buffer.read_window(start_ms=window_start_ms)
+        return _PartialSnapshot(
+            audio=b"".join(chunk.data for chunk in window),
+            end_ms=self.session.last_audio_timestamp_ms,
+        )
+
     async def _commit(self) -> TranscriptEvent | None:
         started_at = time.perf_counter()
+        await self._finish_partial_scheduler()
         chunks = self._buffer.commit()
         audio = b"".join(chunk.data for chunk in chunks)
         result = await self._transcribe(audio)
@@ -185,24 +255,117 @@ class AudioPipeline:
         self._lifecycle.clear(self.session)
         self.session.clear_active_segment()
         self._last_partial_inference_at_ms = None
+        self._last_transcribed_audio_end_ms = self.session.last_audio_timestamp_ms
+        self._record_audio_lag()
         reset = getattr(self._vad, "reset", None)
         if reset is not None:
             reset()
         return event
 
     async def _transcribe(self, audio: bytes):
+        if self.session.closed:
+            self.metrics.increment("discarded_inference_request_total")
+            return TranscriptionResult(text="", language=self.session.language, duration_ms=0)
         started_at = time.perf_counter()
         logger.info("engine_started", extra={"session_id": self.session.id})
+        inference_task = asyncio.create_task(
+            self._engine.transcribe(audio, language=self.session.language)
+        )
+        self.metrics.set_gauge("inference_in_flight", 1)
         try:
-            result = await self._engine.transcribe(audio, language=self.session.language)
+            result = await asyncio.shield(inference_task)
+        except asyncio.CancelledError:
+            self.metrics.increment("cancelled_inference_total")
+            await self._wait_for_cancelled_inference(inference_task)
+            raise
         except Exception:
             self.metrics.increment("engine_failed")
             logger.exception("engine_failed", extra={"session_id": self.session.id})
             raise
+        finally:
+            if inference_task.done():
+                self.metrics.set_gauge("inference_in_flight", 0)
         self.metrics.increment("engine_completed")
+        self._inference_count += 1
+        audio_minutes = self.session.last_audio_timestamp_ms / 60_000
+        if audio_minutes > 0:
+            self.metrics.set_gauge(
+                "inferences_per_audio_minute", self._inference_count / audio_minutes
+            )
         self.metrics.observe("transcription_latency_ms", (time.perf_counter() - started_at) * 1000)
         logger.info("engine_completed", extra={"session_id": self.session.id})
         return result
+
+    async def _wait_for_cancelled_inference(
+        self, inference_task: asyncio.Task[TranscriptionResult]
+    ) -> None:
+        grace_seconds = self._config.inference_cancel_grace_ms / 1000
+        try:
+            await asyncio.wait_for(asyncio.shield(inference_task), grace_seconds)
+        except TimeoutError:
+            inference_task.add_done_callback(self._record_late_inference)
+        except asyncio.CancelledError:
+            inference_task.add_done_callback(self._record_late_inference)
+        except Exception:
+            pass
+        else:
+            self.metrics.set_gauge("inference_in_flight", 0)
+            self._record_late_inference(inference_task)
+
+    def _record_late_inference(self, task: asyncio.Task[TranscriptionResult]) -> None:
+        try:
+            task.result()
+        except (asyncio.CancelledError, Exception):
+            return
+        self.metrics.increment("late_inference_result_total")
+        self.metrics.set_gauge("inference_in_flight", 0)
+
+    async def _finish_partial_scheduler(self) -> None:
+        if self._partial_task is None:
+            self._pending_partial = None
+            return
+        task = self._partial_task
+        self._partial_task = None
+        self._pending_partial = None
+        snapshot, result = await task
+        self._publish_partial_result(snapshot, result)
+
+    async def _cancel_partial_scheduler(self) -> None:
+        task = self._partial_task
+        self._partial_task = None
+        self._pending_partial = None
+        if task is not None:
+            self.metrics.increment("cancelled_inference_total")
+            task.add_done_callback(self._record_late_partial)
+            try:
+                await asyncio.wait_for(
+                    asyncio.shield(task),
+                    self._config.inference_cancel_grace_ms / 1000,
+                )
+            except (TimeoutError, asyncio.CancelledError):
+                pass
+            except Exception:
+                pass
+
+    def _record_late_partial(
+        self, task: asyncio.Task[tuple[_PartialSnapshot, TranscriptionResult]]
+    ) -> None:
+        try:
+            task.result()
+        except (asyncio.CancelledError, Exception):
+            return
+        self.metrics.increment("late_inference_result_total")
+
+    def _record_audio_lag(self) -> None:
+        lag_ms = max(
+            0, self.session.last_audio_timestamp_ms - self._last_transcribed_audio_end_ms
+        )
+        max_lag_ms = max(lag_ms, self.metrics.gauges.get("audio_lag_max_ms", 0))
+        self.metrics.set_gauge(
+            "audio_lag_ms",
+            lag_ms,
+        )
+        self.metrics.set_gauge("audio_lag_max_ms", max_lag_ms)
 
     def _record_vad_metric(self, event_type: VadEventType, duration_ms: int) -> None:
         metric = {
