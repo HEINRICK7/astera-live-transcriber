@@ -127,13 +127,33 @@ class FileSessionManager:
         file_session = self._sessions.get(session_id)
         if file_session is None:
             return
+        file_session.session.begin_cancelling()
+        await file_session.source.close()
         if file_session.task is not None and not file_session.task.done():
             file_session.task.cancel()
-            await asyncio.gather(file_session.task, return_exceptions=True)
+            cleanup_timeout = (self._settings.inference_cancel_grace_ms + 2_000) / 1000
+            try:
+                await asyncio.wait_for(
+                    asyncio.shield(file_session.task), cleanup_timeout
+                )
+            except TimeoutError:
+                logger.error(
+                    "file_session_cleanup_timeout",
+                    extra={"session_id": session_id},
+                )
+            except asyncio.CancelledError:
+                pass
+            finally:
+                if not file_session.task.done():
+                    file_session.task.cancel()
+                    await asyncio.gather(file_session.task, return_exceptions=True)
         else:
             await self._cancel_expiry(file_session)
-            await self._dispose(file_session)
+            await file_session.pipeline.close()
+            await self._dispose(file_session, clear_queue=True)
             self._sessions.pop(session_id, None)
+        await self._dispose(file_session, clear_queue=True)
+        self._sessions.pop(session_id, None)
 
     async def close(self) -> None:
         for session_id in tuple(self._sessions):
@@ -186,11 +206,17 @@ class FileSessionManager:
                     timestamp_ms=file_session.session.last_audio_timestamp_ms,
                 ),
             )
+            file_session.session.mark_completed()
             file_session.completed = True
         except asyncio.CancelledError:
             cancelled = True
+            file_session.session.begin_cancelling()
             raise
         except FileAudioSourceError:
+            if file_session.session.state.value == "cancelling":
+                cancelled = True
+                return
+            file_session.session.mark_failed()
             logger.exception(
                 "file_audio_stream_failed",
                 extra={"session_id": file_session.session.id},
@@ -204,6 +230,10 @@ class FileSessionManager:
                 ),
             )
         except Exception:
+            if file_session.session.state.value == "cancelling":
+                cancelled = True
+                return
+            file_session.session.mark_failed()
             logger.exception(
                 "file_session_failed",
                 extra={"session_id": file_session.session.id},
@@ -217,9 +247,14 @@ class FileSessionManager:
                 ),
             )
         finally:
+            cancelled = cancelled or file_session.session.state.value == "cancelling"
+            cleanup_started = time.perf_counter()
             await file_session.pipeline.close()
             await file_session.source.close()
-            await self._dispose(file_session)
+            await self._dispose(file_session, clear_queue=cancelled)
+            file_session.pipeline.metrics.observe(
+                "cleanup_duration_ms", (time.perf_counter() - cleanup_started) * 1000
+            )
             self._sessions.pop(file_session.session.id, None)
             if not cancelled:
                 await self._put(file_session, None)
@@ -241,12 +276,22 @@ class FileSessionManager:
     async def _put(self, file_session: FileSession, event: TranscriptEvent | None) -> None:
         started = time.perf_counter()
         await file_session.queue.put(event)
+        file_session.pipeline.metrics.set_gauge(
+            "queue_size", file_session.queue.qsize()
+        )
         waited = time.perf_counter() - started
         if waited > 0.001:
             file_session.pipeline.metrics.observe("audio_source_backpressure_seconds", waited)
 
     @staticmethod
-    async def _dispose(file_session: FileSession) -> None:
+    async def _dispose(file_session: FileSession, clear_queue: bool = False) -> None:
+        if clear_queue:
+            while True:
+                try:
+                    file_session.queue.get_nowait()
+                except asyncio.QueueEmpty:
+                    break
+            file_session.pipeline.metrics.set_gauge("queue_size", 0)
         file_session.path.unlink(missing_ok=True)
 
 

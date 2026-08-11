@@ -1,6 +1,9 @@
+import asyncio
 import io
 import shutil
 import struct
+import threading
+import time
 import wave
 
 import pytest
@@ -22,6 +25,24 @@ class ProgressiveEngine:
         texts = ["Eu comecei", "Eu comecei a sentir", "Eu comecei a sentir uma dor"]
         return TranscriptionResult(
             text=texts[min(self.calls - 1, len(texts) - 1)],
+            language=language or "pt-BR",
+            duration_ms=100,
+        )
+
+
+class BlockingEngine:
+    def __init__(self) -> None:
+        self.started = threading.Event()
+        self.release = threading.Event()
+        self.calls = 0
+
+    async def transcribe(self, audio: bytes, language: str | None = None, context=None):
+        del audio, context
+        self.calls += 1
+        self.started.set()
+        await asyncio.to_thread(self.release.wait, 5)
+        return TranscriptionResult(
+            text="late result",
             language=language or "pt-BR",
             duration_ms=100,
         )
@@ -97,3 +118,47 @@ def test_invalid_mp3_emits_decode_error_without_crashing_app() -> None:
         "session_id": session_id,
         "error_code": "audio_decode_error",
     }
+
+
+@pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="ffmpeg is required")
+def test_disconnect_cleans_file_session_while_inference_is_active() -> None:
+    settings = Settings(
+        audio_chunk_ms=100,
+        partial_interval_ms=0,
+        min_speech_ms=0,
+        inference_cancel_grace_ms=100,
+        engine="noop",
+    )
+    engine = BlockingEngine()
+    app = create_app(settings, EngineRuntime(settings=settings, engine=engine))
+    client = TestClient(app)
+
+    with client:
+        response = client.post(
+            "/v1/realtime/files",
+            files={"file": ("consulta.wav", make_wav(1_000), "audio/wav")},
+            data={"mode": "accelerated", "language": "pt-BR"},
+        )
+        session_id = response.json()["session_id"]
+        file_session = app.state.file_sessions._sessions[session_id]
+        metrics = file_session.pipeline.metrics
+
+        with client.websocket_connect(
+            f"/v1/realtime/transcription/{session_id}"
+        ) as websocket:
+            assert websocket.receive_json()["type"] == "session.created"
+            assert websocket.receive_json()["type"] == "audio.started"
+            assert engine.started.wait(2)
+            websocket.close()
+
+        engine.release.set()
+        deadline = time.monotonic() + 2
+        while session_id in app.state.file_sessions._sessions and time.monotonic() < deadline:
+            time.sleep(0.02)
+
+        assert session_id not in app.state.file_sessions._sessions
+        assert file_session.session.state.value == "closed"
+        assert metrics.gauges["active_sessions"] == 0
+        assert metrics.gauges["queue_size"] == 0
+        assert metrics.gauges["ffmpeg_pid"] == 0
+        assert metrics.counters["cancelled_inference_total"] >= 1

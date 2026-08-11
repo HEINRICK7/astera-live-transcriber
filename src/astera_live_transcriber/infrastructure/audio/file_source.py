@@ -45,6 +45,7 @@ class FileAudioSource:
         try:
             process = await self._start_process()
             self._process = process
+            self.metrics.set_gauge("ffmpeg_pid", process.pid or 0)
             bytes_per_chunk = self.sample_rate * 2 * self.chunk_ms // 1000
             sequence = 0
             while True:
@@ -87,6 +88,7 @@ class FileAudioSource:
             if process is not None and process.returncode is None:
                 await self._terminate(process)
             self._process = None
+            self.metrics.set_gauge("ffmpeg_pid", 0)
             self.metrics.observe("file_decode_seconds", time.perf_counter() - started)
             self.metrics.observe("stream_audio_time_seconds", audio_ms / 1000)
             self.metrics.observe("stream_wall_time_seconds", time.perf_counter() - started)

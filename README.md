@@ -170,4 +170,7 @@ O deploy de produção ainda não está automatizado de propósito.
   se precisar de mais atualizações.
 - O pipeline registra `audio_lag_ms`, `audio_lag_max_ms` e
   `inferences_per_audio_minute` no snapshot de métricas do benchmark.
+- O cancelamento de uma sessão passa por `cancelling` e aguarda no máximo
+  `ASTERA_TRANSCRIBER_INFERENCE_CANCEL_GRACE_MS` pela inferência em voo; resultados
+  tardios são descartados e contabilizados em `late_inference_result_total`.
 - O deploy de produção ainda não está automatizado; staging permanece isolado.

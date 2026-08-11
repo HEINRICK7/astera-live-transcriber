@@ -39,6 +39,9 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
         )
         while True:
             event = await file_session.queue.get()
+            file_session.pipeline.metrics.set_gauge(
+                "queue_size", file_session.queue.qsize()
+            )
             if event is None:
                 break
             await websocket.send_json(_event_payload(event))
@@ -58,10 +61,19 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
                 await websocket.send_json({"type": "error", "code": "session_not_found"})
             except WebSocketDisconnect:
                 pass
-    except WebSocketDisconnect:
+    except WebSocketDisconnect as exc:
+        if file_session is not None:
+            file_session.pipeline.metrics.set_gauge(
+                "websocket_close_code", exc.code
+            )
         logger.warning(
             "file_websocket_disconnected",
-            extra={"session_id": session_id},
+            extra={
+                "session_id": session_id,
+                "close_code": exc.code,
+                "close_reason": exc.reason,
+                "session_state": file_session.session.state if file_session else None,
+            },
         )
         if cancel_on_disconnect and file_session is not None and not file_session.completed:
             await manager.cancel(session_id)

@@ -24,6 +24,7 @@ class AudioPipelineConfig:
     prefix_padding_ms: int
     max_segment_duration_ms: int
     partial_interval_ms: int = 1_000
+    inference_cancel_grace_ms: int = 1_500
 
 
 @dataclass(frozen=True, slots=True)
@@ -137,10 +138,12 @@ class AudioPipeline:
                 events.append(committed_event)
         if self._partial_task is not None:
             await asyncio.sleep(0)
+            await asyncio.sleep(0)
             events.extend(await self._drain_partial())
         return events
 
     async def close(self) -> None:
+        self.session.begin_cancelling()
         await self._cancel_partial_scheduler()
         self._buffer.reset()
         self._lifecycle.clear(self.session)
@@ -192,6 +195,9 @@ class AudioPipeline:
     def _publish_partial_result(
         self, snapshot: _PartialSnapshot, result: TranscriptionResult
     ) -> TranscriptEvent | None:
+        if self.session.closed:
+            self.metrics.increment("late_inference_result_total")
+            return None
         event = self._lifecycle.publish(
             self.session,
             result,
@@ -247,14 +253,28 @@ class AudioPipeline:
         return event
 
     async def _transcribe(self, audio: bytes):
+        if self.session.closed:
+            self.metrics.increment("discarded_inference_request_total")
+            return TranscriptionResult(text="", language=self.session.language, duration_ms=0)
         started_at = time.perf_counter()
         logger.info("engine_started", extra={"session_id": self.session.id})
+        inference_task = asyncio.create_task(
+            self._engine.transcribe(audio, language=self.session.language)
+        )
+        self.metrics.set_gauge("inference_in_flight", 1)
         try:
-            result = await self._engine.transcribe(audio, language=self.session.language)
+            result = await asyncio.shield(inference_task)
+        except asyncio.CancelledError:
+            self.metrics.increment("cancelled_inference_total")
+            await self._wait_for_cancelled_inference(inference_task)
+            raise
         except Exception:
             self.metrics.increment("engine_failed")
             logger.exception("engine_failed", extra={"session_id": self.session.id})
             raise
+        finally:
+            if inference_task.done():
+                self.metrics.set_gauge("inference_in_flight", 0)
         self.metrics.increment("engine_completed")
         self._inference_count += 1
         audio_minutes = self.session.last_audio_timestamp_ms / 60_000
@@ -265,6 +285,30 @@ class AudioPipeline:
         self.metrics.observe("transcription_latency_ms", (time.perf_counter() - started_at) * 1000)
         logger.info("engine_completed", extra={"session_id": self.session.id})
         return result
+
+    async def _wait_for_cancelled_inference(
+        self, inference_task: asyncio.Task[TranscriptionResult]
+    ) -> None:
+        grace_seconds = self._config.inference_cancel_grace_ms / 1000
+        try:
+            await asyncio.wait_for(asyncio.shield(inference_task), grace_seconds)
+        except TimeoutError:
+            inference_task.add_done_callback(self._record_late_inference)
+        except asyncio.CancelledError:
+            inference_task.add_done_callback(self._record_late_inference)
+        except Exception:
+            pass
+        else:
+            self.metrics.set_gauge("inference_in_flight", 0)
+            self._record_late_inference(inference_task)
+
+    def _record_late_inference(self, task: asyncio.Task[TranscriptionResult]) -> None:
+        try:
+            task.result()
+        except (asyncio.CancelledError, Exception):
+            return
+        self.metrics.increment("late_inference_result_total")
+        self.metrics.set_gauge("inference_in_flight", 0)
 
     async def _finish_partial_scheduler(self) -> None:
         if self._partial_task is None:
@@ -281,8 +325,26 @@ class AudioPipeline:
         self._partial_task = None
         self._pending_partial = None
         if task is not None:
-            task.cancel()
-            await asyncio.gather(task, return_exceptions=True)
+            self.metrics.increment("cancelled_inference_total")
+            task.add_done_callback(self._record_late_partial)
+            try:
+                await asyncio.wait_for(
+                    asyncio.shield(task),
+                    self._config.inference_cancel_grace_ms / 1000,
+                )
+            except (TimeoutError, asyncio.CancelledError):
+                pass
+            except Exception:
+                pass
+
+    def _record_late_partial(
+        self, task: asyncio.Task[tuple[_PartialSnapshot, TranscriptionResult]]
+    ) -> None:
+        try:
+            task.result()
+        except (asyncio.CancelledError, Exception):
+            return
+        self.metrics.increment("late_inference_result_total")
 
     def _record_audio_lag(self) -> None:
         lag_ms = max(

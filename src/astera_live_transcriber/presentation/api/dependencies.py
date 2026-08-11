@@ -60,6 +60,7 @@ def create_realtime_pipeline(
             prefix_padding_ms=settings.prefix_padding_ms,
             max_segment_duration_ms=settings.max_segment_duration_ms,
             partial_interval_ms=settings.partial_interval_ms,
+            inference_cancel_grace_ms=settings.inference_cancel_grace_ms,
         ),
         metrics=metrics or PipelineMetrics(),
     )
