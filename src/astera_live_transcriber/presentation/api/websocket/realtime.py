@@ -1,6 +1,7 @@
 import base64
 import binascii
 import json
+import logging
 import uuid
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
@@ -16,6 +17,7 @@ from astera_live_transcriber.infrastructure.engines.parakeet.exceptions import P
 from astera_live_transcriber.presentation.api.dependencies import create_realtime_pipeline
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 
 @router.websocket("/v1/realtime/transcription/{session_id}")
@@ -44,7 +46,23 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
                 break
             if event.type is TranscriptEventType.SESSION_COMPLETED:
                 break
-    except (FileSessionError, WebSocketDisconnect):
+    except FileSessionError:
+        logger.exception(
+            "file_websocket_session_failed",
+            extra={"session_id": session_id},
+        )
+        if cancel_on_disconnect and file_session is not None and not file_session.completed:
+            await manager.cancel(session_id)
+        if file_session is None:
+            try:
+                await websocket.send_json({"type": "error", "code": "session_not_found"})
+            except WebSocketDisconnect:
+                pass
+    except WebSocketDisconnect:
+        logger.warning(
+            "file_websocket_disconnected",
+            extra={"session_id": session_id},
+        )
         if cancel_on_disconnect and file_session is not None and not file_session.completed:
             await manager.cancel(session_id)
         if file_session is None:
