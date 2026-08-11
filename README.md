@@ -168,4 +168,6 @@ O deploy de produção ainda não está automatizado de propósito.
 - As revisões parciais do Parakeet são espaçadas em 5 segundos por padrão para evitar
   reprocessamento excessivo no CPU; ajuste `ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`
   se precisar de mais atualizações.
+- O pipeline registra `audio_lag_ms`, `audio_lag_max_ms` e
+  `inferences_per_audio_minute` no snapshot de métricas do benchmark.
 - O deploy de produção ainda não está automatizado; staging permanece isolado.
