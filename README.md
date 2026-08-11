@@ -21,7 +21,7 @@ Bootstrap `v0.1.0` sem engine STT real. A aplicação já possui:
 - Noop Engine para desenvolvimento
 - base para HTTP transcription e WebSocket realtime
 - testes unitários e de integração
-- Docker e GitHub Actions para CI
+- Docker, GitHub Actions para CI e workflow manual de staging
 
 ## Desenvolvimento local
 
@@ -48,6 +48,19 @@ cp .env.example .env
 docker compose up --build
 ```
 
+## Staging na VPS
+
+O workflow `Deploy staging` é manual (`workflow_dispatch`) e usa um projeto Docker separado em `/opt/astera-live-transcriber-staging`, na porta `48080`. Ele não reinicia nem altera os projetos existentes.
+
+Antes de executá-lo, configure no ambiente `staging` do GitHub:
+
+- `STAGING_HOST`
+- `STAGING_USER`
+- `STAGING_SSH_PORT`
+- `STAGING_SSH_KEY`
+
+O deploy de produção ainda não está automatizado de propósito.
+
 ## Próximas fases
 
 1. Implementar o contrato HTTP `POST /v1/audio/transcriptions`.
@@ -56,4 +69,3 @@ docker compose up --build
 4. Selecionar e integrar a primeira engine STT.
 5. Fazer benchmark de português brasileiro.
 6. Publicar staging isolado na VPS.
-

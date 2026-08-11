@@ -34,3 +34,5 @@ jobs:
       - name: Compile sources
         run: python -m compileall -q src
 
+      - name: Build Docker image
+        run: docker build --tag astera-live-transcriber:ci .
