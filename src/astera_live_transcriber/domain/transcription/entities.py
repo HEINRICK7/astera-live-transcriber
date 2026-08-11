@@ -31,13 +31,32 @@ class TranscriptSegment:
 
 
 @dataclass(frozen=True, slots=True)
+class WordTimestamp:
+    word: str
+    start_ms: int
+    end_ms: int
+    confidence: float | None = None
+
+    def __post_init__(self) -> None:
+        if not self.word:
+            raise ValueError("word cannot be empty")
+        if self.start_ms < 0 or self.end_ms < self.start_ms:
+            raise ValueError("word timestamps are invalid")
+        if self.confidence is not None and not 0 <= self.confidence <= 1:
+            raise ValueError("confidence must be between zero and one")
+
+
+@dataclass(frozen=True, slots=True)
 class TranscriptionResult:
     text: str
     language: str
     duration_ms: int
     segments: tuple[TranscriptSegment, ...] = ()
+    confidence: float | None = None
+    words: tuple[WordTimestamp, ...] = ()
 
     def __post_init__(self) -> None:
         if self.duration_ms < 0:
             raise ValueError("duration cannot be negative")
-
+        if self.confidence is not None and not 0 <= self.confidence <= 1:
+            raise ValueError("confidence must be between zero and one")

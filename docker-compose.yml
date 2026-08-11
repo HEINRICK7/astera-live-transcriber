@@ -1,11 +1,16 @@
 services:
   transcriber:
-    build: .
+    build:
+      context: .
+      args:
+        INSTALL_PARAKEET: "${ASTERA_TRANSCRIBER_INSTALL_PARAKEET:-false}"
     restart: unless-stopped
     ports:
       - "${ASTERA_TRANSCRIBER_HOST_PORT:-8000}:8000"
     env_file:
       - .env
+    volumes:
+      - ./models:/models:ro
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s

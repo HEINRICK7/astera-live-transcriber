@@ -9,6 +9,7 @@ from astera_live_transcriber.infrastructure.audio.buffer import RingBuffer
 from astera_live_transcriber.infrastructure.audio.normalizer import AudioNormalizer
 from astera_live_transcriber.infrastructure.config.settings import Settings, get_settings
 from astera_live_transcriber.infrastructure.engines.noop.adapter import NoopTranscriptionEngine
+from astera_live_transcriber.infrastructure.engines.runtime import EngineRuntime
 from astera_live_transcriber.infrastructure.observability.metrics import PipelineMetrics
 from astera_live_transcriber.infrastructure.turn_detection.time_based import TimeBasedTurnDetector
 from astera_live_transcriber.infrastructure.vad import PassthroughVad, RmsVad
@@ -26,7 +27,11 @@ def get_app_settings() -> Settings:
     return get_settings()
 
 
-def create_realtime_pipeline(session: TranscriptionSession, settings: Settings) -> AudioPipeline:
+def create_realtime_pipeline(
+    session: TranscriptionSession,
+    settings: Settings,
+    runtime: EngineRuntime | None = None,
+) -> AudioPipeline:
     vad = (
         RmsVad(
             threshold=settings.vad_threshold,
@@ -48,11 +53,12 @@ def create_realtime_pipeline(session: TranscriptionSession, settings: Settings) 
             commit_silence_ms=settings.commit_silence_ms,
             max_silence_ms=settings.max_silence_ms,
         ),
-        engine=create_engine(),
+        engine=runtime.engine if runtime is not None else create_engine(),
         lifecycle=SegmentLifecycleService(),
         config=AudioPipelineConfig(
             prefix_padding_ms=settings.prefix_padding_ms,
             max_segment_duration_ms=settings.max_segment_duration_ms,
+            partial_interval_ms=settings.partial_interval_ms,
         ),
         metrics=PipelineMetrics(),
     )

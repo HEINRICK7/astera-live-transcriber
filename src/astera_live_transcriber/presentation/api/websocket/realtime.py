@@ -8,7 +8,7 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 from astera_live_transcriber.domain.audio import AudioChunk
 from astera_live_transcriber.domain.session import TranscriptionSession
 from astera_live_transcriber.domain.transcription.events import TranscriptEvent
-from astera_live_transcriber.infrastructure.config.settings import Settings
+from astera_live_transcriber.infrastructure.engines.parakeet.exceptions import ParakeetEngineError
 from astera_live_transcriber.presentation.api.dependencies import create_realtime_pipeline
 
 router = APIRouter()
@@ -18,7 +18,8 @@ router = APIRouter()
 async def realtime_transcription(websocket: WebSocket) -> None:
     await websocket.accept()
     pipeline = None
-    settings = Settings()
+    settings = websocket.app.state.settings
+    runtime = websocket.app.state.engine_runtime
     sequence = 0
     timestamp_ms = 0
 
@@ -66,7 +67,7 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                     model=model,
                     language=language,
                 )
-                pipeline = create_realtime_pipeline(session, settings)
+                pipeline = create_realtime_pipeline(session, settings, runtime)
                 await websocket.send_json({"type": "session.created", "session_id": session.id})
             elif event_type == "audio.append":
                 if pipeline is None:
@@ -102,6 +103,15 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 return
             else:
                 await websocket.send_json({"type": "error", "message": "unsupported event type"})
+    except ParakeetEngineError:
+        if pipeline is not None:
+            await websocket.send_json(
+                {
+                    "type": "error",
+                    "code": "transcription_engine_error",
+                    "session_id": pipeline.session.id,
+                }
+            )
     except (WebSocketDisconnect, json.JSONDecodeError, ValueError, binascii.Error):
         pass
     finally:

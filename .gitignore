@@ -10,5 +10,6 @@ venv/
 htmlcov/
 dist/
 build/
+models/
+*.onnx
 .DS_Store
-

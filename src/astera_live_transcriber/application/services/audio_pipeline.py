@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 class AudioPipelineConfig:
     prefix_padding_ms: int
     max_segment_duration_ms: int
+    partial_interval_ms: int = 1_000
 
 
 class AudioPipeline:
@@ -47,6 +48,7 @@ class AudioPipeline:
         self._lifecycle = lifecycle
         self._config = config
         self.metrics = metrics or PipelineMetrics()
+        self._last_partial_inference_at_ms: int | None = None
         self.metrics.set_gauge("active_sessions", 1)
 
     async def process(self, chunk: AudioChunk) -> list[TranscriptEvent]:
@@ -95,9 +97,21 @@ class AudioPipeline:
                 )
 
         if self.session.active_segment_id is not None:
-            partial_event = await self._publish_partial()
-            if partial_event is not None:
-                events.append(partial_event)
+            segment_start_ms = self.session.segment_started_at_ms
+            if segment_start_ms is None:
+                segment_start_ms = self.session.last_audio_timestamp_ms
+            elapsed_ms = self.session.last_audio_timestamp_ms - segment_start_ms
+            should_infer = (
+                self._last_partial_inference_at_ms is None
+                or self._config.partial_interval_ms <= 0
+                or elapsed_ms - self._last_partial_inference_at_ms
+                >= self._config.partial_interval_ms
+            )
+            if should_infer:
+                partial_event = await self._publish_partial()
+                self._last_partial_inference_at_ms = elapsed_ms
+                if partial_event is not None:
+                    events.append(partial_event)
 
         decision = await self._turn_detector.evaluate(
             self.session.turn_state(
@@ -162,6 +176,7 @@ class AudioPipeline:
             )
         self._lifecycle.clear(self.session)
         self.session.clear_active_segment()
+        self._last_partial_inference_at_ms = None
         reset = getattr(self._vad, "reset", None)
         if reset is not None:
             reset()

@@ -12,16 +12,22 @@ Este serviço não interpreta medicina, não gera SOAP, hipóteses ou componente
 
 ## Status
 
-Bootstrap `v0.1.0` sem engine STT real. A aplicação já possui:
+`v0.1.0` com integração opcional do engine NVIDIA Parakeet TDT 0.6B v3 INT8 via
+`sherpa-onnx`. O default continua sendo `noop`, para que ambientes existentes não
+sejam alterados por dependência de modelo ou download automático.
+
+A aplicação possui:
 
 - `GET /health`
 - `GET /v1/models`
 - modelo de domínio `TranscriptSegment`
 - contrato `TranscriptionEnginePort`
 - Noop Engine para desenvolvimento
-- base para HTTP transcription e WebSocket realtime
+- `POST /v1/audio/transcriptions` para WAV PCM16 mono 16 kHz
 - pipeline realtime em memória com Ring Buffer, VAD RMS e turn detection temporal
 - lifecycle `partial` → `revised` → `committed` com identidade estável de segmento
+- cadence de partial configurável (`ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`)
+- status do engine em `GET /v1/engine/status`
 - sessões isoladas, backpressure limitada e disconnect com limpeza
 - testes unitários e de integração
 - Docker, GitHub Actions para CI e workflow manual de staging
@@ -42,6 +48,39 @@ Endpoints do checkpoint:
 ```bash
 curl http://localhost:8000/health
 curl http://localhost:8000/v1/models
+curl http://localhost:8000/v1/engine/status
+```
+
+### Parakeet local
+
+O modelo não é versionado no Git e não é baixado durante o startup. Para habilitar
+a engine localmente:
+
+```bash
+python scripts/download_models.py --target-dir models
+export ASTERA_TRANSCRIBER_ENGINE=parakeet
+export ASTERA_TRANSCRIBER_MODEL_PATH=models/parakeet-tdt-0.6b-v3-int8
+python -m pip install -e ".[dev,parakeet]"
+uvicorn astera_live_transcriber.main:app --reload
+```
+
+O loader verifica `encoder.int8.onnx`, `decoder.int8.onnx`, `joiner.int8.onnx` e
+`tokens.txt`, carrega uma vez e mantém o recognizer residente. Se o diretório
+estiver incompleto, o processo falha explicitamente; não há fallback implícito para
+`noop`.
+
+Transcrição HTTP:
+
+```bash
+curl -X POST http://localhost:8000/v1/audio/transcriptions \
+  -F file=@sample.wav \
+  -F language=pt-BR
+```
+
+Benchmark local:
+
+```bash
+python scripts/benchmark_stt.py --model-path models/parakeet-tdt-0.6b-v3-int8 sample.wav
 ```
 
 ### Realtime
@@ -69,10 +108,10 @@ Antes de executá-lo, configure no ambiente `staging` do GitHub:
 
 O deploy de produção ainda não está automatizado de propósito.
 
-## Próximas fases
+## Limitações conhecidas
 
-1. Implementar o contrato HTTP `POST /v1/audio/transcriptions`.
-2. Adicionar decoders/resampling para formatos externos.
-3. Selecionar e integrar a primeira engine STT.
-4. Fazer benchmark de português brasileiro.
-5. Publicar staging isolado na VPS.
+- A fronteira HTTP desta fase aceita WAV PCM16 mono em 16 kHz; decoders e resampling
+  de outros formatos permanecem uma evolução separada.
+- O workflow `Parakeet model test` é manual porque baixa o modelo e pode consumir
+  recursos de CI. O workflow `CI` normal continua sem o peso do modelo.
+- O deploy de produção ainda não está automatizado; staging permanece isolado.
