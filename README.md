@@ -58,6 +58,7 @@ Antes de executá-lo, configure no ambiente `staging` do GitHub:
 - `STAGING_USER`
 - `STAGING_SSH_PORT`
 - `STAGING_SSH_KEY`
+- `STAGING_KNOWN_HOSTS`
 
 O deploy de produção ainda não está automatizado de propósito.
 

@@ -18,11 +18,13 @@ jobs:
       - name: Configure SSH
         env:
           STAGING_SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          STAGING_KNOWN_HOSTS: ${{ secrets.STAGING_KNOWN_HOSTS }}
         run: |
           install -d -m 700 "$HOME/.ssh"
           printf '%s\n' "$STAGING_SSH_KEY" > "$HOME/.ssh/id_ed25519"
           chmod 600 "$HOME/.ssh/id_ed25519"
-          ssh-keyscan -H "${{ secrets.STAGING_HOST }}" >> "$HOME/.ssh/known_hosts"
+          printf '%s\n' "$STAGING_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 644 "$HOME/.ssh/known_hosts"
 
       - name: Deploy isolated Docker project
         env:
@@ -62,4 +64,3 @@ jobs:
           docker compose -p astera-live-transcriber-staging up -d --build --remove-orphans
           curl --fail --silent http://127.0.0.1:48080/health
           REMOTE
-
