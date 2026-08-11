@@ -48,20 +48,20 @@ async def transcribe(path: Path, server: str, mode: str) -> None:
 
     websocket_server = server.replace("https://", "wss://", 1).replace("http://", "ws://", 1)
     websocket_url = f"{websocket_server}{session['websocket']}"
-    print(f"sessão: {session['session_id']}")
+    print(f"sessão: {session['session_id']}", flush=True)
     async with websockets.connect(websocket_url, max_size=None) as websocket:
         async for raw_event in websocket:
             event = json.loads(raw_event)
             event_type = event.get("type")
             if event_type in {"transcript.partial", "transcript.revised", "transcript.committed"}:
-                print(f"[{event_type}] {event.get('text', '')}")
+                print(f"[{event_type}] {event.get('text', '')}", flush=True)
             elif event_type == "error":
-                print(json.dumps(event, ensure_ascii=False))
+                print(json.dumps(event, ensure_ascii=False), flush=True)
                 break
             elif event_type in {"audio.completed", "session.completed"}:
-                print(f"[{event_type}]")
+                print(f"[{event_type}]", flush=True)
             else:
-                print(f"[{event_type}]")
+                print(f"[{event_type}]", flush=True)
             if event_type == "session.completed":
                 break
 
