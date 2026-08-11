@@ -67,13 +67,12 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
                 "websocket_close_code", exc.code
             )
         logger.warning(
-            "file_websocket_disconnected",
-            extra={
-                "session_id": session_id,
-                "close_code": exc.code,
-                "close_reason": exc.reason,
-                "session_state": file_session.session.state if file_session else None,
-            },
+            "file_websocket_disconnected "
+            "session_id=%s close_code=%s close_reason=%r session_state=%s",
+            session_id,
+            exc.code,
+            exc.reason,
+            file_session.session.state if file_session else None,
         )
         if cancel_on_disconnect and file_session is not None and not file_session.completed:
             await manager.cancel(session_id)

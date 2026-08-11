@@ -233,17 +233,24 @@
         socket = new WebSocket(`${wsProtocol}${wsHost}${path}`);
         socket.binaryType = "arraybuffer";
         socket.onopen = async () => {
-          socket.send(JSON.stringify({ type: "session.create", session: { model: "astera-stt-realtime-1", language: "pt-BR" } }));
-          if (microphone) await startAudioCapture();
+          if (microphone) {
+            socket.send(JSON.stringify({ type: "session.create", session: { model: "astera-stt-realtime-1", language: "pt-BR" } }));
+            await startAudioCapture();
+          }
         };
         socket.onmessage = (message) => handleEvent(JSON.parse(message.data));
         socket.onerror = () => showError("não foi possível manter a conexão realtime");
-        socket.onclose = () => {
+        socket.onclose = (closeEvent) => {
           stopAudioCapture();
           socket = null;
           setBusy(false);
+          logEvent({
+            type: "websocket.closed",
+            text: `code=${closeEvent.code} reason=${closeEvent.reason || "-"} clean=${closeEvent.wasClean}`,
+          });
           if (!terminalEventReceived && !sessionState.textContent.includes("erro")) {
-            showError("conexão encerrada antes do fim da transcrição");
+            const reason = closeEvent.reason ? ` — ${closeEvent.reason}` : "";
+            showError(`conexão encerrada antes do fim da transcrição (código ${closeEvent.code}${reason})`);
           }
         };
       }
