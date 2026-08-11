@@ -8,6 +8,7 @@ class ParakeetConfig:
     sample_rate: int = 16_000
     num_threads: int = 4
     provider: str = "cpu"
+    model_type: str = "nemo_transducer"
     debug: bool = False
     warmup: bool = True
     max_concurrent_inferences: int = 1

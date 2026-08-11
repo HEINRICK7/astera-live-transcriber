@@ -50,6 +50,7 @@ class ParakeetModelLoader:
                 decoding_method="greedy_search",
                 debug=self.config.debug,
                 provider=self.config.provider,
+                model_type=self.config.model_type,
             )
             if self.config.warmup:
                 self._warmup()
