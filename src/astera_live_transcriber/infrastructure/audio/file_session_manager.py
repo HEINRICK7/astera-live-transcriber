@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import time
 import uuid
 from collections.abc import Callable
@@ -32,6 +33,7 @@ SUPPORTED_MIME_TYPES = {
     "audio/wave",
 }
 SUPPORTED_SUFFIXES = {".mp3", ".wav"}
+logger = logging.getLogger(__name__)
 
 
 class FileSessionError(ValueError):
@@ -189,6 +191,10 @@ class FileSessionManager:
             cancelled = True
             raise
         except FileAudioSourceError:
+            logger.exception(
+                "file_audio_stream_failed",
+                extra={"session_id": file_session.session.id},
+            )
             await self._put(
                 file_session,
                 TranscriptEvent(
@@ -198,6 +204,10 @@ class FileSessionManager:
                 ),
             )
         except Exception:
+            logger.exception(
+                "file_session_failed",
+                extra={"session_id": file_session.session.id},
+            )
             await self._put(
                 file_session,
                 TranscriptEvent(
