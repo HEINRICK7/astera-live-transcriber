@@ -7,11 +7,54 @@ from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
 from astera_live_transcriber.domain.audio import AudioChunk
 from astera_live_transcriber.domain.session import TranscriptionSession
-from astera_live_transcriber.domain.transcription.events import TranscriptEvent
+from astera_live_transcriber.domain.transcription.events import (
+    TranscriptEvent,
+    TranscriptEventType,
+)
+from astera_live_transcriber.infrastructure.audio.file_session_manager import FileSessionError
 from astera_live_transcriber.infrastructure.engines.parakeet.exceptions import ParakeetEngineError
 from astera_live_transcriber.presentation.api.dependencies import create_realtime_pipeline
 
 router = APIRouter()
+
+
+@router.websocket("/v1/realtime/transcription/{session_id}")
+async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> None:
+    await websocket.accept()
+    manager = websocket.app.state.file_sessions
+    cancel_on_disconnect = websocket.app.state.settings.file_cancel_on_disconnect
+    file_session = None
+    try:
+        file_session = await manager.attach(session_id)
+        await websocket.send_json(
+            {
+                "type": "session.created",
+                "session_id": session_id,
+                "source_type": "file",
+                "stream_mode": file_session.session.stream_mode,
+                "source_format": file_session.session.source_format,
+            }
+        )
+        while True:
+            event = await file_session.queue.get()
+            if event is None:
+                break
+            await websocket.send_json(_event_payload(event))
+            if event.type is TranscriptEventType.ERROR:
+                break
+            if event.type is TranscriptEventType.SESSION_COMPLETED:
+                break
+    except (FileSessionError, WebSocketDisconnect):
+        if cancel_on_disconnect and file_session is not None and not file_session.completed:
+            await manager.cancel(session_id)
+        if file_session is None:
+            try:
+                await websocket.send_json({"type": "error", "code": "session_not_found"})
+            except WebSocketDisconnect:
+                pass
+    finally:
+        if cancel_on_disconnect and file_session is not None and not file_session.completed:
+            await manager.cancel(session_id)
 
 
 @router.websocket("/v1/realtime/transcription")
@@ -136,6 +179,7 @@ def _event_payload(event: TranscriptEvent) -> dict[str, object]:
         "silence_ms",
         "language",
         "confidence",
+        "error_code",
     ):
         value = getattr(event, field)
         if value is not None:

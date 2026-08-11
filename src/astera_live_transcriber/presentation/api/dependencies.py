@@ -31,6 +31,7 @@ def create_realtime_pipeline(
     session: TranscriptionSession,
     settings: Settings,
     runtime: EngineRuntime | None = None,
+    metrics: PipelineMetrics | None = None,
 ) -> AudioPipeline:
     vad = (
         RmsVad(
@@ -60,5 +61,5 @@ def create_realtime_pipeline(
             max_segment_duration_ms=settings.max_segment_duration_ms,
             partial_interval_ms=settings.partial_interval_ms,
         ),
-        metrics=PipelineMetrics(),
+        metrics=metrics or PipelineMetrics(),
     )

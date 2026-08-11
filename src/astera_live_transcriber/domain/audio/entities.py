@@ -1,4 +1,25 @@
 from dataclasses import dataclass
+from enum import StrEnum
+
+
+class AudioSourceType(StrEnum):
+    LIVE = "live"
+    FILE = "file"
+
+
+class AudioStreamMode(StrEnum):
+    REALTIME = "realtime"
+    ACCELERATED = "accelerated"
+
+
+@dataclass(frozen=True, slots=True)
+class AudioSourceMetadata:
+    filename: str | None = None
+    mime_type: str | None = None
+    size_bytes: int | None = None
+    duration_ms: int | None = None
+    source_type: AudioSourceType = AudioSourceType.LIVE
+    stream_mode: AudioStreamMode | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -29,4 +50,3 @@ class AudioChunk:
     @property
     def end_timestamp_ms(self) -> int:
         return self.timestamp_ms + self.duration_ms
-

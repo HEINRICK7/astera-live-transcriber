@@ -1,6 +1,12 @@
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 
+from astera_live_transcriber.domain.audio import (
+    AudioSourceMetadata,
+    AudioSourceType,
+    AudioStreamMode,
+)
+
 
 @dataclass(frozen=True, slots=True)
 class TurnState:
@@ -39,6 +45,22 @@ class TranscriptionSession:
     last_audio_timestamp_ms: int = 0
     dropped_chunks: int = 0
     closed: bool = False
+    source_metadata: AudioSourceMetadata = field(default_factory=AudioSourceMetadata)
+
+    @property
+    def source_type(self) -> AudioSourceType:
+        return self.source_metadata.source_type
+
+    @property
+    def stream_mode(self) -> AudioStreamMode | None:
+        return self.source_metadata.stream_mode
+
+    @property
+    def source_format(self) -> str | None:
+        filename = self.source_metadata.filename or ""
+        if "." not in filename:
+            return None
+        return filename.rsplit(".", 1)[-1].lower()
 
     def begin_segment(self, segment_id: str, start_ms: int) -> None:
         if self.closed:

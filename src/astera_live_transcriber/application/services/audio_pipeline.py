@@ -138,6 +138,14 @@ class AudioPipeline:
         self.metrics.set_gauge("buffer_size", 0)
         logger.info("session_closed", extra={"session_id": self.session.id})
 
+    async def flush(self) -> list[TranscriptEvent]:
+        """Force the current segment at a finite source boundary such as EOF."""
+        if self.session.closed or self.session.active_segment_id is None:
+            return []
+        self.metrics.increment("turn_force_commit")
+        committed = await self._commit()
+        return [committed] if committed is not None else []
+
     async def _publish_partial(self) -> TranscriptEvent | None:
         audio = b"".join(chunk.data for chunk in self._buffer.read_window())
         result = await self._transcribe(audio)

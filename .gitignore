@@ -12,4 +12,7 @@ dist/
 build/
 models/
 *.onnx
+benchmarks/audio/
+tests/fixtures/audio/*.mp3
+tests/fixtures/audio/*.wav
 .DS_Store
