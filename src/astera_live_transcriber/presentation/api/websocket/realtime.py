@@ -140,6 +140,7 @@ async def realtime_transcription(websocket: WebSocket) -> None:
             elif event_type == "session.close":
                 if pipeline is not None:
                     session_id = pipeline.session.id
+                    await _send_events(websocket, await pipeline.flush())
                     await pipeline.close()
                     await websocket.send_json({"type": "session.closed", "session_id": session_id})
                 await websocket.close()

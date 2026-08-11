@@ -127,6 +127,13 @@ Para executar rapidamente sem esperar a duração real do arquivo:
 python scripts/transcribe_file.py /caminho/consulta.mp3 --mode accelerated
 ```
 
+### Interface web local
+
+Com o servidor local rodando, abra `http://127.0.0.1:8001/` no navegador. A interface
+permite selecionar um MP3/WAV, acompanhar os eventos e revisões na tela, ou ligar o
+microfone para falar diretamente. Ao parar o microfone, o trecho aberto é confirmado
+antes do encerramento da sessão.
+
 ## Docker
 
 ```bash
