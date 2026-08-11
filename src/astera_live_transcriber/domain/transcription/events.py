@@ -4,6 +4,9 @@ from enum import StrEnum
 
 class TranscriptEventType(StrEnum):
     SESSION_CREATED = "session.created"
+    SESSION_CLOSED = "session.closed"
+    SPEECH_STARTED = "speech.started"
+    SPEECH_STOP_CANDIDATE = "speech.stop_candidate"
     PARTIAL = "transcript.partial"
     REVISED = "transcript.revised"
     COMMITTED = "transcript.committed"
@@ -18,4 +21,7 @@ class TranscriptEvent:
     text: str | None = None
     start_ms: int | None = None
     end_ms: int | None = None
-
+    timestamp_ms: int | None = None
+    silence_ms: int | None = None
+    language: str | None = None
+    confidence: float | None = None

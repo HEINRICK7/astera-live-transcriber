@@ -4,7 +4,7 @@ from astera_live_transcriber.application.ports.transcription_engine import (
     StreamingConfig,
     TranscriptionEnginePort,
 )
-from astera_live_transcriber.domain.transcription import TranscriptSegment
+from astera_live_transcriber.domain.transcription.events import TranscriptEvent
 
 
 class StreamingService:
@@ -17,6 +17,5 @@ class StreamingService:
         self,
         audio: AsyncIterator[bytes],
         config: StreamingConfig,
-    ) -> AsyncIterator[TranscriptSegment]:
+    ) -> AsyncIterator[TranscriptEvent]:
         return self._engine.stream(audio, config)
-

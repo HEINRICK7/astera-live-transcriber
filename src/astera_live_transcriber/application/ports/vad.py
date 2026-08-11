@@ -1,7 +1,11 @@
 from typing import Protocol
 
+from astera_live_transcriber.domain.audio import AudioChunk, VadEvent
 
-class VoiceActivityDetectorPort(Protocol):
-    def is_speech(self, audio: bytes) -> bool:
-        """Return whether the audio chunk contains speech."""
 
+class VadPort(Protocol):
+    async def process(self, audio: AudioChunk) -> VadEvent:
+        """Classify one canonical audio chunk."""
+
+
+VoiceActivityDetectorPort = VadPort

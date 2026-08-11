@@ -20,6 +20,9 @@ Bootstrap `v0.1.0` sem engine STT real. A aplicação já possui:
 - contrato `TranscriptionEnginePort`
 - Noop Engine para desenvolvimento
 - base para HTTP transcription e WebSocket realtime
+- pipeline realtime em memória com Ring Buffer, VAD RMS e turn detection temporal
+- lifecycle `partial` → `revised` → `committed` com identidade estável de segmento
+- sessões isoladas, backpressure limitada e disconnect com limpeza
 - testes unitários e de integração
 - Docker, GitHub Actions para CI e workflow manual de staging
 
@@ -40,6 +43,10 @@ Endpoints do checkpoint:
 curl http://localhost:8000/health
 curl http://localhost:8000/v1/models
 ```
+
+### Realtime
+
+Conecte em `WS /v1/realtime/transcription`, envie `session.create` e depois eventos `audio.append` com áudio PCM16 mono em base64. O formato canônico desta fase é 16 kHz. O servidor emite `session.created`, `speech.started`, `speech.stop_candidate`, `transcript.partial`, `transcript.revised` e `transcript.committed`.
 
 ## Docker
 
@@ -65,8 +72,7 @@ O deploy de produção ainda não está automatizado de propósito.
 ## Próximas fases
 
 1. Implementar o contrato HTTP `POST /v1/audio/transcriptions`.
-2. Implementar o protocolo WebSocket `/v1/realtime/transcription`.
-3. Adicionar normalização de áudio, VAD e segmentação.
-4. Selecionar e integrar a primeira engine STT.
-5. Fazer benchmark de português brasileiro.
-6. Publicar staging isolado na VPS.
+2. Adicionar decoders/resampling para formatos externos.
+3. Selecionar e integrar a primeira engine STT.
+4. Fazer benchmark de português brasileiro.
+5. Publicar staging isolado na VPS.

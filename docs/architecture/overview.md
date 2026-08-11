@@ -9,3 +9,6 @@ O serviço usa quatro círculos simples:
 
 O ponto de composição é `presentation/api/dependencies.py`. A engine real poderá substituir `NoopTranscriptionEngine` sem alterar o contrato HTTP ou o domínio.
 
+## Pipeline realtime
+
+Cada conexão cria uma `TranscriptionSession`, um `RingBuffer`, um VAD, um `TurnDetectionPort`, uma engine e um `SegmentLifecycleService`. O pipeline só publica texto que passa por `is_publishable_text`; silêncio puro, texto vazio e pontuação isolada não viram evidência. Revisões incrementam `revision` e preservam o mesmo `segment_id`; após `committed`, o segmento não é alterado silenciosamente.

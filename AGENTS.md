@@ -19,3 +19,8 @@ Engines são adaptadores de `TranscriptionEnginePort`. Os nomes públicos dos mo
 
 O bootstrap deliberadamente não inclui engine real, VAD, Redis, PostgreSQL ou armazenamento de áudio. Cada dependência nova deve responder a uma necessidade concreta do fluxo.
 
+## Streaming
+
+O VAD e o turn detector são portas independentes da engine. A sessão, o Ring Buffer e o lifecycle de segmentos são criados por conexão WebSocket; nenhum estado realtime pode ser global. Uma pausa curta mantém o segmento aberto, enquanto `commit_silence_ms` e `max_segment_duration_ms` controlam commits.
+
+O Noop Engine permanece sem texto por padrão para nunca transformar silêncio em evidência artificial. Testes podem injetar uma implementação determinística para validar revisões e commits sem instalar um modelo STT.

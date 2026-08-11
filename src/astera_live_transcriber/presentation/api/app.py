@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from astera_live_transcriber import __version__
 from astera_live_transcriber.presentation.api.routes import health, models, transcriptions
+from astera_live_transcriber.presentation.api.websocket import realtime
 
 
 def create_app() -> FastAPI:
@@ -13,5 +14,5 @@ def create_app() -> FastAPI:
     app.include_router(health.router)
     app.include_router(models.router)
     app.include_router(transcriptions.router)
+    app.include_router(realtime.router)
     return app
-
