@@ -24,7 +24,7 @@ async def run(path: Path, model_path: str, mode: AudioStreamMode) -> None:
     settings = Settings(
         engine="parakeet",
         model_path=model_path,
-        partial_interval_ms=1_000,
+        partial_interval_ms=5_000,
     )
     runtime = build_engine_runtime(settings)
     await runtime.start()

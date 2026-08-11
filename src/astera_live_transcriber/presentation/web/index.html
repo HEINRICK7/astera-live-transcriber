@@ -168,6 +168,7 @@
       let silentGain = null;
       let finalText = "";
       let liveText = "";
+      let terminalEventReceived = false;
       let objectUrl = null;
 
       fileInput.addEventListener("change", () => {
@@ -241,7 +242,9 @@
           stopAudioCapture();
           socket = null;
           setBusy(false);
-          if (!sessionState.textContent.includes("erro")) setState("concluído");
+          if (!terminalEventReceived && !sessionState.textContent.includes("erro")) {
+            showError("conexão encerrada antes do fim da transcrição");
+          }
         };
       }
 
@@ -261,7 +264,8 @@
           renderTranscript();
           setState("trecho confirmado");
         }
-        if (event.type === "audio.completed" || event.type === "session.completed" || event.type === "session.closed") {
+        if (event.type === "session.completed" || event.type === "session.closed") {
+          terminalEventReceived = true;
           setState("concluído");
           setBusy(false);
         }
@@ -322,6 +326,7 @@
 
       function resetTranscript() {
         finalText = liveText = "";
+        terminalEventReceived = false;
         sessionId.textContent = "—";
         eventLog.innerHTML = "";
         renderTranscript();

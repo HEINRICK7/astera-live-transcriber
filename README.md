@@ -165,4 +165,7 @@ O deploy de produção ainda não está automatizado de propósito.
   podem ser puladas em ambientes sem esse executável.
 - O limiar RMS do VAD é configurável; o default `0.03` acompanha níveis típicos de
   voz em PCM16 e pode ser ajustado em `ASTERA_TRANSCRIBER_VAD_THRESHOLD`.
+- As revisões parciais do Parakeet são espaçadas em 5 segundos por padrão para evitar
+  reprocessamento excessivo no CPU; ajuste `ASTERA_TRANSCRIBER_PARTIAL_INTERVAL_MS`
+  se precisar de mais atualizações.
 - O deploy de produção ainda não está automatizado; staging permanece isolado.
