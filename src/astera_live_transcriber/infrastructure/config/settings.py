@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     audio_retention: bool = False
     audio_sample_rate: int = 16_000
     vad_enabled: bool = True
-    vad_threshold: float = 0.5
+    vad_threshold: float = 0.03
     prefix_padding_ms: int = 300
     min_speech_ms: int = 200
     silence_candidate_ms: int = 500

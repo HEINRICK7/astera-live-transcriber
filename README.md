@@ -156,4 +156,6 @@ O deploy de produção ainda não está automatizado de propósito.
   recursos de CI. O workflow `CI` normal continua sem o peso do modelo.
 - A fonte de arquivo depende do binário `ffmpeg`, instalado no Docker; fixtures locais
   podem ser puladas em ambientes sem esse executável.
+- O limiar RMS do VAD é configurável; o default `0.03` acompanha níveis típicos de
+  voz em PCM16 e pode ser ajustado em `ASTERA_TRANSCRIBER_VAD_THRESHOLD`.
 - O deploy de produção ainda não está automatizado; staging permanece isolado.
