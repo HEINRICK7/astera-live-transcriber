@@ -7,15 +7,15 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install --no-install-recommends -y curl \
+    && apt-get install --no-install-recommends -y curl ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 COPY pyproject.toml README.md ./
 COPY src ./src
 
-RUN pip install .
+ARG INSTALL_PARAKEET=false
+RUN if [ "$INSTALL_PARAKEET" = "true" ]; then pip install '.[parakeet]'; else pip install .; fi
 
 EXPOSE 8000
 
 CMD ["uvicorn", "astera_live_transcriber.main:app", "--host", "0.0.0.0", "--port", "8000"]
-

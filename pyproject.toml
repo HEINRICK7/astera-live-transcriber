@@ -23,6 +23,10 @@ dev = [
     "pytest-asyncio>=0.25,<1.0",
     "ruff>=0.9,<1.0",
 ]
+parakeet = [
+    "numpy>=2.0,<3.0",
+    "sherpa-onnx>=1.13,<2.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -38,4 +42,3 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
-

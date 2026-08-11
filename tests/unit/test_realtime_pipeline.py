@@ -69,6 +69,7 @@ def build_pipeline(
         config=AudioPipelineConfig(
             prefix_padding_ms=300,
             max_segment_duration_ms=max_segment_duration_ms,
+            partial_interval_ms=0,
         ),
         metrics=PipelineMetrics(),
     )
@@ -170,3 +171,25 @@ async def test_sessions_do_not_share_buffers_or_segment_state() -> None:
     await first.close()
     assert first.session.closed is True
     assert second.session.closed is False
+
+
+@pytest.mark.asyncio
+async def test_partial_inference_respects_configured_audio_cadence() -> None:
+    engine = ScriptedEngine(["primeira", "segunda", "final"])
+    pipeline = build_pipeline(["unused"])
+    pipeline._engine = engine
+    pipeline._config = AudioPipelineConfig(
+        prefix_padding_ms=300,
+        max_segment_duration_ms=30_000,
+        partial_interval_ms=200,
+    )
+
+    events = await feed(pipeline, 0, 0, True, count=5)
+
+    revisions = [
+        event
+        for event in events
+        if event.type in (TranscriptEventType.PARTIAL, TranscriptEventType.REVISED)
+    ]
+    assert len(revisions) == 3
+    assert engine._index == 3

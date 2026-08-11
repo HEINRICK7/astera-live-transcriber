@@ -10,6 +10,10 @@ class TranscriptEventType(StrEnum):
     PARTIAL = "transcript.partial"
     REVISED = "transcript.revised"
     COMMITTED = "transcript.committed"
+    AUDIO_STARTED = "audio.started"
+    AUDIO_COMPLETED = "audio.completed"
+    SESSION_COMPLETED = "session.completed"
+    ERROR = "error"
 
 
 @dataclass(frozen=True, slots=True)
@@ -25,3 +29,4 @@ class TranscriptEvent:
     silence_ms: int | None = None
     language: str | None = None
     confidence: float | None = None
+    error_code: str | None = None

@@ -24,6 +24,19 @@ class Settings(BaseSettings):
     max_segment_duration_ms: int = 30_000
     ring_buffer_max_duration_ms: int = 60_000
     ring_buffer_max_chunks: int = 500
+    engine: str = "noop"
+    engine_provider: str = "cpu"
+    model_path: str = "/models/parakeet-tdt-0.6b-v3-int8"
+    engine_threads: int = 4
+    engine_debug: bool = False
+    engine_warmup: bool = True
+    partial_interval_ms: int = 1_000
+    max_concurrent_inferences: int = 1
+    audio_chunk_ms: int = 100
+    file_event_queue_size: int = 100
+    file_temp_dir: str = "/tmp/astera-live-transcriber"
+    file_cancel_on_disconnect: bool = True
+    file_attach_timeout_seconds: int = 300
 
     model_config = SettingsConfigDict(
         env_prefix="ASTERA_TRANSCRIBER_",
