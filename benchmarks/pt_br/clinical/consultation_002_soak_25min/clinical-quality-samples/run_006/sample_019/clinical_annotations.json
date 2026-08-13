@@ -1,0 +1,41 @@
+{
+  "_status": "validated",
+  "_instruction": "Validated from the user-supplied literal reference for sample_019.",
+  "medication": [
+    {
+      "name": "terlipressina",
+      "expected_text": "terlipressina"
+    },
+    {
+      "name": "somatostatina",
+      "expected_text": "somatostatina"
+    },
+    {
+      "name": "octreotide",
+      "expected_text": "octreotide"
+    }
+  ],
+  "number": [
+    {
+      "value": 3,
+      "expected_text": "esses três fármacos"
+    }
+  ],
+  "dose": [],
+  "negation": [],
+  "clinical_term": [
+    {
+      "concept": "upper_gastrointestinal_bleeding",
+      "expected_text": "hemorragia digestiva alta"
+    },
+    {
+      "concept": "esophageal_variceal_bleeding",
+      "expected_text": "sangramento de varizes esofágicas"
+    },
+    {
+      "concept": "endoscopy",
+      "expected_text": "exame endoscópico"
+    }
+  ],
+  "speaker_label": []
+}

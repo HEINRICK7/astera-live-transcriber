@@ -1,0 +1,10 @@
+{
+  "_status": "pending_manual_validation",
+  "_instruction": "Fill only from audio.wav. Keep spoken wording, values, units, polarity and speaker context literal.",
+  "medications": [],
+  "numbers": [],
+  "doses": [],
+  "negations": [],
+  "clinical_terms": [],
+  "speaker_labels": []
+}

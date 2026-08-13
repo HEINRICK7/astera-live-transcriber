@@ -1,0 +1,1177 @@
+{
+  "analysis": {
+    "kind": "cross_segment_safe_cleanup_investigation",
+    "rules_added": 0,
+    "cleanup_applied": false,
+    "proximity_threshold_ms": 5000,
+    "boundary_token_limit": 8
+  },
+  "summary": {
+    "cross_segment_candidates": 18,
+    "cross_segment_eligible": 0,
+    "cross_segment_exact_boundary_overlap": 1,
+    "cross_segment_temporally_close": 12,
+    "cross_segment_rejected_no_exact_boundary": 17,
+    "cross_segment_rejected_protected": 10,
+    "cross_segment_removed": 0,
+    "punctuation_candidates": 2,
+    "punctuation_removed": 0,
+    "ambiguous_untouched": 14,
+    "protected_untouched": 3,
+    "clinical_changes": 0,
+    "candidate_class_counts": {
+      "cross_segment_duplicate": 18,
+      "punctuation_variant": 2
+    }
+  },
+  "candidates": [
+    {
+      "span_id": "seg_0020:adjacent_duplication:obrigado:21-23",
+      "segment_id": "seg_0020",
+      "rule": "exact_adjacent_duplication",
+      "original": "Obrigado. Obrigado.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 7,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado."
+          ],
+          "text": "Obrigado. Obrigado."
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 6774,
+        "previous_tail_tokens": [
+          "muito",
+          "abraço",
+          "muito",
+          "obrigada",
+          "tchau"
+        ],
+        "incoming_head_tokens": [
+          "pronto",
+          "agora",
+          "é",
+          "só",
+          "você",
+          "aguardar",
+          "aqui",
+          "nesse"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0019",
+        "current_segment_id": "seg_0020"
+      }
+    },
+    {
+      "span_id": "seg_0022:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0022",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 6300,
+        "previous_tail_tokens": [
+          "chama",
+          "tá",
+          "bom",
+          "ok",
+          "melhores",
+          "obrigado",
+          "obrigado",
+          "doutor"
+        ],
+        "incoming_head_tokens": [
+          "boa",
+          "tarde",
+          "boa",
+          "tarde",
+          "o",
+          "joão",
+          "paulo",
+          "está"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0021",
+        "current_segment_id": "seg_0022"
+      }
+    },
+    {
+      "span_id": "seg_0023:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0023",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "tarde",
+          "o",
+          "joão",
+          "paulo",
+          "está",
+          "aqui",
+          "estou",
+          "aqui"
+        ],
+        "incoming_head_tokens": [
+          "boa",
+          "tarde",
+          "boa",
+          "tarde",
+          "o",
+          "joão",
+          "paulo",
+          "está"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0022",
+        "current_segment_id": "seg_0023"
+      }
+    },
+    {
+      "span_id": "seg_0024:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "boa",
+          "tarde",
+          "o",
+          "joão",
+          "paulo",
+          "está",
+          "aqui",
+          "estou"
+        ],
+        "incoming_head_tokens": [
+          "boa",
+          "tarde",
+          "boa",
+          "tarde",
+          "o",
+          "dr",
+          "paul",
+          "isso"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0023",
+        "current_segment_id": "seg_0024"
+      }
+    },
+    {
+      "span_id": "seg_0026:adjacent_duplication:não:0-2",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, Não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "Não, Não,"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 8700,
+        "previous_tail_tokens": [
+          "cabeça",
+          "desmaiou",
+          "teve",
+          "diarréia",
+          "não",
+          "não",
+          "não",
+          "não"
+        ],
+        "incoming_head_tokens": [
+          "não",
+          "não",
+          "na",
+          "verdade",
+          "eu",
+          "tive",
+          "diarreia",
+          "só"
+        ],
+        "exact_boundary_overlap_tokens": 2,
+        "previous_segment_id": "seg_0025",
+        "current_segment_id": "seg_0026"
+      }
+    },
+    {
+      "span_id": "seg_0027:adjacent_duplication:não:73-75",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 73,
+          "token_end": 75,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 8900,
+        "previous_tail_tokens": [
+          "fígado",
+          "tem",
+          "alguma",
+          "doença",
+          "crônica",
+          "como",
+          "hipertensão",
+          "diabetes"
+        ],
+        "incoming_head_tokens": [
+          "ele",
+          "ele",
+          "tem",
+          "uma",
+          "doença",
+          "no",
+          "fígado",
+          "tem"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0026",
+        "current_segment_id": "seg_0027"
+      }
+    },
+    {
+      "span_id": "seg_0028:adjacent_duplication:não:29-31",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 640,
+        "previous_tail_tokens": [
+          "nadar",
+          "nadar",
+          "e",
+          "casa",
+          "casa",
+          "minha",
+          "casa",
+          "não"
+        ],
+        "incoming_head_tokens": [
+          "normal",
+          "tirou",
+          "o",
+          "pé",
+          "tudo",
+          "normal",
+          "é",
+          "eu"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0027",
+        "current_segment_id": "seg_0028"
+      }
+    },
+    {
+      "span_id": "seg_0029:adjacent_duplication:não:29-31",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "os",
+          "meus",
+          "pais",
+          "eles",
+          "morreram",
+          "bem",
+          "velhinhos",
+          "não"
+        ],
+        "incoming_head_tokens": [
+          "normal",
+          "tirou",
+          "o",
+          "pé",
+          "tudo",
+          "normal",
+          "é",
+          "eu"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0028",
+        "current_segment_id": "seg_0029"
+      }
+    },
+    {
+      "span_id": "seg_0030:adjacent_duplication:o_senhor:3-7",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor, o senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 300,
+        "previous_tail_tokens": [
+          "os",
+          "meus",
+          "pais",
+          "eles",
+          "morreram",
+          "bem",
+          "velhinhos",
+          "não"
+        ],
+        "incoming_head_tokens": [
+          "falando",
+          "agora",
+          "sobre",
+          "o",
+          "senhor",
+          "o",
+          "senhor",
+          "faz"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0029",
+        "current_segment_id": "seg_0030"
+      }
+    },
+    {
+      "span_id": "seg_0031:adjacent_duplication:o_senhor:3-7",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor, o senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "de",
+          "verdura",
+          "não",
+          "mas",
+          "come",
+          "arroz",
+          "e",
+          "feijão"
+        ],
+        "incoming_head_tokens": [
+          "falando",
+          "agora",
+          "sobre",
+          "o",
+          "senhor",
+          "o",
+          "senhor",
+          "faz"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0030",
+        "current_segment_id": "seg_0031"
+      }
+    },
+    {
+      "span_id": "seg_0032:adjacent_duplication:não_é:15-19",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "não é? não é",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 400,
+        "previous_tail_tokens": [
+          "de",
+          "verdura",
+          "não",
+          "mas",
+          "com",
+          "arroz",
+          "e",
+          "feijão"
+        ],
+        "incoming_head_tokens": [
+          "entende",
+          "então",
+          "quer",
+          "dizer",
+          "que",
+          "o",
+          "senhor",
+          "daniel"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0031",
+        "current_segment_id": "seg_0032"
+      }
+    },
+    {
+      "span_id": "seg_0033:adjacent_duplication:não_é:15-19",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "não é? não é",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "com",
+          "todo",
+          "o",
+          "dia",
+          "não",
+          "é",
+          "não",
+          "é"
+        ],
+        "incoming_head_tokens": [
+          "entende",
+          "então",
+          "quer",
+          "dizer",
+          "que",
+          "o",
+          "senhor",
+          "daniel"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0032",
+        "current_segment_id": "seg_0033"
+      }
+    },
+    {
+      "span_id": "seg_0034:adjacent_duplication:não:21-23",
+      "segment_id": "seg_0034",
+      "rule": "exact_adjacent_duplication",
+      "original": "não. Não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não"
+          ],
+          "text": "não. Não"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 2000,
+        "previous_tail_tokens": [
+          "com",
+          "todo",
+          "o",
+          "dia",
+          "não",
+          "é",
+          "não",
+          "é"
+        ],
+        "incoming_head_tokens": [
+          "entende",
+          "então",
+          "entendi",
+          "então",
+          "quer",
+          "dizer",
+          "que",
+          "o"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0033",
+        "current_segment_id": "seg_0034"
+      }
+    },
+    {
+      "span_id": "seg_0039:adjacent_duplication:o_senhor:4-8",
+      "segment_id": "seg_0039",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor. O senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "o",
+            "senhor."
+          ],
+          "repeated_block": [
+            "O",
+            "senhor"
+          ],
+          "text": "o senhor. O senhor"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 29400,
+        "previous_tail_tokens": [
+          "favor"
+        ],
+        "incoming_head_tokens": [
+          "seu",
+          "daniel",
+          "vou",
+          "examinar",
+          "o",
+          "senhor",
+          "o",
+          "senhor"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0037",
+        "current_segment_id": "seg_0039"
+      }
+    },
+    {
+      "span_id": "seg_0039:adjacent_duplication:não:14-16",
+      "segment_id": "seg_0039",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 14,
+          "token_end": 16,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 29400,
+        "previous_tail_tokens": [
+          "favor"
+        ],
+        "incoming_head_tokens": [
+          "seu",
+          "daniel",
+          "vou",
+          "examinar",
+          "o",
+          "senhor",
+          "o",
+          "senhor"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0037",
+        "current_segment_id": "seg_0039"
+      }
+    },
+    {
+      "span_id": "seg_0048:adjacent_duplication:não:16-18",
+      "segment_id": "seg_0048",
+      "rule": "exact_adjacent_duplication",
+      "original": "não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 300,
+        "previous_tail_tokens": [
+          "a",
+          "doença",
+          "de",
+          "chagas",
+          "diz",
+          "que",
+          "está",
+          "sã"
+        ],
+        "incoming_head_tokens": [
+          "e",
+          "também",
+          "nega",
+          "o",
+          "uso",
+          "de",
+          "antiplaquetário",
+          "antiinflamatório"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0047",
+        "current_segment_id": "seg_0048"
+      }
+    },
+    {
+      "span_id": "seg_0049:adjacent_duplication:não:16-18",
+      "segment_id": "seg_0049",
+      "rule": "exact_adjacent_duplication",
+      "original": "não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "esse",
+          "hábito",
+          "ético",
+          "há",
+          "mais",
+          "de",
+          "vinte",
+          "anos"
+        ],
+        "incoming_head_tokens": [
+          "e",
+          "também",
+          "nega",
+          "o",
+          "uso",
+          "de",
+          "antiplaquetários",
+          "antiinflamatórios"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0048",
+        "current_segment_id": "seg_0049"
+      }
+    },
+    {
+      "span_id": "seg_0054:adjacent_duplication:o:58-60",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 58,
+          "token_end": 60,
+          "block": [
+            "o"
+          ],
+          "repeated_block": [
+            "o"
+          ],
+          "text": "o o"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "cross_segment_duplicate",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": 1100,
+        "previous_tail_tokens": [
+          "e",
+          "no",
+          "intestino",
+          "grosso",
+          "retos",
+          "e",
+          "ânus",
+          "entendi"
+        ],
+        "incoming_head_tokens": [
+          "yuri",
+          "quais",
+          "são",
+          "as",
+          "principais",
+          "causas",
+          "de",
+          "hemorragia"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0053",
+        "current_segment_id": "seg_0054"
+      }
+    },
+    {
+      "span_id": "seg_0020:adjacent_duplication:tá_bom:15-19",
+      "segment_id": "seg_0020",
+      "rule": "exact_adjacent_duplication",
+      "original": "tá bom? Tá bom.",
+      "status": "unresolved",
+      "reason": "punctuation_variant",
+      "first_seen_revision": 1,
+      "last_seen_revision": 7,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "tá",
+            "bom?"
+          ],
+          "repeated_block": [
+            "Tá",
+            "bom."
+          ],
+          "text": "tá bom? Tá bom."
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "punctuation_variant",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": false,
+        "temporal_gap_ms": 6774,
+        "previous_tail_tokens": [
+          "muito",
+          "abraço",
+          "muito",
+          "obrigada",
+          "tchau"
+        ],
+        "incoming_head_tokens": [
+          "pronto",
+          "agora",
+          "é",
+          "só",
+          "você",
+          "aguardar",
+          "aqui",
+          "nesse"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0019",
+        "current_segment_id": "seg_0020"
+      }
+    },
+    {
+      "span_id": "seg_0070:adjacent_duplication:a_presença:87-91",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "a presença, a presença",
+      "status": "unresolved",
+      "reason": "punctuation_variant",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 91,
+          "block": [
+            "a",
+            "presença,"
+          ],
+          "repeated_block": [
+            "a",
+            "presença"
+          ],
+          "text": "a presença, a presença"
+        },
+        "stage": "committed"
+      },
+      "candidate_class": "punctuation_variant",
+      "eligible_for_cross_segment_cleanup": false,
+      "boundary": {
+        "boundary_adjacent": true,
+        "temporally_close": true,
+        "temporal_gap_ms": -300,
+        "previous_tail_tokens": [
+          "na",
+          "aula",
+          "da",
+          "dra",
+          "bruna",
+          "né",
+          "na",
+          "na"
+        ],
+        "incoming_head_tokens": [
+          "pacientes",
+          "que",
+          "têm",
+          "problemas",
+          "de",
+          "fígado",
+          "geralmente",
+          "acabam"
+        ],
+        "exact_boundary_overlap_tokens": 0,
+        "previous_segment_id": "seg_0069",
+        "current_segment_id": "seg_0070"
+      }
+    }
+  ],
+  "boundary_index": {
+    "source": "previous_tail_tokens_to_incoming_head_tokens",
+    "segments_indexed": 89
+  },
+  "limitations": [
+    "Eligibility is evidence only; no projected_text_clean mutation is applied.",
+    "Speaker-boundary semantics require provider item metadata or human review."
+  ]
+}

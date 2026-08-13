@@ -1,0 +1,26 @@
+{
+  "_status": "validated",
+  "_instruction": "Validated from the user-supplied literal reference for sample_015.",
+  "medication": [
+    {
+      "name": "dipirona",
+      "expected_text": "aunica coisa que ele toma é dipirona"
+    }
+  ],
+  "number": [],
+  "dose": [],
+  "negation": [
+    {
+      "concept": "regular_medication_use",
+      "negated": true,
+      "expected_text": "Não. Eu tento tomar não."
+    }
+  ],
+  "clinical_term": [
+    {
+      "concept": "fever_pain",
+      "expected_text": "quando tem dor febre"
+    }
+  ],
+  "speaker_label": []
+}

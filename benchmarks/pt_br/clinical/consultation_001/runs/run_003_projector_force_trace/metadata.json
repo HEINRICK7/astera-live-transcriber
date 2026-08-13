@@ -1,0 +1,13 @@
+{
+  "fixture_id": "pt_br/clinical/consultation_001",
+  "language": "pt-BR",
+  "domain": "clinical_simulation",
+  "expected_duration_seconds": 122.488,
+  "speakers": 2,
+  "reference_status": "pending_manual_transcription",
+  "audio_status": "available_external_path",
+  "consent_status": "to_be_confirmed",
+  "audio_path": "/home/carlos-henrique/Músicas/audio_2min.mp3",
+  "capture_status": "completed",
+  "notes": "Do not use provider output as ground truth. Reference is still pending manual transcription."
+}

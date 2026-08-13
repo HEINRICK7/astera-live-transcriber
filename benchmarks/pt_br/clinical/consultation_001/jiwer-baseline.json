@@ -1,0 +1,4174 @@
+{
+  "reference_chars": 1614,
+  "reference_tokens": 263,
+  "items": [
+    {
+      "label": "xai_raw_committed",
+      "wer": 0.9504132231404959,
+      "cer": 0.741635687732342,
+      "mer": 0.5099778270509978,
+      "wil": 0.5525004123069029,
+      "alignment": {
+        "hits": 221,
+        "substitutions": 21,
+        "deletions": 0,
+        "insertions": 209,
+        "errors": [
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "acontecendo?\nNo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "começo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "achei",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "No",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "começo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "achei",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "que",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fosse",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "só",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "cansaço,",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "mas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "está",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piorando.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Entendo.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Essa",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "é",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "toda",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "a",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "cabeça",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alguma",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "região",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "acontecendo?\nPaciente:",
+            "hypothesis": "específica?\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piorando.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piorando.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Hoje",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "está",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "torno",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "de",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "oito.",
+            "category": "number"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "A",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "é",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "contínua",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "aparece",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "crises?",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Ela",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fica",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "o",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dia",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "todo,",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "mas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "no",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "final",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "da",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tarde.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Você",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "percebe",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "algum",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fator",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "que",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "melhora",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora?",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Quando",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fico",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "muito",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tempo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "olhando",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "para",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "o",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "computador.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Hoje",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "está",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "torno",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "de",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "oito.",
+            "category": "number"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "A",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "é",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "contínua",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "aparece",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "crises?",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Ela",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fica",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "o",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dia",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "todo,",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "mas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "no",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "final",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "da",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tarde.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Você",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "percebe",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "algum",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fator",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "que",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "melhora",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora?",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Quando",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "fico",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "muito",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tempo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "olhando",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "para",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "o",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "computador,",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "bastante.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Descansar",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "lugar",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "escuro",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ajuda.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "forte.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "forte.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "dor?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "oito.",
+            "category": "number"
+          },
+          {
+            "operation": "substitute",
+            "reference": "oito.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "crises?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "crises?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Ela",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tarde.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tarde.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piora?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pouco.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Náusea.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Eu",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tive",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ontem,",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "mas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "não",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "vomitei.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "A",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "visão",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ficou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pouco",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "embaçada",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "em",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alguns",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "momentos.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "pouco.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "possui",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alguma",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "doença",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "ou",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "faz",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "uso",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "de",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamentos?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Tenho",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "hipertensão",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "controlada",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "e",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tomo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "losartana",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "de",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "50",
+            "category": "number"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "miligramas",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "todos",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "os",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dias",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pela",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "manhã.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Médica,",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "você",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "visão?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "visão?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "A",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "momentos.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "momentos.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamentos?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamentos?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Como",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "está",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "seu",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "sono",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "e",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "sua",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alimentação?",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Tenho",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dormido",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "muito",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "mal",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "nas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "últimas",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "semanas.",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Também",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tenho",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "trabalhado",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "bastante",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "e",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "às",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "vezes",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pulo",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "refeições.\nMédica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamento?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamento?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "saiba.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "saiba.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "Como",
+            "category": "insertion"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alimentação?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alimentação?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "refeições.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "refeições.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alcoólicas?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alcoólicas?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "socialmente.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "socialmente.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "passos",
+            "hypothesis": "passos.\npassos",
+            "category": "word_error"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tratamento.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tratamento.\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "Tudo",
+            "hypothesis": "tudo",
+            "category": "punctuation_or_tokenization"
+          }
+        ],
+        "categories": {
+          "insertion": 181,
+          "speaker_label": 37,
+          "number": 4,
+          "medication_or_clinical_term": 6,
+          "word_error": 1,
+          "punctuation_or_tokenization": 1
+        }
+      },
+      "normalized_jiwer": {
+        "wer": 0.7566539923954373,
+        "cer": 0.7311028500619579,
+        "mer": 0.4316702819956616,
+        "wil": 0.433831231493777,
+        "alignment": {
+          "hits": 262,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 198,
+          "errors": [
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "No",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "começo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "achei",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "No",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "começo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "achei",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "que",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fosse",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "só",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "cansaço,",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "mas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "está",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piorando.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Entendo.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Essa",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dor",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "é",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "toda",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "a",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "cabeça",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "alguma",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "região",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "específica?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Hoje",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "está",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "torno",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "de",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "oito.",
+              "category": "number"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "A",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dor",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "é",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "contínua",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "aparece",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "crises?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Ela",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fica",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "o",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dia",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "todo,",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "mas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piora",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "no",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "final",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "da",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tarde.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Você",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "percebe",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "algum",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fator",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "que",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "melhora",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piora?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Quando",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fico",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "muito",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tempo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "olhando",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "para",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "o",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "computador.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Hoje",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "está",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "torno",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "de",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "oito.",
+              "category": "number"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "A",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dor",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "é",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "contínua",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "aparece",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "crises?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Ela",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fica",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "o",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dia",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "todo,",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "mas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piora",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "no",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "final",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "da",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tarde.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Você",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "percebe",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "algum",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fator",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "que",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "melhora",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piora?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Quando",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "fico",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "muito",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tempo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "olhando",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "para",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "o",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "computador,",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "piora",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "bastante.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Descansar",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "lugar",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "escuro",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ajuda.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Ela",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Náusea.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Eu",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tive",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ontem,",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "mas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "não",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "vomitei.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "A",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "visão",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ficou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "pouco",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "embaçada",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "em",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "alguns",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "momentos.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "possui",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "alguma",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "doença",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "ou",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "faz",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "uso",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "de",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "medicamentos?",
+              "category": "medication_or_clinical_term"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Tenho",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "hipertensão",
+              "category": "medication_or_clinical_term"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "controlada",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "e",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tomo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "losartana",
+              "category": "medication_or_clinical_term"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "de",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "50",
+              "category": "number"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "miligramas",
+              "category": "medication_or_clinical_term"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "todos",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "os",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dias",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "pela",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "manhã.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica,",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "você",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "A",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Como",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "está",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "seu",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "sono",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "e",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "sua",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "alimentação?",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Tenho",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "dormido",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "muito",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "mal",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "nas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "últimas",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "semanas.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Também",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "tenho",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "trabalhado",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "bastante",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "e",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "às",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "vezes",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "pulo",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "refeições.",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Médica:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Como",
+              "category": "insertion"
+            },
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "passos.",
+              "category": "insertion"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Tudo",
+              "hypothesis": "tudo",
+              "category": "punctuation_or_tokenization"
+            }
+          ],
+          "categories": {
+            "insertion": 173,
+            "speaker_label": 18,
+            "number": 3,
+            "medication_or_clinical_term": 4,
+            "punctuation_or_tokenization": 1
+          }
+        }
+      }
+    },
+    {
+      "label": "astera_structural_projection",
+      "wer": 0.1652892561983471,
+      "cer": 0.01982651796778191,
+      "mer": 0.15384615384615385,
+      "wil": 0.2277992277992279,
+      "alignment": {
+        "hits": 220,
+        "substitutions": 21,
+        "deletions": 1,
+        "insertions": 18,
+        "errors": [
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piorando.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piorando.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "forte.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "forte.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "dor?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "oito.",
+            "category": "number"
+          },
+          {
+            "operation": "substitute",
+            "reference": "oito.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "crises?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "crises?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tarde.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tarde.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piora?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pouco.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "pouco.\nMédica:",
+            "hypothesis": "Médica,",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "Você",
+            "hypothesis": "você",
+            "category": "punctuation_or_tokenization"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "visão?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "visão?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "momentos.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "momentos.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamentos?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamentos?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamento?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamento?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "saiba.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "saiba.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alimentação?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alimentação?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "refeições.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "refeições.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alcoólicas?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alcoólicas?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "socialmente.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "socialmente.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "passos",
+            "hypothesis": "passos.\npara",
+            "category": "word_error"
+          },
+          {
+            "operation": "delete",
+            "reference": "para",
+            "hypothesis": "",
+            "category": "omission"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tratamento.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tratamento.\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "Tudo",
+            "hypothesis": "tudo",
+            "category": "punctuation_or_tokenization"
+          }
+        ],
+        "categories": {
+          "insertion": 14,
+          "speaker_label": 19,
+          "number": 1,
+          "punctuation_or_tokenization": 2,
+          "medication_or_clinical_term": 2,
+          "word_error": 1,
+          "omission": 1
+        }
+      },
+      "normalized_jiwer": {
+        "wer": 0.019011406844106463,
+        "cer": 0.008674101610904586,
+        "mer": 0.01893939393939394,
+        "wil": 0.033860467795828963,
+        "alignment": {
+          "hits": 259,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 1,
+          "errors": [
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Médica:",
+              "hypothesis": "Médica,",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Você",
+              "hypothesis": "você",
+              "category": "punctuation_or_tokenization"
+            },
+            {
+              "operation": "substitute",
+              "reference": "passos",
+              "hypothesis": "passos.",
+              "category": "punctuation_or_tokenization"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Tudo",
+              "hypothesis": "tudo",
+              "category": "punctuation_or_tokenization"
+            }
+          ],
+          "categories": {
+            "speaker_label": 2,
+            "punctuation_or_tokenization": 3
+          }
+        }
+      }
+    },
+    {
+      "label": "astera_structural_adaptive",
+      "wer": 0.1652892561983471,
+      "cer": 0.01982651796778191,
+      "mer": 0.15384615384615385,
+      "wil": 0.2277992277992279,
+      "alignment": {
+        "hits": 220,
+        "substitutions": 21,
+        "deletions": 1,
+        "insertions": 18,
+        "errors": [
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piorando.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piorando.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "forte.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "forte.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "dor?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "dor?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "oito.",
+            "category": "number"
+          },
+          {
+            "operation": "substitute",
+            "reference": "oito.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "crises?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "crises?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tarde.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tarde.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "piora?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "piora?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "pouco.\nPaciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "pouco.\nMédica:",
+            "hypothesis": "Médica,",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "Você",
+            "hypothesis": "você",
+            "category": "punctuation_or_tokenization"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "visão?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "visão?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "momentos.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "momentos.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamentos?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamentos?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "medicamento?",
+            "category": "medication_or_clinical_term"
+          },
+          {
+            "operation": "substitute",
+            "reference": "medicamento?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "saiba.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "saiba.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alimentação?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alimentação?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "refeições.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "refeições.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "alcoólicas?",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "alcoólicas?\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "socialmente.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "socialmente.\nMédica:",
+            "hypothesis": "Médica:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "passos",
+            "hypothesis": "passos.\npara",
+            "category": "word_error"
+          },
+          {
+            "operation": "delete",
+            "reference": "para",
+            "hypothesis": "",
+            "category": "omission"
+          },
+          {
+            "operation": "insert",
+            "reference": "",
+            "hypothesis": "tratamento.",
+            "category": "insertion"
+          },
+          {
+            "operation": "substitute",
+            "reference": "tratamento.\nPaciente:",
+            "hypothesis": "Paciente:",
+            "category": "speaker_label"
+          },
+          {
+            "operation": "substitute",
+            "reference": "Tudo",
+            "hypothesis": "tudo",
+            "category": "punctuation_or_tokenization"
+          }
+        ],
+        "categories": {
+          "insertion": 14,
+          "speaker_label": 19,
+          "number": 1,
+          "punctuation_or_tokenization": 2,
+          "medication_or_clinical_term": 2,
+          "word_error": 1,
+          "omission": 1
+        }
+      },
+      "normalized_jiwer": {
+        "wer": 0.019011406844106463,
+        "cer": 0.008674101610904586,
+        "mer": 0.01893939393939394,
+        "wil": 0.033860467795828963,
+        "alignment": {
+          "hits": 259,
+          "substitutions": 4,
+          "deletions": 0,
+          "insertions": 1,
+          "errors": [
+            {
+              "operation": "insert",
+              "reference": "",
+              "hypothesis": "Paciente:",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Médica:",
+              "hypothesis": "Médica,",
+              "category": "speaker_label"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Você",
+              "hypothesis": "você",
+              "category": "punctuation_or_tokenization"
+            },
+            {
+              "operation": "substitute",
+              "reference": "passos",
+              "hypothesis": "passos.",
+              "category": "punctuation_or_tokenization"
+            },
+            {
+              "operation": "substitute",
+              "reference": "Tudo",
+              "hypothesis": "tudo",
+              "category": "punctuation_or_tokenization"
+            }
+          ],
+          "categories": {
+            "speaker_label": 2,
+            "punctuation_or_tokenization": 3
+          }
+        }
+      }
+    }
+  ],
+  "raw_jiwer": {
+    "xai_raw_committed": {
+      "wer": 0.9504132231404959,
+      "cer": 0.741635687732342,
+      "mer": 0.5099778270509978,
+      "wil": 0.5525004123069029
+    },
+    "astera_structural_projection": {
+      "wer": 0.1652892561983471,
+      "cer": 0.01982651796778191,
+      "mer": 0.15384615384615385,
+      "wil": 0.2277992277992279
+    },
+    "astera_structural_adaptive": {
+      "wer": 0.1652892561983471,
+      "cer": 0.01982651796778191,
+      "mer": 0.15384615384615385,
+      "wil": 0.2277992277992279
+    }
+  },
+  "normalized_jiwer": {
+    "xai_raw_committed": {
+      "wer": 0.7566539923954373,
+      "cer": 0.7311028500619579,
+      "mer": 0.4316702819956616,
+      "wil": 0.433831231493777
+    },
+    "astera_structural_projection": {
+      "wer": 0.019011406844106463,
+      "cer": 0.008674101610904586,
+      "mer": 0.01893939393939394,
+      "wil": 0.033860467795828963
+    },
+    "astera_structural_adaptive": {
+      "wer": 0.019011406844106463,
+      "cer": 0.008674101610904586,
+      "mer": 0.01893939393939394,
+      "wil": 0.033860467795828963
+    }
+  },
+  "clinical_checks": {
+    "xai_raw_committed": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "number",
+          "expected": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "matched": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "negation",
+          "expected": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "matched": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "medication",
+          "expected": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "speaker_label",
+          "expected": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "matched": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "astera_structural_projection": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "number",
+          "expected": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "matched": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "negation",
+          "expected": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "matched": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "medication",
+          "expected": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "speaker_label",
+          "expected": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "matched": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "astera_structural_adaptive": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "tomo losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "number",
+          "expected": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "matched": [
+            "Faz uns cinco dias que estou com muita dor de cabeça",
+            "Hoje está em torno de oito",
+            "losartana de 50 miligramas"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "negation",
+          "expected": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "matched": [
+            "não vomitei",
+            "Não que eu saiba",
+            "Não fumo"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "medication",
+          "expected": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "matched": [
+            "losartana de 50 miligramas todos os dias pela manhã"
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        },
+        {
+          "category": "speaker_label",
+          "expected": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "matched": [
+            "Bom dia, pode entrar. O que está acontecendo?",
+            "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+            "De zero a dez, qual a intensidade da dor?",
+            "Hoje está em torno de oito.",
+            "Você possui alguma doença ou faz uso de medicamentos?",
+            "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+            "Você fuma ou consome bebidas alcoólicas?",
+            "Não fumo e bebo apenas socialmente."
+          ],
+          "missing": [],
+          "accuracy": 1.0
+        }
+      ]
+    }
+  },
+  "clinical_fidelity": {
+    "xai_raw_committed": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": "tomo losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Faz uns cinco dias que estou com muita dor de cabeça",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Hoje está em torno de oito",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "losartana de 50 miligramas",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "não vomitei",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não que eu saiba",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não fumo",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "medication",
+          "expected": "losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, pode entrar. O que está acontecendo?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "De zero a dez, qual a intensidade da dor?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Hoje está em torno de oito.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você possui alguma doença ou faz uso de medicamentos?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você fuma ou consome bebidas alcoólicas?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Não fumo e bebo apenas socialmente.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        }
+      ],
+      "summary": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0,
+        "accuracy": 1.0
+      },
+      "ccer_experimental": {
+        "value": 0.0,
+        "status": "computed_context_value_polarity_speaker",
+        "numerator": 0,
+        "denominator": 8,
+        "critical_categories": [
+          "dose",
+          "medication",
+          "negation",
+          "number"
+        ]
+      }
+    },
+    "astera_structural_projection": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": "tomo losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Faz uns cinco dias que estou com muita dor de cabeça",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Hoje está em torno de oito",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "losartana de 50 miligramas",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "não vomitei",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não que eu saiba",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não fumo",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "medication",
+          "expected": "losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, pode entrar. O que está acontecendo?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "De zero a dez, qual a intensidade da dor?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Hoje está em torno de oito.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você possui alguma doença ou faz uso de medicamentos?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você fuma ou consome bebidas alcoólicas?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Não fumo e bebo apenas socialmente.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        }
+      ],
+      "summary": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0,
+        "accuracy": 1.0
+      },
+      "ccer_experimental": {
+        "value": 0.0,
+        "status": "computed_context_value_polarity_speaker",
+        "numerator": 0,
+        "denominator": 8,
+        "critical_categories": [
+          "dose",
+          "medication",
+          "negation",
+          "number"
+        ]
+      }
+    },
+    "astera_structural_adaptive": {
+      "items": [
+        {
+          "category": "dose",
+          "expected": "tomo losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Faz uns cinco dias que estou com muita dor de cabeça",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "Hoje está em torno de oito",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "number",
+          "expected": "losartana de 50 miligramas",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "não vomitei",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não que eu saiba",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "negation",
+          "expected": "Não fumo",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "polarity": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "medication",
+          "expected": "losartana de 50 miligramas todos os dias pela manhã",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true,
+            "value": true,
+            "unit": true,
+            "medication": true
+          },
+          "passed": true,
+          "clinically_relevant": true
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, pode entrar. O que está acontecendo?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "De zero a dez, qual a intensidade da dor?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Hoje está em torno de oito.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você possui alguma doença ou faz uso de medicamentos?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Você fuma ou consome bebidas alcoólicas?",
+          "speaker": "Médica",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        },
+        {
+          "category": "speaker_label",
+          "expected": "Não fumo e bebo apenas socialmente.",
+          "speaker": "Paciente",
+          "checks": {
+            "context": true,
+            "speaker": true
+          },
+          "passed": true,
+          "clinically_relevant": false
+        }
+      ],
+      "summary": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0,
+        "accuracy": 1.0
+      },
+      "ccer_experimental": {
+        "value": 0.0,
+        "status": "computed_context_value_polarity_speaker",
+        "numerator": 0,
+        "denominator": 8,
+        "critical_categories": [
+          "dose",
+          "medication",
+          "negation",
+          "number"
+        ]
+      }
+    }
+  }
+}

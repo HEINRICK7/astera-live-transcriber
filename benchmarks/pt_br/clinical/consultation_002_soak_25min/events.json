@@ -1,0 +1,1671 @@
+[
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0092",
+    "revision": 26,
+    "start_ms": 1403300,
+    "sequence": 1583,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0092",
+      "revision": 26,
+      "sequence": 1583,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 1,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0092",
+    "revision": 27,
+    "start_ms": 1403300,
+    "sequence": 1584,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0092",
+      "revision": 27,
+      "sequence": 1584,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 3,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0092",
+    "revision": 28,
+    "start_ms": 1403300,
+    "sequence": 1585,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito, posteriormente nesse paciente.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0092",
+      "revision": 28,
+      "sequence": 1585,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 5,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0092",
+    "revision": 29,
+    "start_ms": 1403300,
+    "sequence": 1586,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito posteriormente nesse paciente e reduzir",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0092",
+      "revision": 29,
+      "sequence": 1586,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 7,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0092",
+    "revision": 30,
+    "start_ms": 1403300,
+    "end_ms": 1433300,
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito posteriormente nesse paciente e reduzir",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0092",
+      "revision": 30,
+      "sequence": null,
+      "source": null,
+      "operation": null,
+      "projection_summary": {
+        "operation_count": 0,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1403300,
+          "end_ms": 1433300
+        },
+        "astera_segment_span": {
+          "start_ms": 1403300,
+          "end_ms": 1433300
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 9,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0093",
+    "revision": 1,
+    "start_ms": 1400920,
+    "sequence": 1587,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito posteriormente nesse paciente e reduzir a necessidade de trans",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0093",
+      "revision": 1,
+      "sequence": 1587,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 11,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0093",
+    "revision": 2,
+    "start_ms": 1400920,
+    "end_ms": 1433500,
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina, ela pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito posteriormente nesse paciente e reduzir a necessidade de trans",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0093",
+      "revision": 2,
+      "sequence": null,
+      "source": null,
+      "operation": null,
+      "projection_summary": {
+        "operation_count": 0,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1400920,
+          "end_ms": 1433500
+        },
+        "astera_segment_span": {
+          "start_ms": 1400920,
+          "end_ms": 1433500
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 13,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 15,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0094",
+    "revision": 1,
+    "start_ms": 1433200,
+    "sequence": 1588,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina pode levar a parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito posteriormente nesse paciente e reduzir a necessidade transfusional em pacientes",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0094",
+      "revision": 1,
+      "sequence": 1588,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 17,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0094",
+    "revision": 2,
+    "start_ms": 1433200,
+    "sequence": 1589,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina pode levar à parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito, posteriormente, nesse paciente, e reduzir a necessidade transfusional em pacientes com sangramento.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0094",
+      "revision": 2,
+      "sequence": 1589,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 19,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0094",
+    "revision": 3,
+    "start_ms": 1433200,
+    "sequence": 1590,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "e seja varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina pode levar à parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito, posteriormente, nesse paciente, e reduzir a necessidade transfusional em pacientes com sangramento e varizes oculares.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0094",
+      "revision": 3,
+      "sequence": 1590,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 21,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0094",
+    "revision": 4,
+    "start_ms": 1433200,
+    "end_ms": 1436180,
+    "sequence": 1592,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "segment_overlap": "temporal_overlap",
+    "projection_ops": 60,
+    "text": "Então, qual o fármaco utilizar nesses pacientes que chegam com hemorragia digestiva alta e suspeita de ser varicosa? Nós temos esses três fármacos: teriperaquina, somatostatina e octreotide. A administração precoce de terapia farmacológica com o análogo de somatostatina pode levar à parada temporária de sangramento, facilitar a execução do exame endoscópico que tem que ser feito, por ser o momento nesse paciente, e reduzir a necessidade transfusional em pacientes com sangramento de varizes esofágicas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0094",
+      "revision": 4,
+      "sequence": 1592,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "segment_overlap": "temporal_overlap",
+      "projection_summary": {
+        "operation_count": 60,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1433200,
+          "end_ms": 1436180
+        },
+        "astera_segment_span": {
+          "start_ms": 1433200,
+          "end_ms": 1436180
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 23,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 25,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 1,
+    "start_ms": 1437700,
+    "sequence": 1593,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "No.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 1,
+      "sequence": 1593,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 27,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 2,
+    "start_ms": 1437700,
+    "sequence": 1594,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "O fármaco de",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 2,
+      "sequence": 1594,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 29,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 3,
+    "start_ms": 1437700,
+    "sequence": 1595,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "O fardo de escolha nesse escândalo",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 3,
+      "sequence": 1595,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 31,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 4,
+    "start_ms": 1437700,
+    "sequence": 1596,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "O fármaco de escolha nesses casos é a teripárida.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 4,
+      "sequence": 1596,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 33,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 5,
+    "start_ms": 1437700,
+    "sequence": 1597,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "O fármaco de escolha nesses casos é a terapicina, pois a",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 5,
+      "sequence": 1597,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 35,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 6,
+    "start_ms": 1437700,
+    "sequence": 1598,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "O fármaco O fármaco de escolha nesses casos é a terapicina, pois ela",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 6,
+      "sequence": 1598,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 37,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 7,
+    "start_ms": 1437700,
+    "sequence": 1599,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "parece estar associada",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 7,
+      "sequence": 1599,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 39,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 8,
+    "start_ms": 1437700,
+    "sequence": 1600,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "parece estar associada à redução do montante",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 8,
+      "sequence": 1600,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 41,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 9,
+    "start_ms": 1437700,
+    "sequence": 1601,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "parece estar parece estar associada à redução da mortalidade.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 9,
+      "sequence": 1601,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 43,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 10,
+    "start_ms": 1437700,
+    "sequence": 1603,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "parece estar parece estar associada à redução da mortalidade. Ela é análogo sintético.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 10,
+      "sequence": 1603,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 45,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 11,
+    "start_ms": 1437700,
+    "sequence": 1604,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "parece estar parece estar associada à redução da mortalidade. Ela é análogo sintético da vasopressina.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 11,
+      "sequence": 1604,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 47,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0095",
+    "revision": 12,
+    "start_ms": 1437700,
+    "end_ms": 1447779,
+    "sequence": 1606,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "projection_ops": 60,
+    "text": "O fármaco de escolha nesses casos é a terapicina, pois ela parece estar associada à redução da mortalidade. Ela é análogo sintético da vasopressina.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0095",
+      "revision": 12,
+      "sequence": 1606,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "projection_summary": {
+        "operation_count": 60,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1437700,
+          "end_ms": 1447779
+        },
+        "astera_segment_span": {
+          "start_ms": 1437700,
+          "end_ms": 1447779
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 49,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 51,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 1,
+    "start_ms": 1449200,
+    "sequence": 1607,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "com menores efeitos",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 1,
+      "sequence": 1607,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 53,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 2,
+    "start_ms": 1449200,
+    "sequence": 1608,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 2,
+      "sequence": 1608,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 55,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 3,
+    "start_ms": 1449200,
+    "sequence": 1609,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 3,
+      "sequence": 1609,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 57,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 4,
+    "start_ms": 1449200,
+    "sequence": 1610,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 4,
+      "sequence": 1610,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 59,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 5,
+    "start_ms": 1449200,
+    "sequence": 1611,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado na dose de 100.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 5,
+      "sequence": 1611,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 61,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 6,
+    "start_ms": 1449200,
+    "sequence": 1612,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado na dose de 2 a 4 miligramas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 6,
+      "sequence": 1612,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 63,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 7,
+    "start_ms": 1449200,
+    "sequence": 1614,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado na dose de 2 a 4 miligramas intravenosos em bolos.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 7,
+      "sequence": 1614,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 65,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 8,
+    "start_ms": 1449200,
+    "sequence": 1615,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado na dose de 2 a 4 miligramas intravenosos em bolsas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 8,
+      "sequence": 1615,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 67,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 9,
+    "start_ms": 1449200,
+    "sequence": 1616,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Nesse sentido, por dois",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 9,
+      "sequence": 1616,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 69,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 10,
+    "start_ms": 1449200,
+    "sequence": 1617,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas por",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 10,
+      "sequence": 1617,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 71,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 11,
+    "start_ms": 1449200,
+    "sequence": 1618,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas por 48 horas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 11,
+      "sequence": 1618,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 73,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 12,
+    "start_ms": 1449200,
+    "sequence": 1619,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 12,
+      "sequence": 1619,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 75,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 13,
+    "start_ms": 1449200,
+    "sequence": 1621,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas. E seguido por 1 miligramas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 13,
+      "sequence": 1621,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 77,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 14,
+    "start_ms": 1449200,
+    "sequence": 1622,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas. E seguido por 1 miligrama a cada 4 horas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 14,
+      "sequence": 1622,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 79,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 15,
+    "start_ms": 1449200,
+    "sequence": 1623,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas. E seguido por 1 miligrama a cada 4 horas até total",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 15,
+      "sequence": 1623,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 81,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 16,
+    "start_ms": 1449200,
+    "sequence": 1624,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas. E seguido por 1 miligrama a cada 4 horas até totalizar 5 doses.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 16,
+      "sequence": 1624,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 83,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 17,
+    "start_ms": 1449200,
+    "sequence": 1625,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Seguido por 2 miligramas Seguido por 2 miligramas por 48 horas. E seguido por 1 miligrama a cada 4 horas até totalizar 5 dias de tratamento.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 17,
+      "sequence": 1625,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 85,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 18,
+    "start_ms": 1449200,
+    "sequence": 1627,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 18,
+      "sequence": 1627,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 87,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 19,
+    "start_ms": 1449200,
+    "sequence": 1628,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a somatotaxina.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 19,
+      "sequence": 1628,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 89,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 20,
+    "start_ms": 1449200,
+    "sequence": 1629,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a sômatuximina, como foi citado.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 20,
+      "sequence": 1629,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 91,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 21,
+    "start_ms": 1449200,
+    "sequence": 1630,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a sômatuximina, como foi citado, ela é fármaco",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 21,
+      "sequence": 1630,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 93,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 22,
+    "start_ms": 1449200,
+    "sequence": 1631,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a sômatuximina, como foi citado, ela é fármaco ação",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 22,
+      "sequence": 1631,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 95,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 23,
+    "start_ms": 1449200,
+    "sequence": 1632,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a somatotatina, como foi citado, ela é fármaco, a somatotatina é bem tolerada.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 23,
+      "sequence": 1632,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 97,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 24,
+    "start_ms": 1449200,
+    "sequence": 1633,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Outra opção é a somatotatina, como foi Outra opção é a somatotaxina, como foi citado, ela é fármaco, a somatotaxina é bem tolerada.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 24,
+      "sequence": 1633,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 99,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 25,
+    "start_ms": 1449200,
+    "sequence": 1634,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Possui poucos efeitos colaterais.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 25,
+      "sequence": 1634,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 101,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 26,
+    "start_ms": 1449200,
+    "sequence": 1636,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Possui poucos efeitos colaterais e pode ser mantida por até 10-12 semanas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 26,
+      "sequence": 1636,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 103,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 27,
+    "start_ms": 1449200,
+    "sequence": 1637,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Possui poucos efeitos colaterais e pode ser mantida por até 5 dias.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 27,
+      "sequence": 1637,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 105,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 28,
+    "start_ms": 1449200,
+    "sequence": 1638,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Possui poucos efeitos colaterais e pode ser mantida por Possui poucos efeitos colaterais e pode ser mantida por até 5 dias.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 28,
+      "sequence": 1638,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 107,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0096",
+    "revision": 29,
+    "start_ms": 1449200,
+    "end_ms": 1479200,
+    "text": "Possui poucos efeitos colaterais e pode ser mantida por Possui poucos efeitos colaterais e pode ser mantida por até 5 dias.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0096",
+      "revision": 29,
+      "sequence": null,
+      "source": null,
+      "operation": null,
+      "projection_summary": {
+        "operation_count": 0,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1449200,
+          "end_ms": 1479200
+        },
+        "astera_segment_span": {
+          "start_ms": 1449200,
+          "end_ms": 1479200
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 109,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 111,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 1,
+    "start_ms": 1478900,
+    "sequence": 1639,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "é na administração",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 1,
+      "sequence": 1639,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 113,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 2,
+    "start_ms": 1478900,
+    "sequence": 1640,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 2,
+      "sequence": 1640,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 115,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 3,
+    "start_ms": 1478900,
+    "sequence": 1641,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 3,
+      "sequence": 1641,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 117,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 4,
+    "start_ms": 1478900,
+    "sequence": 1642,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250 microgramas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 4,
+      "sequence": 1642,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 119,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 5,
+    "start_ms": 1478900,
+    "sequence": 1643,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250 microgramas seguida por infusão.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 5,
+      "sequence": 1643,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 121,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 6,
+    "start_ms": 1478900,
+    "sequence": 1644,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250 microgramas seguida por uma infusão contínua de 250",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 6,
+      "sequence": 1644,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 123,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 7,
+    "start_ms": 1478900,
+    "sequence": 1645,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250 microgramas seguida por uma infusão contínua de 250 a 500",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 7,
+      "sequence": 1645,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 125,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 8,
+    "start_ms": 1478900,
+    "sequence": 1646,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Na administração ali da dose inicial de 250 microgramas seguida por uma infusão contínua de 250 a 500 microgramas/hora.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 8,
+      "sequence": 1646,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 127,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0097",
+    "revision": 9,
+    "start_ms": 1478900,
+    "end_ms": 1486340,
+    "sequence": 1648,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "segment_overlap": "temporal_overlap",
+    "projection_ops": 61,
+    "text": "com menores efeitos colaterais, com uma meia-vida maior e pode ser administrado na dose de 2 a 4 mg intravenosos em bolos, seguido por 2 mg por 48 horas e seguido por 1 mg a cada 4 horas até totalizar 5 dias de tratamento. Outra opção é a sódio chetina, como foi citado, ela é fármaco, a sódio chetina é bem tolerada, possui poucos efeitos colaterais e pode ser mantida por até 5 dias na administração, ali da dose inicial de 250 microgramas seguida por uma infusão contínua de 250 a 500 microgramas/hora.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0097",
+      "revision": 9,
+      "sequence": 1648,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "segment_overlap": "temporal_overlap",
+      "projection_summary": {
+        "operation_count": 61,
+        "adjacent_dup_removed": 0
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1478900,
+          "end_ms": 1486340
+        },
+        "astera_segment_span": {
+          "start_ms": 1478900,
+          "end_ms": 1486340
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 129,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 131,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.partial",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 1,
+    "start_ms": 1487500,
+    "sequence": 1649,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "Então",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 1,
+      "sequence": 1649,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 133,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 2,
+    "start_ms": 1487500,
+    "sequence": 1650,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, esse foi o material",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 2,
+      "sequence": 1650,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 135,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 3,
+    "start_ms": 1487500,
+    "sequence": 1651,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, esse foi o material complementar.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 3,
+      "sequence": 1651,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 137,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 4,
+    "start_ms": 1487500,
+    "sequence": 1652,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, Então, esse foi o material complementar.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 4,
+      "sequence": 1652,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 139,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 5,
+    "start_ms": 1487500,
+    "sequence": 1654,
+    "source": "word_timeline",
+    "operation": "append_new_span",
+    "text": "Então, Então, esse foi o material complementar. Do grupo de hemorragia digestiva.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 5,
+      "sequence": 1654,
+      "source": "word_timeline",
+      "operation": "append_new_span",
+      "source_trace_line": 141,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 6,
+    "start_ms": 1487500,
+    "sequence": 1655,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, Então, esse foi o material complementar. Do grupo de hemorragia digestiva alta varicosas.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 6,
+      "sequence": 1655,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 143,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 7,
+    "start_ms": 1487500,
+    "sequence": 1656,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, Então, esse foi o material complementar. Do grupo de hemorragia digestiva auto-variável prestado por Daniel Rocha.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 7,
+      "sequence": 1656,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 145,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 8,
+    "start_ms": 1487500,
+    "sequence": 1657,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, Então, esse foi o material complementar. Do grupo de hemorragia digestiva alta varicoso apresentado por Daniel Rocha. Muito obrigado.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 8,
+      "sequence": 1657,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 147,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.revised",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 9,
+    "start_ms": 1487500,
+    "sequence": 1658,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "text": "Então, Então, esse foi o material complementar. Do grupo de hemorragia digestiva alta varicoso apresentado por Daniel Rocha. Muito obrigado. obrigado.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 9,
+      "sequence": 1658,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "source_trace_line": 149,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "transcript.committed",
+    "provider": "xai",
+    "segment_id": "seg_0098",
+    "revision": 10,
+    "start_ms": 1487500,
+    "end_ms": 1495240,
+    "sequence": 1659,
+    "source": "word_timeline",
+    "operation": "replace_overlap",
+    "adjacent_dup": 2,
+    "projection_ops": 62,
+    "text": "Então, Então, esse foi o material complementar do grupo de hemorragia digestiva auto-variável apresentado por Daniel Rocha. Muito obrigado. obrigado.",
+    "technical": {
+      "provider": "xai",
+      "provider_segment_id": "seg_0098",
+      "revision": 10,
+      "sequence": 1659,
+      "source": "word_timeline",
+      "operation": "replace_overlap",
+      "projection_summary": {
+        "operation_count": 62,
+        "adjacent_dup_removed": 2
+      },
+      "span_diagnostics": {
+        "provider_event_span": {
+          "start_ms": 1487500,
+          "end_ms": 1495240
+        },
+        "astera_segment_span": {
+          "start_ms": 1487500,
+          "end_ms": 1495240
+        },
+        "word_span_available": false
+      },
+      "source_trace_line": 151,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "speech.started",
+    "technical": {
+      "source_trace_line": 153,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "audio.completed",
+    "technical": {
+      "source_trace_line": 155,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "session.completed",
+    "technical": {
+      "source_trace_line": 156,
+      "source_trace_kind": "excerpt"
+    }
+  },
+  {
+    "type": "websocket.closed",
+    "code": 1000,
+    "clean": true,
+    "reason": "session completed",
+    "technical": {
+      "source_trace_line": 157,
+      "source_trace_kind": "excerpt"
+    }
+  }
+]

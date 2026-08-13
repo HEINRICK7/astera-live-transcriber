@@ -1,0 +1,39 @@
+{
+  "sample_id": "sample_012",
+  "reason": "clinical_target",
+  "categories": [
+    "numero_rni"
+  ],
+  "target_terms": [
+    "RNI"
+  ],
+  "matched_terms": [
+    "RNI"
+  ],
+  "observed_aliases": {
+    "RNI": [
+      "rni",
+      "tempo de protrombina"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0075",
+    "revision": 29,
+    "start_ms": 1235600,
+    "end_ms": 1265600,
+    "source_event_index": 1041
+  },
+  "clip": {
+    "start_ms": 1228100,
+    "end_ms": 1273100,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  }
+}

@@ -4,6 +4,7 @@ import wave
 
 from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 
+from astera_live_transcriber.application.ports.speech_errors import SpeechEngineError
 from astera_live_transcriber.infrastructure.audio.normalizer import AudioNormalizer
 from astera_live_transcriber.infrastructure.engines.parakeet.exceptions import ParakeetEngineError
 
@@ -31,7 +32,7 @@ async def transcribe_audio(
         )
     except (ValueError, wave.Error) as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
-    except ParakeetEngineError as exc:
+    except (ParakeetEngineError, SpeechEngineError) as exc:
         raise HTTPException(status_code=503, detail="transcription engine failed") from exc
 
     duration_ms = result.duration_ms or normalized.duration_ms

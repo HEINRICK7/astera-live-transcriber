@@ -1,0 +1,36 @@
+{
+  "kind": "clinical_long_session_quality_pilot",
+  "status": "reference_pending_manual_validation",
+  "selection_policy": {
+    "sample_count": 3,
+    "stop_after_pilot": true,
+    "source_of_truth": "audio.wav only"
+  },
+  "samples": [
+    {
+      "sample_id": "sample_002",
+      "role": "ordinary_clinical_conversation",
+      "source_dir": "../sample_002",
+      "reference": "reference.txt (not created)",
+      "annotations": "clinical_annotations.json",
+      "expected_manual_action": "Listen to audio.wav, write literal reference.txt, fill clinical_annotations.json, set _status=validated."
+    },
+    {
+      "sample_id": "sample_015",
+      "role": "medication_number_negation_candidate",
+      "source_dir": "../sample_015",
+      "reference": "reference.txt (not created)",
+      "annotations": "clinical_annotations.json",
+      "expected_manual_action": "Listen to audio.wav, write literal reference.txt, fill clinical_annotations.json, set _status=validated."
+    },
+    {
+      "sample_id": "sample_019",
+      "role": "difficult_medical_terminology",
+      "source_dir": "../sample_019",
+      "reference": "reference.txt (not created)",
+      "annotations": "clinical_annotations.json",
+      "expected_manual_action": "Listen to audio.wav, write literal reference.txt, fill clinical_annotations.json, set _status=validated."
+    }
+  ],
+  "benchmark_command_after_validation": "Run the sample benchmark only after the pilot validator reports references_ready=3 and benchmark_ready=true."
+}

@@ -1,0 +1,48 @@
+{
+  "sample_id": "sample_010",
+  "reason": "clinical_target",
+  "categories": [
+    "numero_hemacias"
+  ],
+  "target_terms": [
+    "13 hemácias",
+    "sete"
+  ],
+  "matched_terms": [
+    "13 hemácias",
+    "sete"
+  ],
+  "observed_aliases": {
+    "13 hemácias": [
+      "13 hemácias"
+    ],
+    "sete": [
+      "7"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0066",
+    "revision": 29,
+    "start_ms": 1081900,
+    "end_ms": 1111900,
+    "source_event_index": 891
+  },
+  "clip": {
+    "start_ms": 1074400,
+    "end_ms": 1119400,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  },
+  "reference_file": "reference.txt (not created yet)",
+  "annotation_file": "clinical_annotations.json",
+  "provider_file": "provider_committed.txt",
+  "structural_file": "projected_text.txt",
+  "clean_file": "projected_text_clean.pending.txt (not scoreable)"
+}

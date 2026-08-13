@@ -1,0 +1,3564 @@
+{
+  "analysis": {
+    "kind": "safe_cleanup_unresolved_span_analysis",
+    "rules_added": 0,
+    "cleanup_promoted": false
+  },
+  "sets": {
+    "quality_safe_adjacent_candidates": 87,
+    "covered_by_cleanup": 50,
+    "safe_but_unresolved": 37,
+    "cleanup_only": 107
+  },
+  "summary": {
+    "unresolved_count": 37,
+    "category_counts": {
+      "ambiguous_repetition": 14,
+      "punctuation_variant": 2,
+      "cross_segment_duplicate": 18,
+      "protected_context": 3
+    },
+    "protected_unresolved": 3,
+    "ambiguous_unresolved": 14
+  },
+  "unresolved_spans": [
+    {
+      "span_id": "seg_0004:adjacent_duplication:o_quê:42-46",
+      "segment_id": "seg_0004",
+      "rule": "exact_adjacent_duplication",
+      "original": "o quê? o quê?",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 42,
+          "token_end": 46,
+          "block": [
+            "o",
+            "quê?"
+          ],
+          "repeated_block": [
+            "o",
+            "quê?"
+          ],
+          "text": "o quê? o quê?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0020:adjacent_duplication:tá_bom:15-19",
+      "segment_id": "seg_0020",
+      "rule": "exact_adjacent_duplication",
+      "original": "tá bom? Tá bom.",
+      "status": "unresolved",
+      "reason": "punctuation_variant",
+      "first_seen_revision": 1,
+      "last_seen_revision": 7,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "tá",
+            "bom?"
+          ],
+          "repeated_block": [
+            "Tá",
+            "bom."
+          ],
+          "text": "tá bom? Tá bom."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0020:adjacent_duplication:melhores:19-21",
+      "segment_id": "seg_0020",
+      "rule": "exact_adjacent_duplication",
+      "original": "Melhores. Melhores.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 7,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Melhores."
+          ],
+          "repeated_block": [
+            "Melhores."
+          ],
+          "text": "Melhores. Melhores."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0020:adjacent_duplication:obrigado:21-23",
+      "segment_id": "seg_0020",
+      "rule": "exact_adjacent_duplication",
+      "original": "Obrigado. Obrigado.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 7,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado."
+          ],
+          "text": "Obrigado. Obrigado."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0022:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0022",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0023:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0023",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0024:adjacent_duplication:boa_tarde:0-4",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "Boa tarde. Boa tarde.",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0025:adjacent_duplication:é_é:4-8",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é é, é",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "é,",
+            "é"
+          ],
+          "repeated_block": [
+            "é,",
+            "é"
+          ],
+          "text": "é, é é, é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0025:adjacent_duplication:não_não:82-86",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não, não. não.",
+      "status": "unresolved",
+      "reason": "protected_context",
+      "first_seen_revision": 1,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 82,
+          "token_end": 86,
+          "block": [
+            "Não,",
+            "não,"
+          ],
+          "repeated_block": [
+            "não.",
+            "não."
+          ],
+          "text": "Não, não, não. não."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0026:adjacent_duplication:não:0-2",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, Não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "Não, Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0026:adjacent_duplication:escura:50-52",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "escura. escura.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 50,
+          "token_end": 52,
+          "block": [
+            "escura."
+          ],
+          "repeated_block": [
+            "escura."
+          ],
+          "text": "escura. escura."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0027:adjacent_duplication:não:73-75",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 73,
+          "token_end": 75,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0027:adjacent_duplication:nadar:84-86",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "nadar. nadar.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 84,
+          "token_end": 86,
+          "block": [
+            "nadar."
+          ],
+          "repeated_block": [
+            "nadar."
+          ],
+          "text": "nadar. nadar."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0028:adjacent_duplication:não:29-31",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0029:adjacent_duplication:não:29-31",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não,",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0030:adjacent_duplication:o_senhor:3-7",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor, o senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0031:adjacent_duplication:o_senhor:3-7",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor, o senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0032:adjacent_duplication:não_é:15-19",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "não é? não é",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0033:adjacent_duplication:não_é:15-19",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "não é? não é",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0034:adjacent_duplication:não:21-23",
+      "segment_id": "seg_0034",
+      "rule": "exact_adjacent_duplication",
+      "original": "não. Não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não"
+          ],
+          "text": "não. Não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0035:adjacent_duplication:podem:51-53",
+      "segment_id": "seg_0035",
+      "rule": "exact_adjacent_duplication",
+      "original": "Podem. Podem.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 20,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 51,
+          "token_end": 53,
+          "block": [
+            "Podem."
+          ],
+          "repeated_block": [
+            "Podem."
+          ],
+          "text": "Podem. Podem."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0039:adjacent_duplication:o_senhor:4-8",
+      "segment_id": "seg_0039",
+      "rule": "exact_adjacent_duplication",
+      "original": "o senhor. O senhor",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "o",
+            "senhor."
+          ],
+          "repeated_block": [
+            "O",
+            "senhor"
+          ],
+          "text": "o senhor. O senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0039:adjacent_duplication:não:14-16",
+      "segment_id": "seg_0039",
+      "rule": "exact_adjacent_duplication",
+      "original": "Não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 14,
+          "token_end": 16,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0040:adjacent_duplication:cabeça_girada_para_lá:9-17",
+      "segment_id": "seg_0040",
+      "rule": "exact_adjacent_duplication",
+      "original": "cabeça girada para lá. cabeça girada para lá.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 17,
+          "block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "repeated_block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "text": "cabeça girada para lá. cabeça girada para lá."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0041:adjacent_duplication:por_favor_marque_aqui:18-26",
+      "segment_id": "seg_0041",
+      "rule": "exact_adjacent_duplication",
+      "original": "por favor. Marque aqui, por favor. Marque aqui,",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 26,
+          "block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "repeated_block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "text": "por favor. Marque aqui, por favor. Marque aqui,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0048:adjacent_duplication:não:16-18",
+      "segment_id": "seg_0048",
+      "rule": "exact_adjacent_duplication",
+      "original": "não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0049:adjacent_duplication:não:16-18",
+      "segment_id": "seg_0049",
+      "rule": "exact_adjacent_duplication",
+      "original": "não, não",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0051:adjacent_duplication:sexo:22-24",
+      "segment_id": "seg_0051",
+      "rule": "exact_adjacent_duplication",
+      "original": "sexo sexo",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 22,
+          "token_end": 24,
+          "block": [
+            "sexo"
+          ],
+          "repeated_block": [
+            "sexo"
+          ],
+          "text": "sexo sexo"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0054:adjacent_duplication:o:58-60",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "status": "unresolved",
+      "reason": "cross_segment_duplicate",
+      "first_seen_revision": 1,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 58,
+          "token_end": 60,
+          "block": [
+            "o"
+          ],
+          "repeated_block": [
+            "o"
+          ],
+          "text": "o o"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0054:adjacent_duplication:doença_base:67-71",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "doença base? doença base?",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 71,
+          "block": [
+            "doença",
+            "base?"
+          ],
+          "repeated_block": [
+            "doença",
+            "base?"
+          ],
+          "text": "doença base? doença base?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0065:adjacent_duplication:estou:11-13",
+      "segment_id": "seg_0065",
+      "rule": "exact_adjacent_duplication",
+      "original": "estou. estou.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 11,
+          "token_end": 13,
+          "block": [
+            "estou."
+          ],
+          "repeated_block": [
+            "estou."
+          ],
+          "text": "estou. estou."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0067:adjacent_duplication:e_aí:18-22",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "e aí e aí",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 22,
+          "block": [
+            "e",
+            "aí"
+          ],
+          "repeated_block": [
+            "e",
+            "aí"
+          ],
+          "text": "e aí e aí"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0070:adjacent_duplication:a_presença:87-91",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "a presença, a presença",
+      "status": "unresolved",
+      "reason": "punctuation_variant",
+      "first_seen_revision": 1,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 91,
+          "block": [
+            "a",
+            "presença,"
+          ],
+          "repeated_block": [
+            "a",
+            "presença"
+          ],
+          "text": "a presença, a presença"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0072:adjacent_duplication:muito:0-2",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "Muito Muito",
+      "status": "unresolved",
+      "reason": "protected_context",
+      "first_seen_revision": 1,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Muito"
+          ],
+          "repeated_block": [
+            "Muito"
+          ],
+          "text": "Muito Muito"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0074:adjacent_duplication:o_c:13-17",
+      "segment_id": "seg_0074",
+      "rule": "exact_adjacent_duplication",
+      "original": "o C. o C.",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 13,
+          "token_end": 17,
+          "block": [
+            "o",
+            "C."
+          ],
+          "repeated_block": [
+            "o",
+            "C."
+          ],
+          "text": "o C. o C."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0077:adjacent_duplication:e_além_disso:47-53",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "E além disso, E além disso,",
+      "status": "unresolved",
+      "reason": "ambiguous_repetition",
+      "first_seen_revision": 1,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "protected": false,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 53,
+          "block": [
+            "E",
+            "além",
+            "disso,"
+          ],
+          "repeated_block": [
+            "E",
+            "além",
+            "disso,"
+          ],
+          "text": "E além disso, E além disso,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "span_id": "seg_0086:adjacent_duplication:dessa_forma_não:0-6",
+      "segment_id": "seg_0086",
+      "rule": "exact_adjacent_duplication",
+      "original": "Dessa forma, não Dessa forma, não",
+      "status": "unresolved",
+      "reason": "protected_context",
+      "first_seen_revision": 1,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "protected": true,
+      "provider_origin": true,
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 6,
+          "block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "repeated_block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "text": "Dessa forma, não Dessa forma, não"
+        },
+        "stage": "committed"
+      }
+    }
+  ],
+  "covered_candidates": [
+    {
+      "segment_id": "seg_0002",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0003",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0004",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 51,
+          "token_end": 53,
+          "block": [
+            "enjoado,"
+          ],
+          "repeated_block": [
+            "enjoado"
+          ],
+          "text": "enjoado, enjoado"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0010",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 7,
+          "token_end": 9,
+          "block": [
+            "pediônios."
+          ],
+          "repeated_block": [
+            "Pediônios."
+          ],
+          "text": "pediônios. Pediônios."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0010",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 20,
+          "block": [
+            "e"
+          ],
+          "repeated_block": [
+            "e"
+          ],
+          "text": "e e"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0011",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Está"
+          ],
+          "repeated_block": [
+            "Está"
+          ],
+          "text": "Está Está"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0021",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado,"
+          ],
+          "text": "Obrigado. Obrigado,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 49,
+          "token_end": 51,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 57,
+          "token_end": 59,
+          "block": [
+            "de,"
+          ],
+          "repeated_block": [
+            "de"
+          ],
+          "text": "de, de"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 28,
+          "token_end": 30,
+          "block": [
+            "que,"
+          ],
+          "repeated_block": [
+            "que,"
+          ],
+          "text": "que, que,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 39,
+          "token_end": 41,
+          "block": [
+            "bem,"
+          ],
+          "repeated_block": [
+            "bem"
+          ],
+          "text": "bem, bem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 69,
+          "token_end": 71,
+          "block": [
+            "Entende,"
+          ],
+          "repeated_block": [
+            "entende."
+          ],
+          "text": "Entende, entende."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 52,
+          "token_end": 54,
+          "block": [
+            "Era"
+          ],
+          "repeated_block": [
+            "Era"
+          ],
+          "text": "Era Era"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Ele"
+          ],
+          "repeated_block": [
+            "Ele"
+          ],
+          "text": "Ele Ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 89,
+          "block": [
+            "casa,"
+          ],
+          "repeated_block": [
+            "casa,"
+          ],
+          "text": "casa, casa,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0028",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 49,
+          "block": [
+            "tem,"
+          ],
+          "repeated_block": [
+            "tem"
+          ],
+          "text": "tem, tem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0029",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 49,
+          "block": [
+            "tem,"
+          ],
+          "repeated_block": [
+            "tem"
+          ],
+          "text": "tem, tem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0030",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "ele,"
+          ],
+          "repeated_block": [
+            "ele"
+          ],
+          "text": "ele, ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0031",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "ele,"
+          ],
+          "repeated_block": [
+            "ele"
+          ],
+          "text": "ele, ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0035",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "e"
+          ],
+          "repeated_block": [
+            "e"
+          ],
+          "text": "e e"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 22,
+          "token_end": 26,
+          "block": [
+            "Respira.",
+            "Solta."
+          ],
+          "repeated_block": [
+            "Respira.",
+            "Solta."
+          ],
+          "text": "Respira. Solta. Respira. Solta."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Respira,"
+          ],
+          "repeated_block": [
+            "respira."
+          ],
+          "text": "Respira, respira."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 2,
+          "token_end": 4,
+          "block": [
+            "Pode"
+          ],
+          "repeated_block": [
+            "Pode"
+          ],
+          "text": "Pode Pode"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0041",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Se"
+          ],
+          "repeated_block": [
+            "Se"
+          ],
+          "text": "Se Se"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "E"
+          ],
+          "repeated_block": [
+            "E"
+          ],
+          "text": "E E"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 20,
+          "token_end": 22,
+          "block": [
+            "Pode."
+          ],
+          "repeated_block": [
+            "Pode"
+          ],
+          "text": "Pode. Pode"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 33,
+          "token_end": 35,
+          "block": [
+            "masculino,"
+          ],
+          "repeated_block": [
+            "masculino,"
+          ],
+          "text": "masculino, masculino,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 70,
+          "token_end": 72,
+          "block": [
+            "horas,"
+          ],
+          "repeated_block": [
+            "horas,"
+          ],
+          "text": "horas, horas,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0052",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 31,
+          "token_end": 33,
+          "block": [
+            "concordo."
+          ],
+          "repeated_block": [
+            "Concordo."
+          ],
+          "text": "concordo. Concordo."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0056",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 81,
+          "token_end": 83,
+          "block": [
+            "hepatogênico"
+          ],
+          "repeated_block": [
+            "hepatogênico"
+          ],
+          "text": "hepatogênico hepatogênico"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0057",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 30,
+          "token_end": 32,
+          "block": [
+            "da,"
+          ],
+          "repeated_block": [
+            "da"
+          ],
+          "text": "da, da"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0057",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 43,
+          "token_end": 45,
+          "block": [
+            "é,"
+          ],
+          "repeated_block": [
+            "é"
+          ],
+          "text": "é, é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 34,
+          "token_end": 36,
+          "block": [
+            "da,"
+          ],
+          "repeated_block": [
+            "da"
+          ],
+          "text": "da, da"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 49,
+          "block": [
+            "é,"
+          ],
+          "repeated_block": [
+            "é,"
+          ],
+          "text": "é, é,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 70,
+          "token_end": 72,
+          "block": [
+            "queda"
+          ],
+          "repeated_block": [
+            "queda"
+          ],
+          "text": "queda queda"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0059",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "uma,"
+          ],
+          "repeated_block": [
+            "uma"
+          ],
+          "text": "uma, uma"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0060",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 60,
+          "token_end": 62,
+          "block": [
+            "uma,"
+          ],
+          "repeated_block": [
+            "uma"
+          ],
+          "text": "uma, uma"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0065",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 2,
+          "token_end": 4,
+          "block": [
+            "a"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 11,
+          "block": [
+            "chegaram"
+          ],
+          "repeated_block": [
+            "chegaram"
+          ],
+          "text": "chegaram chegaram"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 69,
+          "block": [
+            "de"
+          ],
+          "repeated_block": [
+            "de,"
+          ],
+          "text": "de de,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 71,
+          "token_end": 73,
+          "block": [
+            "Porque"
+          ],
+          "repeated_block": [
+            "porque"
+          ],
+          "text": "Porque porque"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 79,
+          "token_end": 81,
+          "block": [
+            "Então"
+          ],
+          "repeated_block": [
+            "então"
+          ],
+          "text": "Então então"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 116,
+          "token_end": 118,
+          "block": [
+            "número"
+          ],
+          "repeated_block": [
+            "número"
+          ],
+          "text": "número número"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0068",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 17,
+          "block": [
+            "Na"
+          ],
+          "repeated_block": [
+            "na"
+          ],
+          "text": "Na na"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0069",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 17,
+          "block": [
+            "Na"
+          ],
+          "repeated_block": [
+            "na"
+          ],
+          "text": "Na na"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0072",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 69,
+          "block": [
+            "o"
+          ],
+          "repeated_block": [
+            "o"
+          ],
+          "text": "o o"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0072",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 91,
+          "token_end": 93,
+          "block": [
+            "A"
+          ],
+          "repeated_block": [
+            "A"
+          ],
+          "text": "A A"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0077",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 80,
+          "token_end": 82,
+          "block": [
+            "bandas"
+          ],
+          "repeated_block": [
+            "bandas"
+          ],
+          "text": "bandas bandas"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0095",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Então,"
+          ],
+          "repeated_block": [
+            "Então,"
+          ],
+          "text": "Então, Então,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0095",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 20,
+          "block": [
+            "obrigado."
+          ],
+          "repeated_block": [
+            "obrigado."
+          ],
+          "text": "obrigado. obrigado."
+        },
+        "stage": "committed"
+      }
+    }
+  ],
+  "cleanup_only_spans": [
+    {
+      "cleanup_id": "seg_0005:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0005",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0011:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0011",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 5,
+      "last_seen_revision": 5,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0013:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0013",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0024:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:é:4-6",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0026:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0027:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 27,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0028:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0028:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0029:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0029:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0030:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0030:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0031:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0031:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0032:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0032:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0033:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0033:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0034:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0034",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0035:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0035",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 20,
+      "last_seen_revision": 20,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0040:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0040",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0044:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0044",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0045:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0045",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0046:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0046",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0046:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0046",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0047:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0047",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0047:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0047",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0048:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0048",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0049:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0049",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0050:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0050",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0051:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0051",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0052:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0052",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0052:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0052",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0053:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0053",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0053:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0053",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0054:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0054:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0055:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0055",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0056:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0056",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 24,
+      "last_seen_revision": 24,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0056:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0056",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 24,
+      "last_seen_revision": 24,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0058:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0058",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:da:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:da:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0061:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0061",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0062:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0062",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0062:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0062",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0063:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0063",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0064:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0064",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 16,
+      "last_seen_revision": 16,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0064:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0064",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 16,
+      "last_seen_revision": 16,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0068:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0068",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 26,
+      "last_seen_revision": 26,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0069:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0069",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0070:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0070:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0071:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0071",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0071:adjacent_duplication:na:unknown-unknown",
+      "segment_id": "seg_0071",
+      "rule": "exact_adjacent_duplication",
+      "original": "Na na",
+      "replacement": "Na",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:é:unknown-unknown",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0073:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0073",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0073:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0073",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0074:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0074",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0077:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0077:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0078:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0078",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0078:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0078",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0086:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0086",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0087:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0087",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0089:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0089",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0089:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0089",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0091:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0091",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0091:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0091",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0092:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0092",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 12,
+      "last_seen_revision": 12,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0094:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0094",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 9,
+      "last_seen_revision": 9,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0094:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0094",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 9,
+      "last_seen_revision": 9,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    }
+  ],
+  "limitations": [
+    "No new cleanup rule is inferred from this report.",
+    "Speaker/boundary semantics require provider item metadata or human review."
+  ]
+}

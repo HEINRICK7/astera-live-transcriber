@@ -1,0 +1,43 @@
+{
+  "sample_id": "sample_015",
+  "reason": "clinical_target",
+  "categories": [
+    "medicamento"
+  ],
+  "target_terms": [
+    "ibuprofeno",
+    "medicação"
+  ],
+  "matched_terms": [
+    "ibuprofeno",
+    "medicação"
+  ],
+  "observed_aliases": {
+    "ibuprofeno": [
+      "ibuprofeno"
+    ],
+    "medicação": [
+      "medicação"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0028",
+    "revision": 30,
+    "start_ms": 398000,
+    "end_ms": 428000,
+    "source_event_index": 255
+  },
+  "clip": {
+    "start_ms": 390500,
+    "end_ms": 435500,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  }
+}

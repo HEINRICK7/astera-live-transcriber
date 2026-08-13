@@ -1,0 +1,18 @@
+{
+  "status": "not_a_benchmark_run",
+  "reason": "xAI audio queue backpressure",
+  "error_code": "audio_stream_error",
+  "provider_error": "xAI audio queue is full",
+  "session_id": "sess_286e823f8e13",
+  "events_jsonl": "events.jsonl",
+  "persisted_events": 639,
+  "audio_started": true,
+  "transcription_started": true,
+  "last_audio_timestamp_ms": 883100,
+  "last_segment_id": "seg_0053",
+  "incremental_projection_enabled": true,
+  "source_audio": "/home/carlos-henrique/Músicas/medical.mp3",
+  "websocket_close_code": null,
+  "websocket_clean": false,
+  "note": "The xAI credential worked and the stream ran for approximately 14m43s. The run is retained for backpressure diagnostics and must not be used as a complete A/B benchmark."
+}

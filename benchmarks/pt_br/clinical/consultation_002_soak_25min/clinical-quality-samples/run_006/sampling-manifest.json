@@ -1,0 +1,809 @@
+{
+  "kind": "clinical_long_session_quality_sampling",
+  "status": "reference_pending_manual_validation",
+  "source_events": "benchmarks/pt_br/clinical/consultation_002_soak_25min/runs/run_006_incremental_backpressure_metrics/events.json",
+  "source_audio": "/home/carlos-henrique/Músicas/medical.mp3",
+  "source_audio_sha256": "37b83a787a2148beba24d38866e9335b8c26d213b8c8369d81960d4f43e317f7",
+  "duration_ms": 1502720,
+  "sample_duration_ms": 45000,
+  "reference_policy": "Listen to every clip and write reference.txt literally from audio. Do not copy provider or projected output as ground truth.",
+  "hypothesis_warning": "The source run stores projected_text as a cumulative transcript snapshot. It is preserved for audit, but must not be scored as a segment-local hypothesis until a local extraction is manually validated.",
+  "samples": [
+    {
+      "sample_id": "sample_001",
+      "reason": "time_bucket",
+      "categories": [
+        "0-5min"
+      ],
+      "target_terms": [],
+      "matched_terms": [],
+      "observed_aliases": {},
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0013",
+        "revision": 6,
+        "start_ms": 103500,
+        "end_ms": 103500,
+        "source_event_index": 91
+      },
+      "clip": {
+        "start_ms": 81000,
+        "end_ms": 126000,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_002",
+      "reason": "time_bucket",
+      "categories": [
+        "5-10min"
+      ],
+      "target_terms": [],
+      "matched_terms": [],
+      "observed_aliases": {},
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0030",
+        "revision": 31,
+        "start_ms": 428000,
+        "end_ms": 458000,
+        "source_event_index": 290
+      },
+      "clip": {
+        "start_ms": 420500,
+        "end_ms": 465500,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_003",
+      "reason": "time_bucket",
+      "categories": [
+        "10-15min"
+      ],
+      "target_terms": [],
+      "matched_terms": [],
+      "observed_aliases": {},
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0048",
+        "revision": 31,
+        "start_ms": 738600,
+        "end_ms": 768600,
+        "source_event_index": 519
+      },
+      "clip": {
+        "start_ms": 731100,
+        "end_ms": 776100,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_004",
+      "reason": "time_bucket",
+      "categories": [
+        "15-20min"
+      ],
+      "target_terms": [],
+      "matched_terms": [],
+      "observed_aliases": {},
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0063",
+        "revision": 31,
+        "start_ms": 1029600,
+        "end_ms": 1059600,
+        "source_event_index": 837
+      },
+      "clip": {
+        "start_ms": 1022100,
+        "end_ms": 1067100,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_005",
+      "reason": "time_bucket",
+      "categories": [
+        "20-25min"
+      ],
+      "target_terms": [],
+      "matched_terms": [],
+      "observed_aliases": {},
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0081",
+        "revision": 2,
+        "start_ms": 1351800,
+        "end_ms": 1351800,
+        "source_event_index": 1139
+      },
+      "clip": {
+        "start_ms": 1329300,
+        "end_ms": 1374300,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_006",
+      "reason": "clinical_target",
+      "categories": [
+        "anamnese_vomito"
+      ],
+      "target_terms": [
+        "vômito"
+      ],
+      "matched_terms": [
+        "vômito"
+      ],
+      "observed_aliases": {
+        "vômito": [
+          "vômito"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0025",
+        "revision": 32,
+        "start_ms": 365800,
+        "end_ms": 365800,
+        "source_event_index": 166
+      },
+      "clip": {
+        "start_ms": 343300,
+        "end_ms": 388300,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_007",
+      "reason": "clinical_target",
+      "categories": [
+        "anamnese_diarreia"
+      ],
+      "target_terms": [
+        "diarreia"
+      ],
+      "matched_terms": [
+        "diarreia"
+      ],
+      "observed_aliases": {
+        "diarreia": [
+          "diarreia"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0026",
+        "revision": 29,
+        "start_ms": 374500,
+        "end_ms": 374500,
+        "source_event_index": 196
+      },
+      "clip": {
+        "start_ms": 352000,
+        "end_ms": 397000,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_008",
+      "reason": "clinical_target",
+      "categories": [
+        "anamnese_doenca_hepatica"
+      ],
+      "target_terms": [
+        "doença no fígado"
+      ],
+      "matched_terms": [
+        "doença no fígado"
+      ],
+      "observed_aliases": {
+        "doença no fígado": [
+          "doença no fígado"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0026",
+        "revision": 29,
+        "start_ms": 374500,
+        "end_ms": 374500,
+        "source_event_index": 196
+      },
+      "clip": {
+        "start_ms": 352000,
+        "end_ms": 397000,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_009",
+      "reason": "clinical_target",
+      "categories": [
+        "negacao"
+      ],
+      "target_terms": [
+        "nega",
+        "não",
+        "não tem"
+      ],
+      "matched_terms": [
+        "nega",
+        "não",
+        "não tem"
+      ],
+      "observed_aliases": {
+        "nega": [
+          "nega"
+        ],
+        "não": [
+          "não"
+        ],
+        "não tem": [
+          "não tem"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0048",
+        "revision": 31,
+        "start_ms": 738600,
+        "end_ms": 768600,
+        "source_event_index": 519
+      },
+      "clip": {
+        "start_ms": 731100,
+        "end_ms": 776100,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_010",
+      "reason": "clinical_target",
+      "categories": [
+        "numero_hemacias"
+      ],
+      "target_terms": [
+        "13 hemácias",
+        "sete"
+      ],
+      "matched_terms": [
+        "13 hemácias",
+        "sete"
+      ],
+      "observed_aliases": {
+        "13 hemácias": [
+          "13 hemácias"
+        ],
+        "sete": [
+          "7"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0066",
+        "revision": 29,
+        "start_ms": 1081900,
+        "end_ms": 1111900,
+        "source_event_index": 891
+      },
+      "clip": {
+        "start_ms": 1074400,
+        "end_ms": 1119400,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_011",
+      "reason": "clinical_target",
+      "categories": [
+        "numero_manifestacoes"
+      ],
+      "target_terms": [
+        "cinco manifestações"
+      ],
+      "matched_terms": [
+        "cinco manifestações"
+      ],
+      "observed_aliases": {
+        "cinco manifestações": [
+          "cinco manifestações"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0062",
+        "revision": 2,
+        "start_ms": 1029100,
+        "end_ms": 1029100,
+        "source_event_index": 805
+      },
+      "clip": {
+        "start_ms": 1006600,
+        "end_ms": 1051600,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_012",
+      "reason": "clinical_target",
+      "categories": [
+        "numero_rni"
+      ],
+      "target_terms": [
+        "RNI"
+      ],
+      "matched_terms": [
+        "RNI"
+      ],
+      "observed_aliases": {
+        "RNI": [
+          "rni",
+          "tempo de protrombina"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0075",
+        "revision": 29,
+        "start_ms": 1235600,
+        "end_ms": 1265600,
+        "source_event_index": 1041
+      },
+      "clip": {
+        "start_ms": 1228100,
+        "end_ms": 1273100,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_013",
+      "reason": "clinical_target",
+      "categories": [
+        "exame_fisico"
+      ],
+      "target_terms": [
+        "exame físico"
+      ],
+      "matched_terms": [
+        "exame físico"
+      ],
+      "observed_aliases": {
+        "exame físico": [
+          "exame físico"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0052",
+        "revision": 30,
+        "start_ms": 803700,
+        "end_ms": 833700,
+        "source_event_index": 592
+      },
+      "clip": {
+        "start_ms": 796200,
+        "end_ms": 841200,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_014",
+      "reason": "clinical_target",
+      "categories": [
+        "exame_maniobra"
+      ],
+      "target_terms": [
+        "respira",
+        "palpasse o fígado"
+      ],
+      "matched_terms": [
+        "respira",
+        "palpasse o fígado"
+      ],
+      "observed_aliases": {
+        "respira": [
+          "respira"
+        ],
+        "palpasse o fígado": [
+          "palpasse o fígado"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0042",
+        "revision": 2,
+        "start_ms": 640700,
+        "end_ms": 644639,
+        "source_event_index": 386
+      },
+      "clip": {
+        "start_ms": 620169,
+        "end_ms": 665169,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_015",
+      "reason": "clinical_target",
+      "categories": [
+        "medicamento"
+      ],
+      "target_terms": [
+        "ibuprofeno",
+        "medicação"
+      ],
+      "matched_terms": [
+        "ibuprofeno",
+        "medicação"
+      ],
+      "observed_aliases": {
+        "ibuprofeno": [
+          "ibuprofeno"
+        ],
+        "medicação": [
+          "medicação"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0028",
+        "revision": 30,
+        "start_ms": 398000,
+        "end_ms": 428000,
+        "source_event_index": 255
+      },
+      "clip": {
+        "start_ms": 390500,
+        "end_ms": 435500,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_016",
+      "reason": "clinical_target",
+      "categories": [
+        "cirrose"
+      ],
+      "target_terms": [
+        "cirrose"
+      ],
+      "matched_terms": [
+        "cirrose"
+      ],
+      "observed_aliases": {
+        "cirrose": [
+          "cirrose"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0058",
+        "revision": 4,
+        "start_ms": 966300,
+        "end_ms": 968880,
+        "source_event_index": 736
+      },
+      "clip": {
+        "start_ms": 945090,
+        "end_ms": 990090,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_017",
+      "reason": "clinical_target",
+      "categories": [
+        "hipertensao_portal"
+      ],
+      "target_terms": [
+        "hipertensão portal"
+      ],
+      "matched_terms": [
+        "hipertensão portal"
+      ],
+      "observed_aliases": {
+        "hipertensão portal": [
+          "hipertensão portal"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0047",
+        "revision": 2,
+        "start_ms": 738300,
+        "end_ms": 738300,
+        "source_event_index": 487
+      },
+      "clip": {
+        "start_ms": 715800,
+        "end_ms": 760800,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_018",
+      "reason": "clinical_target",
+      "categories": [
+        "varizes_esofagianas"
+      ],
+      "target_terms": [
+        "varizes esofagianas"
+      ],
+      "matched_terms": [
+        "varizes esofagianas"
+      ],
+      "observed_aliases": {
+        "varizes esofagianas": [
+          "varizes esofagianas"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0054",
+        "revision": 30,
+        "start_ms": 853400,
+        "end_ms": 882360,
+        "source_event_index": 645
+      },
+      "clip": {
+        "start_ms": 845380,
+        "end_ms": 890380,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_019",
+      "reason": "clinical_target",
+      "categories": [
+        "vasoativos"
+      ],
+      "target_terms": [
+        "terlipressina",
+        "somatostatina",
+        "octreotide"
+      ],
+      "matched_terms": [
+        "terlipressina",
+        "somatostatina",
+        "octreotide"
+      ],
+      "observed_aliases": {
+        "terlipressina": [
+          "teriperaquina"
+        ],
+        "somatostatina": [
+          "somatostatina"
+        ],
+        "octreotide": [
+          "octreotide"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0089",
+        "revision": 29,
+        "start_ms": 1403300,
+        "end_ms": 1433300,
+        "source_event_index": 1223
+      },
+      "clip": {
+        "start_ms": 1395800,
+        "end_ms": 1440800,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    },
+    {
+      "sample_id": "sample_020",
+      "reason": "clinical_target",
+      "categories": [
+        "child_pugh"
+      ],
+      "target_terms": [
+        "child-pugh",
+        "A, o B e o C"
+      ],
+      "matched_terms": [
+        "child-pugh",
+        "A, o B e o C"
+      ],
+      "observed_aliases": {
+        "child-pugh": [
+          "child-pugh",
+          "A, o B e o C"
+        ],
+        "A, o B e o C": [
+          "A, o B e o C"
+        ]
+      },
+      "missing_terms": [],
+      "anchor": {
+        "segment_id": "seg_0073",
+        "revision": 30,
+        "start_ms": 1204940,
+        "end_ms": 1235000,
+        "source_event_index": 1007
+      },
+      "clip": {
+        "start_ms": 1197470,
+        "end_ms": 1242470,
+        "duration_ms": 45000
+      },
+      "reference_status": "pending_manual_validation",
+      "hypothesis_status": {
+        "raw_committed": "snapshot_for_review",
+        "structural": "cumulative_snapshot_not_segment_isolated",
+        "adaptive": "shadow_equals_structural_snapshot",
+        "clean": "not_captured_in_source_run"
+      }
+    }
+  ],
+  "summary": {
+    "sample_count": 20,
+    "time_bucket_samples": 5,
+    "clinical_target_samples": 15,
+    "target_not_found_samples": 0,
+    "matched_target_terms": [
+      "13 hemácias",
+      "A, o B e o C",
+      "RNI",
+      "child-pugh",
+      "cinco manifestações",
+      "cirrose",
+      "diarreia",
+      "doença no fígado",
+      "exame físico",
+      "hipertensão portal",
+      "ibuprofeno",
+      "medicação",
+      "nega",
+      "não",
+      "não tem",
+      "octreotide",
+      "palpasse o fígado",
+      "respira",
+      "sete",
+      "somatostatina",
+      "terlipressina",
+      "varizes esofagianas",
+      "vômito"
+    ],
+    "missing_target_terms": [],
+    "references_ready": 0,
+    "benchmark_ready": false
+  }
+}

@@ -86,6 +86,10 @@ def test_file_stream_publishes_partial_before_audio_completed() -> None:
                 events.append(event)
                 if event["type"] in {"session.completed", "error"}:
                     break
+            if events[-1]["type"] == "session.completed":
+                closed = websocket.receive()
+                assert closed["type"] == "websocket.close"
+                assert closed["code"] == 1000
 
     event_types = [event["type"] for event in events]
     first_transcript = next(

@@ -1,0 +1,25 @@
+{
+  "_status": "validated",
+  "_instruction": "Validated from the user-supplied literal reference for sample_002.",
+  "medication": [],
+  "number": [],
+  "dose": [],
+  "negation": [
+    {
+      "concept": "smoking",
+      "negated": true,
+      "expected_text": "Fumante não. Não, não."
+    }
+  ],
+  "clinical_term": [
+    {
+      "concept": "physical_activity",
+      "expected_text": "exercício físico"
+    },
+    {
+      "concept": "alcohol_history",
+      "expected_text": "bebia muito"
+    }
+  ],
+  "speaker_label": []
+}

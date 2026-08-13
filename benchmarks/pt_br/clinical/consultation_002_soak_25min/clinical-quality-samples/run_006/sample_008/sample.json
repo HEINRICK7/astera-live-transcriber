@@ -1,0 +1,38 @@
+{
+  "sample_id": "sample_008",
+  "reason": "clinical_target",
+  "categories": [
+    "anamnese_doenca_hepatica"
+  ],
+  "target_terms": [
+    "doença no fígado"
+  ],
+  "matched_terms": [
+    "doença no fígado"
+  ],
+  "observed_aliases": {
+    "doença no fígado": [
+      "doença no fígado"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0026",
+    "revision": 29,
+    "start_ms": 374500,
+    "end_ms": 374500,
+    "source_event_index": 196
+  },
+  "clip": {
+    "start_ms": 352000,
+    "end_ms": 397000,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  }
+}

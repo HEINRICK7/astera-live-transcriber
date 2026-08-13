@@ -1,0 +1,1 @@
+13 hemácias, o limite seria 7, né? entendi, muito bem. Agora é importante lembrar o seguinte, que esse parâmetro sozinho, ele não é suficiente para a gente chegar e descartar a necessidade de

@@ -1,0 +1,37 @@
+{
+  "session_id": "sess_ed14d7785535",
+  "provider": "xai",
+  "started_at": "2026-08-13T21:29:44.511675+00:00",
+  "completed_at": "2026-08-13T21:30:29.976500+00:00",
+  "event_count": 56,
+  "event_counts": {
+    "session.created": 1,
+    "audio.started": 1,
+    "speech.started": 3,
+    "transcript.partial": 3,
+    "transcript.revised": 42,
+    "transcript.committed": 3,
+    "audio.completed": 1,
+    "session.completed": 1,
+    "websocket.closed": 1
+  },
+  "commit_count": 3,
+  "revision_count": 42,
+  "partial_count": 3,
+  "last_segment_id": "seg_0003",
+  "last_sequence": 48,
+  "technical_sequence": {
+    "first": 2,
+    "last": 48,
+    "missing": []
+  },
+  "capture_sequence": {
+    "first": 1,
+    "last": 56,
+    "missing": []
+  },
+  "websocket_close_code": 1000,
+  "websocket_clean": true,
+  "runtime_metrics": null,
+  "audio_duration_ms": 45000
+}

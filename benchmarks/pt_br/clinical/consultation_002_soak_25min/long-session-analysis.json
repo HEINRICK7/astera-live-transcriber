@@ -1,0 +1,249 @@
+{
+  "analysis": {
+    "kind": "long_session_structural_analysis",
+    "source_label": "consultation_002_soak_25min_excerpt",
+    "input_event_count": 80,
+    "input_completeness": "partial_or_excerpt",
+    "transcript_text_unchanged": true
+  },
+  "session": {
+    "duration_ms": 1495240,
+    "duration_seconds": 1495.24,
+    "segment_count": 7,
+    "revision_count": 58,
+    "commit_count": 7,
+    "partial_count": 6,
+    "speech_started_count": 6,
+    "sequence_min": 1583,
+    "sequence_max": 1659,
+    "lifecycle": {
+      "audio_completed": true,
+      "session_completed": true,
+      "websocket_closed": true,
+      "websocket_clean": true
+    }
+  },
+  "segments": [
+    {
+      "segment_id": "seg_0093",
+      "first_sequence": 1587,
+      "last_sequence": 1587,
+      "event_count": 2,
+      "partial_count": 1,
+      "revised_count": 0,
+      "committed_count": 1,
+      "max_revision": 2,
+      "start_ms": 1400920,
+      "end_ms": 1433500,
+      "duration_ms": 32580,
+      "projection_ops": 0,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 349
+    },
+    {
+      "segment_id": "seg_0092",
+      "first_sequence": 1583,
+      "last_sequence": 1586,
+      "event_count": 5,
+      "partial_count": 0,
+      "revised_count": 4,
+      "committed_count": 1,
+      "max_revision": 30,
+      "start_ms": 1403300,
+      "end_ms": 1433300,
+      "duration_ms": 30000,
+      "projection_ops": 0,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 326
+    },
+    {
+      "segment_id": "seg_0094",
+      "first_sequence": 1588,
+      "last_sequence": 1592,
+      "event_count": 4,
+      "partial_count": 1,
+      "revised_count": 2,
+      "committed_count": 1,
+      "max_revision": 4,
+      "start_ms": 1433200,
+      "end_ms": 1436180,
+      "duration_ms": 2980,
+      "projection_ops": 60,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 506
+    },
+    {
+      "segment_id": "seg_0095",
+      "first_sequence": 1593,
+      "last_sequence": 1606,
+      "event_count": 12,
+      "partial_count": 1,
+      "revised_count": 10,
+      "committed_count": 1,
+      "max_revision": 12,
+      "start_ms": 1437700,
+      "end_ms": 1447779,
+      "duration_ms": 10079,
+      "projection_ops": 60,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 148
+    },
+    {
+      "segment_id": "seg_0096",
+      "first_sequence": 1607,
+      "last_sequence": 1638,
+      "event_count": 29,
+      "partial_count": 1,
+      "revised_count": 27,
+      "committed_count": 1,
+      "max_revision": 29,
+      "start_ms": 1449200,
+      "end_ms": 1479200,
+      "duration_ms": 30000,
+      "projection_ops": 0,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 123
+    },
+    {
+      "segment_id": "seg_0097",
+      "first_sequence": 1639,
+      "last_sequence": 1648,
+      "event_count": 9,
+      "partial_count": 1,
+      "revised_count": 7,
+      "committed_count": 1,
+      "max_revision": 9,
+      "start_ms": 1478900,
+      "end_ms": 1486340,
+      "duration_ms": 7440,
+      "projection_ops": 61,
+      "adjacent_dup_removed": 0,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 505
+    },
+    {
+      "segment_id": "seg_0098",
+      "first_sequence": 1649,
+      "last_sequence": 1659,
+      "event_count": 10,
+      "partial_count": 1,
+      "revised_count": 8,
+      "committed_count": 1,
+      "max_revision": 10,
+      "start_ms": 1487500,
+      "end_ms": 1495240,
+      "duration_ms": 7740,
+      "projection_ops": 62,
+      "adjacent_dup_removed": 2,
+      "temporal_overlap_removed": 0,
+      "textual_overlap_removed": 0,
+      "committed_text_chars": 149
+    }
+  ],
+  "revisions_and_commits": {
+    "revisions_by_segment": {
+      "seg_0093": 0,
+      "seg_0092": 4,
+      "seg_0094": 2,
+      "seg_0095": 10,
+      "seg_0096": 27,
+      "seg_0097": 7,
+      "seg_0098": 8
+    },
+    "commits_by_segment": {
+      "seg_0093": 1,
+      "seg_0092": 1,
+      "seg_0094": 1,
+      "seg_0095": 1,
+      "seg_0096": 1,
+      "seg_0097": 1,
+      "seg_0098": 1
+    },
+    "max_revisions_per_segment": 30
+  },
+  "temporal": {
+    "zero_duration_segments": [],
+    "zero_duration_count": 0,
+    "overlaps": [
+      {
+        "left_segment_id": "seg_0093",
+        "right_segment_id": "seg_0092",
+        "overlap_ms": 30000
+      },
+      {
+        "left_segment_id": "seg_0092",
+        "right_segment_id": "seg_0094",
+        "overlap_ms": 100
+      },
+      {
+        "left_segment_id": "seg_0096",
+        "right_segment_id": "seg_0097",
+        "overlap_ms": 300
+      }
+    ],
+    "overlap_count": 3,
+    "overlap_total_ms": 30400,
+    "max_overlap_ms": 30000,
+    "drift": {
+      "sample_count": 0,
+      "samples": []
+    }
+  },
+  "replay_and_duplicates": {
+    "textual_replays": [],
+    "replay_count": 0,
+    "residual_adjacent_duplicates": [
+      {
+        "segment_id": "seg_0098",
+        "runs": [
+          {
+            "text": "Então, Então,",
+            "token_start": 0
+          },
+          {
+            "text": "obrigado. obrigado.",
+            "token_start": 18
+          }
+        ]
+      }
+    ],
+    "residual_adjacent_duplicate_count": 2
+  },
+  "projection": {
+    "total_projection_ops": 243,
+    "total_adjacent_dup_removed": 2,
+    "total_temporal_overlap_removed": 0,
+    "total_textual_overlap_removed": 0,
+    "ops_by_minute": {
+      "23": 120,
+      "24": 123
+    }
+  },
+  "pauses": {
+    "threshold_ms": 60000,
+    "long_pauses": [],
+    "long_pause_count": 0
+  },
+  "timeline": [
+    {
+      "start_ms": 1200000,
+      "end_ms": 1500000,
+      "event_count": 71,
+      "revisions": 58,
+      "commits": 7,
+      "projection_ops": 243,
+      "adjacent_dup_removed": 2
+    }
+  ]
+}

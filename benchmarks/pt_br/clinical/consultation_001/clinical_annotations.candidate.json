@@ -1,0 +1,99 @@
+{
+  "_status": "candidate_reference_from_reviewed_transcript",
+  "_instruction": "Candidate annotations derived from the supplied transcript. Promote to ground truth only after validating against the source audio.",
+  "dose": [
+    {
+      "medication": "losartana",
+      "value": 50,
+      "unit": "mg",
+      "frequency": "todos os dias",
+      "period": "pela manhã",
+      "speaker": "Paciente",
+      "expected_text": "tomo losartana de 50 miligramas todos os dias pela manhã"
+    }
+  ],
+  "number": [
+    {
+      "concept": "duration_headache",
+      "value": 5,
+      "unit": "dias",
+      "speaker": "Paciente",
+      "expected_text": "Faz uns cinco dias que estou com muita dor de cabeça"
+    },
+    {
+      "concept": "pain_intensity",
+      "value": 8,
+      "scale": "0-10",
+      "speaker": "Paciente",
+      "expected_text": "Hoje está em torno de oito"
+    },
+    {
+      "concept": "losartan_dose",
+      "value": 50,
+      "unit": "mg",
+      "speaker": "Paciente",
+      "expected_text": "losartana de 50 miligramas"
+    }
+  ],
+  "negation": [
+    {
+      "concept": "vomiting",
+      "negated": true,
+      "speaker": "Paciente",
+      "expected_text": "não vomitei"
+    },
+    {
+      "concept": "known_medication_allergy",
+      "negated": true,
+      "speaker": "Paciente",
+      "expected_text": "Não que eu saiba"
+    },
+    {
+      "concept": "smoking",
+      "negated": true,
+      "speaker": "Paciente",
+      "expected_text": "Não fumo"
+    }
+  ],
+  "medication": [
+    {
+      "name": "losartana",
+      "speaker": "Paciente",
+      "expected_text": "losartana de 50 miligramas todos os dias pela manhã"
+    }
+  ],
+  "speaker_label": [
+    {
+      "speaker": "Médica",
+      "expected_text": "Bom dia, pode entrar. O que está acontecendo?"
+    },
+    {
+      "speaker": "Paciente",
+      "expected_text": "Bom dia, Dra. Faz uns cinco dias que estou com muita dor de cabeça."
+    },
+    {
+      "speaker": "Médica",
+      "expected_text": "De zero a dez, qual a intensidade da dor?"
+    },
+    {
+      "speaker": "Paciente",
+      "expected_text": "Hoje está em torno de oito."
+    },
+    {
+      "speaker": "Médica",
+      "expected_text": "Você possui alguma doença ou faz uso de medicamentos?"
+    },
+    {
+      "speaker": "Paciente",
+      "expected_text": "Tenho hipertensão controlada e tomo losartana de 50 miligramas todos os dias pela manhã."
+    },
+    {
+      "speaker": "Médica",
+      "expected_text": "Você fuma ou consome bebidas alcoólicas?"
+    },
+    {
+      "speaker": "Paciente",
+      "expected_text": "Não fumo e bebo apenas socialmente."
+    }
+  ]
+}

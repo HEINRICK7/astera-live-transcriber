@@ -6,6 +6,7 @@ import uuid
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect
 
+from astera_live_transcriber.application.ports.speech_errors import SpeechEngineError
 from astera_live_transcriber.domain.audio import AudioChunk
 from astera_live_transcriber.domain.session import TranscriptionSession
 from astera_live_transcriber.domain.transcription.events import (
@@ -26,6 +27,7 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
     manager = websocket.app.state.file_sessions
     cancel_on_disconnect = websocket.app.state.settings.file_cancel_on_disconnect
     file_session = None
+    session_completed = False
     try:
         file_session = await manager.attach(session_id)
         await websocket.send_json(
@@ -53,7 +55,10 @@ async def file_realtime_transcription(websocket: WebSocket, session_id: str) -> 
             if event.type is TranscriptEventType.ERROR:
                 break
             if event.type is TranscriptEventType.SESSION_COMPLETED:
+                session_completed = True
                 break
+        if session_completed:
+            await websocket.close(code=1000, reason="session completed")
     except FileSessionError:
         logger.exception(
             "file_websocket_session_failed",
@@ -148,7 +153,20 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                     model=model,
                     language=language,
                 )
-                pipeline = create_realtime_pipeline(session, settings, runtime)
+                requested_keyterms = session_config.get("keyterms", settings.stt_keyterms)
+                keyterms = (
+                    tuple(str(term).strip() for term in requested_keyterms if str(term).strip())
+                    if isinstance(requested_keyterms, list | tuple)
+                    else settings.stt_keyterms
+                )
+                pipeline = create_realtime_pipeline(
+                    session,
+                    settings,
+                    runtime,
+                    streaming_keyterms=keyterms,
+                    streaming_diarization=bool(session_config.get("diarization", False)),
+                    intelligence_memory=websocket.app.state.transcription_memory,
+                )
                 await websocket.send_json({"type": "session.created", "session_id": session.id})
             elif event_type == "audio.append":
                 if pipeline is None:
@@ -193,13 +211,14 @@ async def realtime_transcription(websocket: WebSocket) -> None:
                 return
             else:
                 await websocket.send_json({"type": "error", "message": "unsupported event type"})
-    except ParakeetEngineError:
+    except (ParakeetEngineError, SpeechEngineError) as exc:
         if pipeline is not None:
             await websocket.send_json(
                 {
                     "type": "error",
                     "code": "transcription_engine_error",
                     "session_id": pipeline.session.id,
+                    "detail": type(exc).__name__,
                 }
             )
     except (WebSocketDisconnect, json.JSONDecodeError, ValueError, binascii.Error):
@@ -229,6 +248,8 @@ def _event_payload(event: TranscriptEvent) -> dict[str, object]:
         "segment_id",
         "revision",
         "text",
+        "projected_text",
+        "projected_text_clean",
         "start_ms",
         "end_ms",
         "timestamp_ms",
@@ -240,6 +261,20 @@ def _event_payload(event: TranscriptEvent) -> dict[str, object]:
         value = getattr(event, field)
         if value is not None:
             payload[field] = value
+    if event.provider != "local":
+        payload["provider"] = event.provider
+    if event.technical is not None:
+        payload["technical"] = event.technical
+    if event.words:
+        payload["words"] = [
+            {
+                "word": word.word,
+                "start_ms": word.start_ms,
+                "end_ms": word.end_ms,
+                "confidence": word.confidence,
+            }
+            for word in event.words
+        ]
     return payload
 
 

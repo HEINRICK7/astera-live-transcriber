@@ -1,0 +1,11 @@
+{
+  "kind": "realtime_capture",
+  "source_audio": "benchmarks/pt_br/clinical/consultation_002_soak_25min/clinical-quality-samples/run_006/sample_002/audio.wav",
+  "output_dir": "benchmarks/pt_br/clinical/consultation_002_soak_25min/clinical-quality-samples/run_006/pilot/runs/current_sample_002",
+  "events_jsonl": "events.jsonl",
+  "events_json": "events.json",
+  "persistence": "append_flush_fsync_per_event",
+  "summary": "technical-summary.json",
+  "status": "completed",
+  "failure": null
+}

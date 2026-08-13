@@ -1,0 +1,4085 @@
+{
+  "analysis": {
+    "kind": "safe_structural_cleanup_shadow",
+    "input_event_count": 1299,
+    "text_mutated": false,
+    "committed_text_changed": false,
+    "mode": "shadow"
+  },
+  "quality_gate": {
+    "changed_commits": 70,
+    "cleanup_operations": 301,
+    "snapshot_operations_total": 301,
+    "unique_cleanup_spans": 157,
+    "unique_segments_changed": 70,
+    "unique_removed": 157,
+    "repeated_across_snapshots": 87,
+    "protected": 69,
+    "unresolved": 37,
+    "safe_candidates_total": 96,
+    "safe_adjacent_candidates": 87,
+    "safe_adjacent_candidates_covered": 50,
+    "protected_repetitions_seen": 322,
+    "clinical_protected_spans_changed": 0,
+    "dose_changed": 0,
+    "numbers_changed": 0,
+    "negation_changed": 0,
+    "medication_changed": 0
+  },
+  "unique_spans": [
+    {
+      "cleanup_id": "seg_0002:adjacent_duplication:a:27-29",
+      "segment_id": "seg_0002",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 15,
+      "last_seen_revision": 15,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0003:adjacent_duplication:a:27-29",
+      "segment_id": "seg_0003",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0004:adjacent_duplication:enjoado:51-53",
+      "segment_id": "seg_0004",
+      "rule": "exact_adjacent_duplication",
+      "original": "enjoado, enjoado",
+      "replacement": "enjoado,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0005:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0005",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0010:adjacent_duplication:pediônios:7-9",
+      "segment_id": "seg_0010",
+      "rule": "exact_adjacent_duplication",
+      "original": "pediônios. Pediônios.",
+      "replacement": "pediônios.",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0010:adjacent_duplication:e:18-20",
+      "segment_id": "seg_0010",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0011:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0011",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 5,
+      "last_seen_revision": 5,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0011:adjacent_duplication:está:0-2",
+      "segment_id": "seg_0011",
+      "rule": "exact_adjacent_duplication",
+      "original": "Está Está",
+      "replacement": "Está",
+      "first_seen_revision": 5,
+      "last_seen_revision": 5,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0013:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0013",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0021:adjacent_duplication:obrigado:19-21",
+      "segment_id": "seg_0021",
+      "rule": "exact_adjacent_duplication",
+      "original": "Obrigado. Obrigado,",
+      "replacement": "Obrigado.",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0024:adjacent_duplication:a:49-51",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0024:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0024:adjacent_duplication:de:57-59",
+      "segment_id": "seg_0024",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:é:4-6",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:que:28-30",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "que, que,",
+      "replacement": "que,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:bem:39-41",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "bem, bem",
+      "replacement": "bem,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0025:adjacent_duplication:entende:69-71",
+      "segment_id": "seg_0025",
+      "rule": "exact_adjacent_duplication",
+      "original": "Entende, entende.",
+      "replacement": "Entende,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0026:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0026:adjacent_duplication:era:52-54",
+      "segment_id": "seg_0026",
+      "rule": "exact_adjacent_duplication",
+      "original": "Era Era",
+      "replacement": "Era",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0027:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 27,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0027:adjacent_duplication:ele:0-2",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "Ele Ele",
+      "replacement": "Ele",
+      "first_seen_revision": 27,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0027:adjacent_duplication:casa:87-89",
+      "segment_id": "seg_0027",
+      "rule": "exact_adjacent_duplication",
+      "original": "casa, casa,",
+      "replacement": "casa,",
+      "first_seen_revision": 27,
+      "last_seen_revision": 27,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0028:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0028:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0028:adjacent_duplication:tem:47-49",
+      "segment_id": "seg_0028",
+      "rule": "exact_adjacent_duplication",
+      "original": "tem, tem",
+      "replacement": "tem,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0029:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0029:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0029:adjacent_duplication:tem:47-49",
+      "segment_id": "seg_0029",
+      "rule": "exact_adjacent_duplication",
+      "original": "tem, tem",
+      "replacement": "tem,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0030:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0030:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0030:adjacent_duplication:ele:62-64",
+      "segment_id": "seg_0030",
+      "rule": "exact_adjacent_duplication",
+      "original": "Ele Ele",
+      "replacement": "Ele",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0031:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0031:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0031:adjacent_duplication:ele:62-64",
+      "segment_id": "seg_0031",
+      "rule": "exact_adjacent_duplication",
+      "original": "Ele Ele",
+      "replacement": "Ele",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0032:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0032:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0032",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0033:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0033:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0033",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0034:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0034",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0035:adjacent_duplication:e:0-2",
+      "segment_id": "seg_0035",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 20,
+      "last_seen_revision": 20,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0035:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0035",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 20,
+      "last_seen_revision": 20,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0039:adjacent_duplication:respira_solta:22-26",
+      "segment_id": "seg_0039",
+      "rule": "exact_adjacent_duplication",
+      "original": "Respira. Solta. Respira. Solta.",
+      "replacement": "Respira. Solta.",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0040:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0040",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0040:adjacent_duplication:respira:0-2",
+      "segment_id": "seg_0040",
+      "rule": "exact_adjacent_duplication",
+      "original": "Respira. respira.",
+      "replacement": "Respira.",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0040:adjacent_duplication:pode:2-4",
+      "segment_id": "seg_0040",
+      "rule": "exact_adjacent_duplication",
+      "original": "Pode Pode",
+      "replacement": "Pode",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0041:adjacent_duplication:se:0-2",
+      "segment_id": "seg_0041",
+      "rule": "exact_adjacent_duplication",
+      "original": "Se Se",
+      "replacement": "Se",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0043:adjacent_duplication:e:0-2",
+      "segment_id": "seg_0043",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0043:adjacent_duplication:pode:20-22",
+      "segment_id": "seg_0043",
+      "rule": "exact_adjacent_duplication",
+      "original": "Pode Pode",
+      "replacement": "Pode",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0043:adjacent_duplication:masculino:33-35",
+      "segment_id": "seg_0043",
+      "rule": "exact_adjacent_duplication",
+      "original": "masculino, masculino,",
+      "replacement": "masculino,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0043:adjacent_duplication:horas:70-72",
+      "segment_id": "seg_0043",
+      "rule": "exact_adjacent_duplication",
+      "original": "horas, horas,",
+      "replacement": "horas,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0044:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0044",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0045:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0045",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0046:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0046",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0046:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0046",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0047:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0047",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0047:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0047",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0048:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0048",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0049:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0049",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0050:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0050",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0051:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0051",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0052:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0052",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0052:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0052",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0052:adjacent_duplication:concordo:31-33",
+      "segment_id": "seg_0052",
+      "rule": "exact_adjacent_duplication",
+      "original": "concordo. Concordo.",
+      "replacement": "concordo.",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0053:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0053",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0053:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0053",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0054:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0054:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0054",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0055:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0055",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0056:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0056",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 24,
+      "last_seen_revision": 24,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0056:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0056",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 24,
+      "last_seen_revision": 24,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0056:adjacent_duplication:hepatogênico:81-83",
+      "segment_id": "seg_0056",
+      "rule": "exact_adjacent_duplication",
+      "original": "hepatogênico hepatogênico",
+      "replacement": "hepatogênico",
+      "first_seen_revision": 24,
+      "last_seen_revision": 24,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:é:43-45",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0057:adjacent_duplication:da:30-32",
+      "segment_id": "seg_0057",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0058:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0058",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0058:adjacent_duplication:é:47-49",
+      "segment_id": "seg_0058",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0058:adjacent_duplication:da:34-36",
+      "segment_id": "seg_0058",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0058:adjacent_duplication:queda:70-72",
+      "segment_id": "seg_0058",
+      "rule": "exact_adjacent_duplication",
+      "original": "queda queda",
+      "replacement": "queda",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:da:unknown-unknown",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0059:adjacent_duplication:uma:62-64",
+      "segment_id": "seg_0059",
+      "rule": "exact_adjacent_duplication",
+      "original": "uma, uma",
+      "replacement": "uma,",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:da:unknown-unknown",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "da, da",
+      "replacement": "da,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0060:adjacent_duplication:uma:60-62",
+      "segment_id": "seg_0060",
+      "rule": "exact_adjacent_duplication",
+      "original": "uma, uma",
+      "replacement": "uma,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0061:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0061",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0062:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0062",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0062:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0062",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0063:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0063",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 31,
+      "last_seen_revision": 31,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0064:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0064",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 16,
+      "last_seen_revision": 16,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0064:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0064",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 16,
+      "last_seen_revision": 16,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0065:adjacent_duplication:a:2-4",
+      "segment_id": "seg_0065",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0066:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0066",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:de:67-69",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:chegaram:9-11",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "chegaram chegaram",
+      "replacement": "chegaram",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:porque:71-73",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "Porque porque",
+      "replacement": "Porque",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:então:79-81",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "Então então",
+      "replacement": "Então",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0067:adjacent_duplication:número:116-118",
+      "segment_id": "seg_0067",
+      "rule": "exact_adjacent_duplication",
+      "original": "número número",
+      "replacement": "número",
+      "first_seen_revision": 18,
+      "last_seen_revision": 18,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0068:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0068",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 26,
+      "last_seen_revision": 26,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0068:adjacent_duplication:na:15-17",
+      "segment_id": "seg_0068",
+      "rule": "exact_adjacent_duplication",
+      "original": "Na na",
+      "replacement": "Na",
+      "first_seen_revision": 26,
+      "last_seen_revision": 26,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0069:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0069",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0069:adjacent_duplication:na:15-17",
+      "segment_id": "seg_0069",
+      "rule": "exact_adjacent_duplication",
+      "original": "Na na",
+      "replacement": "Na",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0070:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0070:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0070",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0071:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0071",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0071:adjacent_duplication:na:unknown-unknown",
+      "segment_id": "seg_0071",
+      "rule": "exact_adjacent_duplication",
+      "original": "Na na",
+      "replacement": "Na",
+      "first_seen_revision": 6,
+      "last_seen_revision": 6,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:a:91-93",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:é:unknown-unknown",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "é, é",
+      "replacement": "é,",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0072:adjacent_duplication:o:67-69",
+      "segment_id": "seg_0072",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 25,
+      "last_seen_revision": 25,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0073:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0073",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0073:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0073",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 30,
+      "last_seen_revision": 30,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0074:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0074",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 3,
+      "last_seen_revision": 3,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0075:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0075",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0076:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0076",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0077:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0077:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0077:adjacent_duplication:bandas:80-82",
+      "segment_id": "seg_0077",
+      "rule": "exact_adjacent_duplication",
+      "original": "bandas bandas",
+      "replacement": "bandas",
+      "first_seen_revision": 32,
+      "last_seen_revision": 32,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0078:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0078",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0078:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0078",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 21,
+      "last_seen_revision": 21,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0081:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0081",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0084:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0084",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0085:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0085",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0086:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0086",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 13,
+      "last_seen_revision": 13,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0087:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0087",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 1,
+      "last_seen_revision": 1,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0089:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0089",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0089:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0089",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 29,
+      "last_seen_revision": 29,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0090:adjacent_duplication:de:unknown-unknown",
+      "segment_id": "seg_0090",
+      "rule": "exact_adjacent_duplication",
+      "original": "de, de",
+      "replacement": "de,",
+      "first_seen_revision": 2,
+      "last_seen_revision": 2,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0091:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0091",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0091:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0091",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 4,
+      "last_seen_revision": 4,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0092:adjacent_duplication:e:unknown-unknown",
+      "segment_id": "seg_0092",
+      "rule": "exact_adjacent_duplication",
+      "original": "e e",
+      "replacement": "e",
+      "first_seen_revision": 12,
+      "last_seen_revision": 12,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0094:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0094",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 9,
+      "last_seen_revision": 9,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0094:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0094",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 9,
+      "last_seen_revision": 9,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:a:unknown-unknown",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "a, a",
+      "replacement": "a,",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 3,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:obrigado:18-20",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "Obrigado. Obrigado,",
+      "replacement": "Obrigado.",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:então:0-2",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "Então então",
+      "replacement": "Então",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 2,
+      "unique_span": true
+    },
+    {
+      "cleanup_id": "seg_0095:adjacent_duplication:o:unknown-unknown",
+      "segment_id": "seg_0095",
+      "rule": "exact_adjacent_duplication",
+      "original": "o o",
+      "replacement": "o",
+      "first_seen_revision": 10,
+      "last_seen_revision": 10,
+      "snapshot_occurrences": 1,
+      "unique_span": true
+    }
+  ],
+  "unresolved_candidates": [
+    {
+      "segment_id": "seg_0004",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 42,
+          "token_end": 46,
+          "block": [
+            "o",
+            "quê?"
+          ],
+          "repeated_block": [
+            "o",
+            "quê?"
+          ],
+          "text": "o quê? o quê?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0020",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "tá",
+            "bom?"
+          ],
+          "repeated_block": [
+            "Tá",
+            "bom."
+          ],
+          "text": "tá bom? Tá bom."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0020",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Melhores."
+          ],
+          "repeated_block": [
+            "Melhores."
+          ],
+          "text": "Melhores. Melhores."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0020",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado."
+          ],
+          "text": "Obrigado. Obrigado."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0022",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0023",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "é,",
+            "é"
+          ],
+          "repeated_block": [
+            "é,",
+            "é"
+          ],
+          "text": "é, é é, é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 82,
+          "token_end": 86,
+          "block": [
+            "Não,",
+            "não,"
+          ],
+          "repeated_block": [
+            "não.",
+            "não."
+          ],
+          "text": "Não, não, não. não."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "Não, Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 50,
+          "token_end": 52,
+          "block": [
+            "escura."
+          ],
+          "repeated_block": [
+            "escura."
+          ],
+          "text": "escura. escura."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 73,
+          "token_end": 75,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 84,
+          "token_end": 86,
+          "block": [
+            "nadar."
+          ],
+          "repeated_block": [
+            "nadar."
+          ],
+          "text": "nadar. nadar."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0028",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0029",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0030",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0031",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0032",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0033",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "não",
+            "é?"
+          ],
+          "repeated_block": [
+            "não",
+            "é"
+          ],
+          "text": "não é? não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não"
+          ],
+          "text": "não. Não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0035",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 51,
+          "token_end": 53,
+          "block": [
+            "Podem."
+          ],
+          "repeated_block": [
+            "Podem."
+          ],
+          "text": "Podem. Podem."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "o",
+            "senhor."
+          ],
+          "repeated_block": [
+            "O",
+            "senhor"
+          ],
+          "text": "o senhor. O senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 14,
+          "token_end": 16,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 17,
+          "block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "repeated_block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "text": "cabeça girada para lá. cabeça girada para lá."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0041",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 26,
+          "block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "repeated_block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "text": "por favor. Marque aqui, por favor. Marque aqui,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0048",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0049",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0051",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 22,
+          "token_end": 24,
+          "block": [
+            "sexo"
+          ],
+          "repeated_block": [
+            "sexo"
+          ],
+          "text": "sexo sexo"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0054",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 58,
+          "token_end": 60,
+          "block": [
+            "o"
+          ],
+          "repeated_block": [
+            "o"
+          ],
+          "text": "o o"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0054",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 71,
+          "block": [
+            "doença",
+            "base?"
+          ],
+          "repeated_block": [
+            "doença",
+            "base?"
+          ],
+          "text": "doença base? doença base?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0065",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 11,
+          "token_end": 13,
+          "block": [
+            "estou."
+          ],
+          "repeated_block": [
+            "estou."
+          ],
+          "text": "estou. estou."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 22,
+          "block": [
+            "e",
+            "aí"
+          ],
+          "repeated_block": [
+            "e",
+            "aí"
+          ],
+          "text": "e aí e aí"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 91,
+          "block": [
+            "a",
+            "presença,"
+          ],
+          "repeated_block": [
+            "a",
+            "presença"
+          ],
+          "text": "a presença, a presença"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0072",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Muito"
+          ],
+          "repeated_block": [
+            "Muito"
+          ],
+          "text": "Muito Muito"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0074",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 13,
+          "token_end": 17,
+          "block": [
+            "o",
+            "C."
+          ],
+          "repeated_block": [
+            "o",
+            "C."
+          ],
+          "text": "o C. o C."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0077",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 53,
+          "block": [
+            "E",
+            "além",
+            "disso,"
+          ],
+          "repeated_block": [
+            "E",
+            "além",
+            "disso,"
+          ],
+          "text": "E além disso, E além disso,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0086",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 6,
+          "block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "repeated_block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "text": "Dessa forma, não Dessa forma, não"
+        },
+        "stage": "committed"
+      }
+    }
+  ],
+  "final_transcript_diff": {
+    "changed": true,
+    "projected_text_chars": 18045,
+    "projected_text_clean_chars": 18014,
+    "operations": [
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:a:unknown-unknown",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "a, a",
+        "replacement": "a,",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:obrigado:18-20",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "Obrigado. Obrigado,",
+        "replacement": "Obrigado.",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:a:unknown-unknown",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "a, a",
+        "replacement": "a,",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:a:unknown-unknown",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "a a",
+        "replacement": "a",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:então:0-2",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "Então então",
+        "replacement": "Então",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:o:unknown-unknown",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "o o",
+        "replacement": "o",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      },
+      {
+        "cleanup_id": "seg_0095:adjacent_duplication:então:0-2",
+        "segment_id": "seg_0095",
+        "revision": 10,
+        "operation": "remove_adjacent_duplicate",
+        "original": "Então, Então,",
+        "replacement": "Então,",
+        "evidence": "exact_adjacent_replay",
+        "evidenced_by_commit": true,
+        "newly_introduced": false,
+        "safe": true
+      }
+    ],
+    "character_diff": [
+      {
+        "tag": "delete",
+        "original": "o ",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": " a",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": "a ",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": " Obrigado,",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": "a ",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": "então ",
+        "cleaned": ""
+      },
+      {
+        "tag": "delete",
+        "original": "Então, ",
+        "cleaned": ""
+      }
+    ],
+    "protected_repetitions": [
+      {
+        "token_start": 462,
+        "token_end": 464,
+        "block": [
+          "Não,"
+        ],
+        "repeated_block": [
+          "não,"
+        ],
+        "text": "Não, não,"
+      },
+      {
+        "token_start": 612,
+        "token_end": 614,
+        "block": [
+          "Não,"
+        ],
+        "repeated_block": [
+          "não"
+        ],
+        "text": "Não, não"
+      },
+      {
+        "token_start": 659,
+        "token_end": 661,
+        "block": [
+          "Não,"
+        ],
+        "repeated_block": [
+          "não,"
+        ],
+        "text": "Não, não,"
+      },
+      {
+        "token_start": 826,
+        "token_end": 828,
+        "block": [
+          "não."
+        ],
+        "repeated_block": [
+          "Não"
+        ],
+        "text": "não. Não"
+      },
+      {
+        "token_start": 897,
+        "token_end": 899,
+        "block": [
+          "Não,"
+        ],
+        "repeated_block": [
+          "não"
+        ],
+        "text": "Não, não"
+      },
+      {
+        "token_start": 1221,
+        "token_end": 1223,
+        "block": [
+          "não,"
+        ],
+        "repeated_block": [
+          "não"
+        ],
+        "text": "não, não"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "segment_id": "seg_0002",
+      "changes": [
+        {
+          "cleanup_id": "seg_0002:adjacent_duplication:a:27-29",
+          "segment_id": "seg_0002",
+          "revision": 15,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0003",
+      "changes": [
+        {
+          "cleanup_id": "seg_0003:adjacent_duplication:a:27-29",
+          "segment_id": "seg_0003",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0004",
+      "changes": [
+        {
+          "cleanup_id": "seg_0004:adjacent_duplication:enjoado:51-53",
+          "segment_id": "seg_0004",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "enjoado, enjoado",
+          "replacement": "enjoado,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0005",
+      "changes": [
+        {
+          "cleanup_id": "seg_0005:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0005",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": false,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0010",
+      "changes": [
+        {
+          "cleanup_id": "seg_0010:adjacent_duplication:pediônios:7-9",
+          "segment_id": "seg_0010",
+          "revision": 13,
+          "operation": "remove_adjacent_duplicate",
+          "original": "pediônios. Pediônios.",
+          "replacement": "pediônios.",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0010:adjacent_duplication:e:18-20",
+          "segment_id": "seg_0010",
+          "revision": 13,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0011",
+      "changes": [
+        {
+          "cleanup_id": "seg_0011:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0011",
+          "revision": 5,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0011:adjacent_duplication:está:0-2",
+          "segment_id": "seg_0011",
+          "revision": 5,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Está Está",
+          "replacement": "Está",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0013",
+      "changes": [
+        {
+          "cleanup_id": "seg_0013:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0013",
+          "revision": 6,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0021",
+      "changes": [
+        {
+          "cleanup_id": "seg_0021:adjacent_duplication:obrigado:19-21",
+          "segment_id": "seg_0021",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Obrigado. Obrigado,",
+          "replacement": "Obrigado.",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0024",
+      "changes": [
+        {
+          "cleanup_id": "seg_0024:adjacent_duplication:a:49-51",
+          "segment_id": "seg_0024",
+          "revision": 3,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0024:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0024",
+          "revision": 3,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0024:adjacent_duplication:a:49-51",
+          "segment_id": "seg_0024",
+          "revision": 3,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0024:adjacent_duplication:de:57-59",
+          "segment_id": "seg_0024",
+          "revision": 3,
+          "operation": "remove_adjacent_duplicate",
+          "original": "de, de",
+          "replacement": "de,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": []
+    },
+    {
+      "segment_id": "seg_0025",
+      "changes": [
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:é:4-6",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "é, é",
+          "replacement": "é,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:que:28-30",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "que, que,",
+          "replacement": "que,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:bem:39-41",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "bem, bem",
+          "replacement": "bem,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0025:adjacent_duplication:entende:69-71",
+          "segment_id": "seg_0025",
+          "revision": 32,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Entende, entende.",
+          "replacement": "Entende,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0026",
+      "changes": [
+        {
+          "cleanup_id": "seg_0026:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0026",
+          "revision": 29,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0026:adjacent_duplication:era:52-54",
+          "segment_id": "seg_0026",
+          "revision": 29,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Era Era",
+          "replacement": "Era",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0027",
+      "changes": [
+        {
+          "cleanup_id": "seg_0027:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0027",
+          "revision": 27,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0027:adjacent_duplication:ele:0-2",
+          "segment_id": "seg_0027",
+          "revision": 27,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Ele Ele",
+          "replacement": "Ele",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0027:adjacent_duplication:casa:87-89",
+          "segment_id": "seg_0027",
+          "revision": 27,
+          "operation": "remove_adjacent_duplicate",
+          "original": "casa, casa,",
+          "replacement": "casa,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0028",
+      "changes": [
+        {
+          "cleanup_id": "seg_0028:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0028",
+          "revision": 30,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0028:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0028",
+          "revision": 30,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0028:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0028",
+          "revision": 30,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0028:adjacent_duplication:tem:47-49",
+          "segment_id": "seg_0028",
+          "revision": 30,
+          "operation": "remove_adjacent_duplicate",
+          "original": "tem, tem",
+          "replacement": "tem,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": true,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0029",
+      "changes": [
+        {
+          "cleanup_id": "seg_0029:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0029",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0029:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0029",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0029:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0029",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0029:adjacent_duplication:tem:47-49",
+          "segment_id": "seg_0029",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "tem, tem",
+          "replacement": "tem,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0030",
+      "changes": [
+        {
+          "cleanup_id": "seg_0030:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0030",
+          "revision": 31,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0030:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0030",
+          "revision": 31,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0030:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0030",
+          "revision": 31,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0030:adjacent_duplication:ele:62-64",
+          "segment_id": "seg_0030",
+          "revision": 31,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Ele Ele",
+          "replacement": "Ele",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0030:adjacent_duplication:ele:62-64",
+          "segment_id": "seg_0030",
+          "revision": 31,
+          "operation": "remove_adjacent_duplicate",
+          "original": "ele, ele",
+          "replacement": "ele,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0031",
+      "changes": [
+        {
+          "cleanup_id": "seg_0031:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0031",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0031:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0031",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0031:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0031",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0031:adjacent_duplication:ele:62-64",
+          "segment_id": "seg_0031",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "Ele Ele",
+          "replacement": "Ele",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0031:adjacent_duplication:ele:62-64",
+          "segment_id": "seg_0031",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "ele, ele",
+          "replacement": "ele,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0032",
+      "changes": [
+        {
+          "cleanup_id": "seg_0032:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0032",
+          "revision": 13,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0032:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0032",
+          "revision": 13,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0032:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0032",
+          "revision": 13,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0033",
+      "changes": [
+        {
+          "cleanup_id": "seg_0033:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0033",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0033:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0033",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0033:adjacent_duplication:a:unknown-unknown",
+          "segment_id": "seg_0033",
+          "revision": 2,
+          "operation": "remove_adjacent_duplicate",
+          "original": "a, a",
+          "replacement": "a,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0034",
+      "changes": [
+        {
+          "cleanup_id": "seg_0034:adjacent_duplication:e:unknown-unknown",
+          "segment_id": "seg_0034",
+          "revision": 3,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 826,
+          "token_end": 828,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não"
+          ],
+          "text": "não. Não"
+        }
+      ]
+    },
+    {
+      "segment_id": "seg_0035",
+      "changes": [
+        {
+          "cleanup_id": "seg_0035:adjacent_duplication:e:0-2",
+          "segment_id": "seg_0035",
+          "revision": 20,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0035:adjacent_duplication:de:unknown-unknown",
+          "segment_id": "seg_0035",
+          "revision": 20,
+          "operation": "remove_adjacent_duplicate",
+          "original": "de, de",
+          "replacement": "de,",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        },
+        {
+          "cleanup_id": "seg_0035:adjacent_duplication:e:0-2",
+          "segment_id": "seg_0035",
+          "revision": 20,
+          "operation": "remove_adjacent_duplicate",
+          "original": "e e",
+          "replacement": "e",
+          "evidence": "exact_adjacent_replay",
+          "evidenced_by_commit": true,
+          "newly_introduced": false,
+          "safe": true
+        }
+      ],
+      "protected_repetitions": [
+        {
+          "token_start": 462,
+          "token_end": 464,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 612,
+          "token_end": 614,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        {
+          "token_start": 659,
+          "token_end": 661,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        {
+          "token_start": 826,
+          "token_end": 828,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não"
+          ],
+          "text": "não. Não"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Clinical span checks require clinical_annotations.json and are zero because no mutation is promoted.",
+    "This report evaluates projected_text only; committed_text remains untouched evidence."
+  ]
+}

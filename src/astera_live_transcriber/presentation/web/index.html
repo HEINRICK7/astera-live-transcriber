@@ -60,6 +60,7 @@
       button.secondary { border-color: var(--line); background: transparent; color: var(--text); }
       button.danger { border-color: rgba(255,125,134,.35); background: rgba(255,125,134,.12); color: #ffabb0; }
       button:disabled { cursor: not-allowed; opacity: .45; }
+      #transcribeFile { width: 100%; margin-top: 14px; }
       .hint { margin-top: 12px; font-size: 13px; }
 
       .transcript-box { min-height: 280px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #0c1118; white-space: pre-wrap; }
@@ -69,9 +70,15 @@
       .meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 14px 0; color: var(--muted); font-size: 13px; }
       .meta strong { color: var(--text); font-weight: 600; }
       .event-log { max-height: 180px; overflow: auto; margin-top: 14px; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: #0c1118; color: var(--muted); font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; }
-      .event-log div { padding: 2px 0; }
+      .event-log div { padding: 4px 0; border-bottom: 1px solid rgba(45,57,72,.45); }
       .event-log .text { color: var(--text); }
+      .event-log .event-summary { color: var(--muted); }
+      .event-log details { margin-top: 5px; }
+      .event-log summary { color: var(--accent); cursor: pointer; }
+      .event-log pre { max-height: 360px; overflow: auto; margin: 8px 0 0; padding: 10px; border-radius: 7px; background: #080c11; color: #cbd8e6; white-space: pre-wrap; word-break: break-word; }
       audio { width: 100%; margin-top: 14px; }
+      .audio-progress { display: flex; align-items: center; gap: 10px; margin-top: 14px; color: var(--muted); font-size: 13px; }
+      .audio-progress progress { width: 100%; height: 8px; accent-color: var(--accent); }
       .mic-state { display: flex; align-items: center; gap: 10px; min-height: 30px; margin-top: 14px; color: var(--muted); }
       .mic-state.recording { color: #ffabb0; }
       .pulse { width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
@@ -102,18 +109,13 @@
           <h2>Testar um arquivo</h2>
           <label class="label" for="audioFile">MP3 ou WAV</label>
           <input id="audioFile" type="file" accept="audio/mpeg,audio/mp3,audio/wav,.mp3,.wav" />
-          <div class="row">
-            <div>
-              <label class="label" for="fileMode">Velocidade</label>
-              <select id="fileMode">
-                <option value="realtime">Tempo real</option>
-                <option value="accelerated">Acelerado</option>
-              </select>
-            </div>
-            <button id="transcribeFile" type="button" disabled>Transcrever</button>
+          <button id="transcribeFile" type="button" disabled>Tocar e transcrever</button>
+          <audio id="audioPreview" preload="metadata" hidden></audio>
+          <div id="audioProgressWrap" class="audio-progress" hidden>
+            <progress id="audioProgress" value="0" max="1"></progress>
+            <span id="audioTime">00:00 / 00:00</span>
           </div>
-          <audio id="audioPreview" controls hidden></audio>
-          <p class="hint">Tempo real respeita a duração do áudio. Acelerado tenta terminar mais rápido.</p>
+          <p class="hint">Uma única ação inicia o áudio e a transcrição em streaming, acompanhando o tempo real.</p>
         </article>
 
         <article class="panel">
@@ -151,6 +153,9 @@
       const fileInput = $("audioFile");
       const fileButton = $("transcribeFile");
       const audioPreview = $("audioPreview");
+      const audioProgressWrap = $("audioProgressWrap");
+      const audioProgress = $("audioProgress");
+      const audioTime = $("audioTime");
       const startMicButton = $("startMicrophone");
       const stopMicButton = $("stopMicrophone");
       const engineStatus = $("engineStatus");
@@ -166,27 +171,36 @@
       let audioProcessor = null;
       let audioSource = null;
       let silentGain = null;
-      let finalText = "";
+      let committedSegments = new Map();
+      let projectedTranscriptText = "";
       let liveText = "";
+      let liveSegmentId = null;
       let terminalEventReceived = false;
       let objectUrl = null;
+      let filePlaybackRequested = false;
 
       fileInput.addEventListener("change", () => {
         const file = fileInput.files[0];
         fileButton.disabled = !file || Boolean(socket);
+        stopFilePlayback();
         if (!file) {
           audioPreview.hidden = true;
+          audioProgressWrap.hidden = true;
           return;
         }
         if (objectUrl) URL.revokeObjectURL(objectUrl);
         objectUrl = URL.createObjectURL(file);
         audioPreview.src = objectUrl;
         audioPreview.hidden = false;
+        audioProgressWrap.hidden = false;
+        audioProgress.value = 0;
+        audioTime.textContent = "00:00 / 00:00";
       });
 
       fileButton.addEventListener("click", async () => {
         const file = fileInput.files[0];
         if (!file) return;
+        stopFilePlayback();
         stopAudioCapture();
         closeSocket();
         resetTranscript();
@@ -196,15 +210,15 @@
           const form = new FormData();
           form.append("file", file, file.name);
           form.append("language", "pt-BR");
-          form.append("mode", $("fileMode").value);
+          form.append("mode", "realtime");
           const response = await fetch(`${backend}/v1/realtime/files`, { method: "POST", body: form });
           const data = await response.json();
           if (!response.ok) throw new Error(data.detail || `upload falhou (${response.status})`);
           sessionId.textContent = data.session_id;
           setState("conectando ao stream…");
-          connectSocket(data.websocket);
+          connectSocket(data.websocket, false, true);
         } catch (error) {
-          showError(error);
+          showError(error.message || String(error));
           setBusy(false);
         }
       });
@@ -229,19 +243,28 @@
         }
       }
 
-      function connectSocket(path, microphone = false) {
+      function connectSocket(path, microphone = false, playFile = false) {
+        filePlaybackRequested = playFile;
         socket = new WebSocket(`${wsProtocol}${wsHost}${path}`);
         socket.binaryType = "arraybuffer";
         socket.onopen = async () => {
           if (microphone) {
             socket.send(JSON.stringify({ type: "session.create", session: { model: "astera-stt-realtime-1", language: "pt-BR" } }));
             await startAudioCapture();
+          } else if (playFile) {
+            try {
+              await startFilePlayback();
+            } catch (error) {
+              showError(error.message || String(error));
+              closeSocket();
+            }
           }
         };
         socket.onmessage = (message) => handleEvent(JSON.parse(message.data));
         socket.onerror = () => showError("não foi possível manter a conexão realtime");
         socket.onclose = (closeEvent) => {
           stopAudioCapture();
+          if (filePlaybackRequested && !terminalEventReceived) stopFilePlayback();
           socket = null;
           setBusy(false);
           logEvent({
@@ -262,12 +285,23 @@
         if (event.type === "speech.started") setState("fala detectada");
         if (event.type === "transcript.partial" || event.type === "transcript.revised") {
           liveText = event.text || "";
+          liveSegmentId = event.segment_id || liveSegmentId;
           renderTranscript();
           setState(event.type === "transcript.partial" ? "transcrevendo…" : "revisando…");
         }
         if (event.type === "transcript.committed") {
-          if (event.text) finalText = `${finalText}${finalText ? "\n" : ""}${event.text}`;
+          if (event.segment_id && event.text) {
+            committedSegments.set(event.segment_id, {
+              text: event.text,
+              start_ms: event.start_ms ?? Number.MAX_SAFE_INTEGER,
+              revision: event.revision ?? 0,
+            });
+            projectedTranscriptText = event.projected_text
+              || event.technical?.committed_projection?.projected_transcript?.text
+              || "";
+          }
           liveText = "";
+          liveSegmentId = null;
           renderTranscript();
           setState("trecho confirmado");
         }
@@ -309,6 +343,23 @@
         setState("finalizando…");
       }
 
+      async function startFilePlayback() {
+        audioPreview.currentTime = 0;
+        try {
+          await audioPreview.play();
+          setState("tocando e transcrevendo…");
+        } catch (error) {
+          throw new Error("o navegador bloqueou a reprodução automática do áudio");
+        }
+      }
+
+      function stopFilePlayback() {
+        audioPreview.pause();
+        audioPreview.currentTime = 0;
+        audioProgress.value = 0;
+        audioTime.textContent = "00:00 / " + formatTime(audioPreview.duration);
+      }
+
       function stopAudioCapture() {
         if (audioProcessor) audioProcessor.disconnect();
         if (audioSource) audioSource.disconnect();
@@ -327,12 +378,16 @@
 
       function setBusy(busy) {
         fileButton.disabled = busy || !fileInput.files[0];
+        fileButton.textContent = busy ? "Transcrevendo…" : "Tocar e transcrever";
         startMicButton.disabled = busy;
         stopMicButton.disabled = !busy;
       }
 
       function resetTranscript() {
-        finalText = liveText = "";
+        committedSegments = new Map();
+        projectedTranscriptText = "";
+        liveText = "";
+        liveSegmentId = null;
         terminalEventReceived = false;
         sessionId.textContent = "—";
         eventLog.innerHTML = "";
@@ -341,6 +396,7 @@
 
       function renderTranscript() {
         transcript.innerHTML = "";
+        const finalText = projectedTranscriptText;
         if (!finalText && !liveText) {
           transcript.innerHTML = '<span class="placeholder">A transcrição aparecerá aqui…</span>';
           return;
@@ -361,7 +417,46 @@
 
       function logEvent(event) {
         const line = document.createElement("div");
-        line.innerHTML = `<span>[${escapeHtml(event.type || "evento")}]</span>${event.text ? ` <span class="text">${escapeHtml(event.text)}</span>` : ""}`;
+        const summary = document.createElement("div");
+        summary.className = "event-summary";
+        const details = [
+          event.provider ? `provider=${event.provider}` : "",
+          event.segment_id ? `segment=${event.segment_id}` : "",
+          event.revision != null ? `revision=${event.revision}` : "",
+          event.start_ms != null ? `start=${event.start_ms}ms` : "",
+          event.end_ms != null ? `end=${event.end_ms}ms` : "",
+          event.technical?.sequence != null ? `seq=${event.technical.sequence}` : "",
+          event.technical?.projection?.source ? `source=${event.technical.projection.source}` : "",
+          event.technical?.projection?.timeline_change?.operation ? `op=${event.technical.projection.timeline_change.operation}` : "",
+          event.technical?.committed_projection?.current_adjacent_duplicates?.length ? `adjacent_dup=${event.technical.committed_projection.current_adjacent_duplicates.length}` : "",
+          event.technical?.committed_projection?.overlap_with_previous?.classification && event.technical.committed_projection.overlap_with_previous.classification !== "none" ? `segment_overlap=${event.technical.committed_projection.overlap_with_previous.classification}` : "",
+          event.technical?.committed_projection?.projected_transcript?.operations?.length ? `projection_ops=${event.technical.committed_projection.projected_transcript.operations.length}` : "",
+          event.technical?.projection_summary?.adjacent_dup_removed ? `adjacent_removed=${event.technical.projection_summary.adjacent_dup_removed}` : "",
+        ].filter(Boolean).join(" ");
+        summary.textContent = `[${event.type || "evento"}]${details ? ` ${details}` : ""}`;
+        if (event.type === "transcript.committed") {
+          const text = document.createElement("span");
+          text.className = "text";
+          text.textContent = ` committed_text=${event.technical?.committed_text || event.text || ""} | projected_text=${event.technical?.projected_text || event.projected_text || ""}`;
+          summary.appendChild(text);
+        } else if (event.text) {
+          const text = document.createElement("span");
+          text.className = "text";
+          text.textContent = ` ${event.text}`;
+          summary.appendChild(text);
+        }
+        line.appendChild(summary);
+        if (event.technical) {
+          const disclosure = document.createElement("details");
+          const label = document.createElement("summary");
+          label.textContent = event.type === "transcript.committed"
+            ? "dados técnicos COMMITTED RAW → PROJECTED"
+            : "dados técnicos RAW → MAPPED → CANONICAL";
+          const pre = document.createElement("pre");
+          pre.textContent = JSON.stringify(event.technical, null, 2);
+          disclosure.append(label, pre);
+          line.appendChild(disclosure);
+        }
         eventLog.appendChild(line);
         while (eventLog.children.length > 80) eventLog.firstChild.remove();
         eventLog.scrollTop = eventLog.scrollHeight;
@@ -370,6 +465,7 @@
       function setState(value) { sessionState.textContent = value; }
 
       function showError(message) {
+        stopFilePlayback();
         setState("erro");
         logEvent({ type: "error", text: message });
         setBusy(false);
@@ -379,6 +475,22 @@
         const div = document.createElement("div");
         div.textContent = value;
         return div.innerHTML;
+      }
+
+      audioPreview.addEventListener("loadedmetadata", () => {
+        audioTime.textContent = "00:00 / " + formatTime(audioPreview.duration);
+      });
+      audioPreview.addEventListener("timeupdate", () => {
+        const duration = Number.isFinite(audioPreview.duration) ? audioPreview.duration : 0;
+        audioProgress.value = duration ? audioPreview.currentTime / duration : 0;
+        audioTime.textContent = `${formatTime(audioPreview.currentTime)} / ${formatTime(duration)}`;
+      });
+
+      function formatTime(seconds) {
+        if (!Number.isFinite(seconds) || seconds < 0) return "00:00";
+        const minutes = Math.floor(seconds / 60).toString().padStart(2, "0");
+        const remainder = Math.floor(seconds % 60).toString().padStart(2, "0");
+        return `${minutes}:${remainder}`;
       }
 
       function downsample(buffer, inputRate, targetRate) {

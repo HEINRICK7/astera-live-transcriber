@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from enum import StrEnum
 
+from .entities import WordTimestamp
+
 
 class TranscriptEventType(StrEnum):
     SESSION_CREATED = "session.created"
@@ -30,3 +32,8 @@ class TranscriptEvent:
     language: str | None = None
     confidence: float | None = None
     error_code: str | None = None
+    words: tuple[WordTimestamp, ...] = ()
+    provider: str = "local"
+    projected_text: str | None = None
+    projected_text_clean: str | None = None
+    technical: dict[str, object] | None = None

@@ -7,6 +7,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from astera_live_transcriber.application.services.audio_pipeline import AudioPipeline
+from astera_live_transcriber.application.transcription_intelligence.memory import (
+    InMemoryTranscriptionMemory,
+)
 from astera_live_transcriber.domain.audio import (
     AudioSourceMetadata,
     AudioSourceType,
@@ -61,10 +64,12 @@ class FileSessionManager:
         settings: Settings,
         runtime: EngineRuntime,
         pipeline_factory: Callable[..., AudioPipeline],
+        intelligence_memory: InMemoryTranscriptionMemory | None = None,
     ) -> None:
         self._settings = settings
         self._runtime = runtime
         self._pipeline_factory = pipeline_factory
+        self._intelligence_memory = intelligence_memory
         self._sessions: dict[str, FileSession] = {}
 
     async def create(
@@ -100,7 +105,16 @@ class FileSessionManager:
             mode=mode,
             metrics=metrics,
         )
-        pipeline = self._pipeline_factory(session, self._settings, self._runtime, metrics)
+        if self._intelligence_memory is None:
+            pipeline = self._pipeline_factory(session, self._settings, self._runtime, metrics)
+        else:
+            pipeline = self._pipeline_factory(
+                session,
+                self._settings,
+                self._runtime,
+                metrics,
+                intelligence_memory=self._intelligence_memory,
+            )
         file_session = FileSession(
             session=session,
             path=path,
@@ -204,6 +218,9 @@ class FileSessionManager:
                     type=TranscriptEventType.SESSION_COMPLETED,
                     session_id=file_session.session.id,
                     timestamp_ms=file_session.session.last_audio_timestamp_ms,
+                    technical={
+                        "runtime_metrics": file_session.pipeline.technical_metrics_snapshot(),
+                    },
                 ),
             )
             file_session.session.mark_completed()

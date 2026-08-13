@@ -1,0 +1,209 @@
+{
+  "kind": "clinical_sample_annotation_gate",
+  "sample_root": "benchmarks/pt_br/clinical/consultation_002_soak_25min/clinical-quality-samples/run_006",
+  "sample_count": 20,
+  "references_ready": 0,
+  "benchmark_ready": false,
+  "samples": [
+    {
+      "sample_id": "sample_001",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_002",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_003",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_004",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_005",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_006",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_007",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_008",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_009",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_010",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_011",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_012",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_013",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_014",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_015",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_016",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_017",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_018",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_019",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    },
+    {
+      "sample_id": "sample_020",
+      "ready": false,
+      "blocking_reasons": [
+        "reference",
+        "annotations",
+        "clean"
+      ],
+      "annotation_status": "pending_manual_validation"
+    }
+  ]
+}

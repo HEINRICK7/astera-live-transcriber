@@ -1,0 +1,49 @@
+{
+  "sample_id": "sample_020",
+  "reason": "clinical_target",
+  "categories": [
+    "child_pugh"
+  ],
+  "target_terms": [
+    "child-pugh",
+    "A, o B e o C"
+  ],
+  "matched_terms": [
+    "child-pugh",
+    "A, o B e o C"
+  ],
+  "observed_aliases": {
+    "child-pugh": [
+      "child-pugh",
+      "A, o B e o C"
+    ],
+    "A, o B e o C": [
+      "A, o B e o C"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0073",
+    "revision": 30,
+    "start_ms": 1204940,
+    "end_ms": 1235000,
+    "source_event_index": 1007
+  },
+  "clip": {
+    "start_ms": 1197470,
+    "end_ms": 1242470,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  },
+  "reference_file": "reference.txt (not created yet)",
+  "annotation_file": "clinical_annotations.json",
+  "provider_file": "provider_committed.txt",
+  "structural_file": "projected_text.txt",
+  "clean_file": "projected_text_clean.pending.txt (not scoreable)"
+}

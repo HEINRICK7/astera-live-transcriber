@@ -1,0 +1,13 @@
+{
+  "status": "not_a_benchmark_run",
+  "reason": "xAI WebSocket handshake rejected",
+  "http_status": 403,
+  "session_id": "sess_bc6b74ca0f14",
+  "events_jsonl": "events.jsonl",
+  "persisted_events": 3,
+  "audio_started": true,
+  "transcription_started": false,
+  "incremental_projection_requested": true,
+  "source_audio": "/home/carlos-henrique/Músicas/medical.mp3",
+  "note": "The partial capture is retained for provider credential troubleshooting and must not be used as a quality or performance benchmark."
+}

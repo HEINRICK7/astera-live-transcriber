@@ -1,0 +1,35 @@
+{
+  "sample_id": "sample_001",
+  "reason": "time_bucket",
+  "categories": [
+    "0-5min"
+  ],
+  "target_terms": [],
+  "matched_terms": [],
+  "observed_aliases": {},
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0013",
+    "revision": 6,
+    "start_ms": 103500,
+    "end_ms": 103500,
+    "source_event_index": 91
+  },
+  "clip": {
+    "start_ms": 81000,
+    "end_ms": 126000,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  },
+  "reference_file": "reference.txt (not created yet)",
+  "annotation_file": "clinical_annotations.json",
+  "provider_file": "provider_committed.txt",
+  "structural_file": "projected_text.txt",
+  "clean_file": "projected_text_clean.pending.txt (not scoreable)"
+}

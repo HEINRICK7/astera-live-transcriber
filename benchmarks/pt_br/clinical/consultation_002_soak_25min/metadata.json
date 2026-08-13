@@ -1,0 +1,56 @@
+{
+  "fixture_id": "pt_br/clinical/consultation_002_soak_25min",
+  "kind": "realtime_soak",
+  "language": "pt-BR",
+  "domain": "clinical_simulation",
+  "source": "user_supplied_attachments",
+  "source_audio": "not supplied",
+  "duration_seconds_observed": 1495.24,
+  "duration_label": "approximately 25 minutes",
+  "last_provider_sequence": 1659,
+  "last_segment": "seg_0098",
+  "excerpt_scope": {
+    "complete_run_json": false,
+    "first_sequence_in_attachment": 1583,
+    "last_sequence_in_attachment": 1659,
+    "segments_visible": [
+      "seg_0092",
+      "seg_0093",
+      "seg_0094",
+      "seg_0095",
+      "seg_0096",
+      "seg_0097",
+      "seg_0098"
+    ]
+  },
+  "event_counts_in_attachment": {
+    "transcript.partial": 6,
+    "transcript.revised": 58,
+    "transcript.committed": 7,
+    "speech.started": 6,
+    "audio.completed": 1,
+    "session.completed": 1,
+    "websocket.closed": 1
+  },
+  "timeline_operations_in_attachment": {
+    "replace_overlap": 59,
+    "append_new_span": 9,
+    "projection_ops_last_commit": 62,
+    "adjacent_dup_last_commit": 2
+  },
+  "final_lifecycle": {
+    "audio_completed": true,
+    "session_completed": true,
+    "websocket_code": 1000,
+    "websocket_reason": "session completed",
+    "clean": true
+  },
+  "markers_not_found_in_attachment": {
+    "zero_duration": 0,
+    "span_drift": 0,
+    "replay": 0,
+    "duplicate": 0
+  },
+  "quality_status": "operational_soak_evidence_not_quality_benchmark",
+  "notes": "The attachments preserve a technical trace excerpt and the projected transcript. They are not a complete structured events.json, so global counts, memory, queue depth, pause duration, and drift cannot be claimed from this fixture alone."
+}

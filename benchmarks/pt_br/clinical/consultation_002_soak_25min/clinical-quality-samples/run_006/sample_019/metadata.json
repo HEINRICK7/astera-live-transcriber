@@ -1,0 +1,53 @@
+{
+  "sample_id": "sample_019",
+  "reason": "clinical_target",
+  "categories": [
+    "vasoativos"
+  ],
+  "target_terms": [
+    "terlipressina",
+    "somatostatina",
+    "octreotide"
+  ],
+  "matched_terms": [
+    "terlipressina",
+    "somatostatina",
+    "octreotide"
+  ],
+  "observed_aliases": {
+    "terlipressina": [
+      "teriperaquina"
+    ],
+    "somatostatina": [
+      "somatostatina"
+    ],
+    "octreotide": [
+      "octreotide"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0089",
+    "revision": 29,
+    "start_ms": 1403300,
+    "end_ms": 1433300,
+    "source_event_index": 1223
+  },
+  "clip": {
+    "start_ms": 1395800,
+    "end_ms": 1440800,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  },
+  "reference_file": "reference.txt (not created yet)",
+  "annotation_file": "clinical_annotations.json",
+  "provider_file": "provider_committed.txt",
+  "structural_file": "projected_text.txt",
+  "clean_file": "projected_text_clean.pending.txt (not scoreable)"
+}

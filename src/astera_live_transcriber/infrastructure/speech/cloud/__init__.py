@@ -1,0 +1,1 @@
+"""Cloud speech provider adapters."""

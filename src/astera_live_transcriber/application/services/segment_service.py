@@ -27,6 +27,7 @@ class SegmentLifecycleService:
         result: TranscriptionResult,
         end_ms: int,
         committed: bool = False,
+        provider: str = "local",
     ) -> TranscriptEvent | None:
         current = self._current.get(session.id)
         text = result.text.strip()
@@ -74,6 +75,8 @@ class SegmentLifecycleService:
             end_ms=segment.end_ms if committed else None,
             language=segment.language if committed else None,
             confidence=segment.confidence if committed else None,
+            words=result.words if committed else (),
+            provider=provider,
         )
 
     def current(self, session_id: str) -> TranscriptSegment | None:

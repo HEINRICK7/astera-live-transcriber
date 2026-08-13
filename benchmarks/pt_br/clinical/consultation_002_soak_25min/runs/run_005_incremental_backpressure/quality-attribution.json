@@ -1,0 +1,2929 @@
+{
+  "analysis": {
+    "kind": "transcript_quality_attribution",
+    "input_event_count": 1289,
+    "committed_count": 84,
+    "revision_count": 1112,
+    "text_mutated": false,
+    "semantic_attribution": "not_inferred_without_reference"
+  },
+  "summary": {
+    "issue_count": 112,
+    "issue_counts": {
+      "adjacent_duplication": 103,
+      "language_drift": 2,
+      "segment_replay": 7
+    },
+    "origin_counts": {
+      "provider": 111,
+      "projector": 1
+    },
+    "provider_artifacts": 111,
+    "structural_artifacts": 1,
+    "safe_structural_candidates": 109,
+    "projection_regressions": 1
+  },
+  "issues": [
+    {
+      "segment_id": "seg_0002",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0003",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0004",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 42,
+          "token_end": 46,
+          "block": [
+            "o",
+            "quê?"
+          ],
+          "repeated_block": [
+            "o",
+            "quê?"
+          ],
+          "text": "o quê? o quê?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0004",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 51,
+          "token_end": 53,
+          "block": [
+            "enjoado,"
+          ],
+          "repeated_block": [
+            "enjoado"
+          ],
+          "text": "enjoado, enjoado"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0005",
+      "issue": "adjacent_duplication",
+      "classification": "projector_adjacent_duplication",
+      "origin": "projector",
+      "provider_committed_contains_issue": false,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": true,
+      "clinical_risk": "low",
+      "safe_structural_candidate": false,
+      "correctable_by": "none",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "projected"
+      }
+    },
+    {
+      "segment_id": "seg_0005",
+      "issue": "language_drift",
+      "classification": "provider_language_drift",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": false,
+      "correctable_by": "none",
+      "evidence": {
+        "markers": [
+          "you can use"
+        ]
+      }
+    },
+    {
+      "segment_id": "seg_0008",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 7,
+          "token_end": 9,
+          "block": [
+            "pediônios."
+          ],
+          "repeated_block": [
+            "Pediônios."
+          ],
+          "text": "pediônios. Pediônios."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0008",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 20,
+          "block": [
+            "e"
+          ],
+          "repeated_block": [
+            "e"
+          ],
+          "text": "e e"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0009",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Está"
+          ],
+          "repeated_block": [
+            "Está"
+          ],
+          "text": "Está Está"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0009",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 11,
+          "block": [
+            "cheia?"
+          ],
+          "repeated_block": [
+            "cheia?"
+          ],
+          "text": "cheia? cheia?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0018",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 19,
+          "block": [
+            "tá",
+            "bom?"
+          ],
+          "repeated_block": [
+            "Tá",
+            "bom."
+          ],
+          "text": "tá bom? Tá bom."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0018",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Melhores."
+          ],
+          "repeated_block": [
+            "Melhores."
+          ],
+          "text": "Melhores. Melhores."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0018",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 21,
+          "token_end": 23,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado."
+          ],
+          "text": "Obrigado. Obrigado."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0019",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Obrigado."
+          ],
+          "repeated_block": [
+            "Obrigado,"
+          ],
+          "text": "Obrigado. Obrigado,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0020",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0021",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0022",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Boa",
+            "tarde."
+          ],
+          "repeated_block": [
+            "Boa",
+            "tarde."
+          ],
+          "text": "Boa tarde. Boa tarde."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0022",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 49,
+          "token_end": 51,
+          "block": [
+            "a,"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a, a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0022",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 57,
+          "token_end": 59,
+          "block": [
+            "de,"
+          ],
+          "repeated_block": [
+            "de"
+          ],
+          "text": "de, de"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0023",
+      "issue": "language_drift",
+      "classification": "provider_language_drift",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": false,
+      "correctable_by": "none",
+      "evidence": {
+        "markers": [
+          "so"
+        ]
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "é,",
+            "é"
+          ],
+          "repeated_block": [
+            "é,",
+            "é"
+          ],
+          "text": "é, é é, é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 27,
+          "token_end": 29,
+          "block": [
+            "e,"
+          ],
+          "repeated_block": [
+            "e,"
+          ],
+          "text": "e, e,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 37,
+          "token_end": 39,
+          "block": [
+            "bem,"
+          ],
+          "repeated_block": [
+            "bem"
+          ],
+          "text": "bem, bem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 66,
+          "token_end": 68,
+          "block": [
+            "Entendeu,"
+          ],
+          "repeated_block": [
+            "entendeu."
+          ],
+          "text": "Entendeu, entendeu."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0024",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 79,
+          "token_end": 81,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "Não, Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 30,
+          "token_end": 32,
+          "block": [
+            "cor,"
+          ],
+          "repeated_block": [
+            "cor,"
+          ],
+          "text": "cor, cor,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0025",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 41,
+          "token_end": 43,
+          "block": [
+            "líquida."
+          ],
+          "repeated_block": [
+            "líquida."
+          ],
+          "text": "líquida. líquida."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Ele"
+          ],
+          "repeated_block": [
+            "Ele"
+          ],
+          "text": "Ele Ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 73,
+          "token_end": 75,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 84,
+          "token_end": 86,
+          "block": [
+            "nadar."
+          ],
+          "repeated_block": [
+            "nadar."
+          ],
+          "text": "nadar. nadar."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0026",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 89,
+          "block": [
+            "casa,"
+          ],
+          "repeated_block": [
+            "casa,"
+          ],
+          "text": "casa, casa,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0027",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 49,
+          "block": [
+            "tem,"
+          ],
+          "repeated_block": [
+            "tem"
+          ],
+          "text": "tem, tem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0028",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 29,
+          "token_end": 31,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não,"
+          ],
+          "text": "Não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0028",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 47,
+          "token_end": 49,
+          "block": [
+            "tem,"
+          ],
+          "repeated_block": [
+            "tem"
+          ],
+          "text": "tem, tem"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0029",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0029",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "ele,"
+          ],
+          "repeated_block": [
+            "ele"
+          ],
+          "text": "ele, ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0030",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 3,
+          "token_end": 7,
+          "block": [
+            "o",
+            "senhor,"
+          ],
+          "repeated_block": [
+            "o",
+            "senhor"
+          ],
+          "text": "o senhor, o senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0030",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "ele,"
+          ],
+          "repeated_block": [
+            "ele"
+          ],
+          "text": "ele, ele"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0031",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 17,
+          "token_end": 19,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "não. Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0031",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 23,
+          "block": [
+            "não",
+            "é."
+          ],
+          "repeated_block": [
+            "Não",
+            "é"
+          ],
+          "text": "não é. Não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0032",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 17,
+          "token_end": 19,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "não. Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0032",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 23,
+          "block": [
+            "não",
+            "é."
+          ],
+          "repeated_block": [
+            "Não",
+            "é"
+          ],
+          "text": "não é. Não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0033",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 17,
+          "token_end": 19,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "não. Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0033",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 23,
+          "block": [
+            "não",
+            "é."
+          ],
+          "repeated_block": [
+            "Não",
+            "é"
+          ],
+          "text": "não é. Não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 4,
+          "block": [
+            "Entendi.",
+            "Então"
+          ],
+          "repeated_block": [
+            "Entendi.",
+            "Então"
+          ],
+          "text": "Entendi. Então Entendi. Então"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 17,
+          "token_end": 19,
+          "block": [
+            "não."
+          ],
+          "repeated_block": [
+            "Não,"
+          ],
+          "text": "não. Não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 23,
+          "block": [
+            "não",
+            "é."
+          ],
+          "repeated_block": [
+            "Não",
+            "é"
+          ],
+          "text": "não é. Não é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 24,
+          "token_end": 26,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 41,
+          "token_end": 45,
+          "block": [
+            "Não,",
+            "não,"
+          ],
+          "repeated_block": [
+            "não,",
+            "não,"
+          ],
+          "text": "Não, não, não, não,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0034",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 71,
+          "block": [
+            "Não,",
+            "não,"
+          ],
+          "repeated_block": [
+            "não,",
+            "não."
+          ],
+          "text": "Não, não, não, não."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0035",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "e"
+          ],
+          "repeated_block": [
+            "e"
+          ],
+          "text": "e e"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0035",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 51,
+          "token_end": 53,
+          "block": [
+            "Podem."
+          ],
+          "repeated_block": [
+            "Podem."
+          ],
+          "text": "Podem. Podem."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 4,
+          "token_end": 8,
+          "block": [
+            "o",
+            "senhor."
+          ],
+          "repeated_block": [
+            "O",
+            "senhor"
+          ],
+          "text": "o senhor. O senhor"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 14,
+          "token_end": 16,
+          "block": [
+            "Não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "Não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0039",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 22,
+          "token_end": 26,
+          "block": [
+            "Respira.",
+            "Solta."
+          ],
+          "repeated_block": [
+            "Respira.",
+            "Solta."
+          ],
+          "text": "Respira. Solta. Respira. Solta."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Respira,"
+          ],
+          "repeated_block": [
+            "respira."
+          ],
+          "text": "Respira, respira."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 2,
+          "token_end": 4,
+          "block": [
+            "Pode"
+          ],
+          "repeated_block": [
+            "Pode"
+          ],
+          "text": "Pode Pode"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0040",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 17,
+          "block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "repeated_block": [
+            "cabeça",
+            "girada",
+            "para",
+            "lá."
+          ],
+          "text": "cabeça girada para lá. cabeça girada para lá."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0041",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Se"
+          ],
+          "repeated_block": [
+            "Se"
+          ],
+          "text": "Se Se"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0041",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 26,
+          "block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "repeated_block": [
+            "por",
+            "favor.",
+            "Marque",
+            "aqui,"
+          ],
+          "text": "por favor. Marque aqui, por favor. Marque aqui,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "E"
+          ],
+          "repeated_block": [
+            "E"
+          ],
+          "text": "E E"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 19,
+          "token_end": 21,
+          "block": [
+            "Pode."
+          ],
+          "repeated_block": [
+            "Pode"
+          ],
+          "text": "Pode. Pode"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 32,
+          "token_end": 34,
+          "block": [
+            "masculino,"
+          ],
+          "repeated_block": [
+            "masculino,"
+          ],
+          "text": "masculino, masculino,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0043",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 69,
+          "token_end": 71,
+          "block": [
+            "horas,"
+          ],
+          "repeated_block": [
+            "horas,"
+          ],
+          "text": "horas, horas,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0048",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 17,
+          "token_end": 19,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0049",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 16,
+          "token_end": 18,
+          "block": [
+            "não,"
+          ],
+          "repeated_block": [
+            "não"
+          ],
+          "text": "não, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0051",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 22,
+          "token_end": 24,
+          "block": [
+            "sexo"
+          ],
+          "repeated_block": [
+            "sexo"
+          ],
+          "text": "sexo sexo"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0052",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 31,
+          "token_end": 33,
+          "block": [
+            "concordo."
+          ],
+          "repeated_block": [
+            "Concordo."
+          ],
+          "text": "concordo. Concordo."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0053",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 117,
+          "token_end": 119,
+          "block": [
+            "delgado."
+          ],
+          "repeated_block": [
+            "delgado"
+          ],
+          "text": "delgado. delgado"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0054",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 58,
+          "token_end": 60,
+          "block": [
+            "o"
+          ],
+          "repeated_block": [
+            "o"
+          ],
+          "text": "o o"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0054",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 71,
+          "block": [
+            "doença",
+            "base?"
+          ],
+          "repeated_block": [
+            "doença",
+            "base?"
+          ],
+          "text": "doença base? doença base?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0056",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 82,
+          "token_end": 84,
+          "block": [
+            "hepatogênico,"
+          ],
+          "repeated_block": [
+            "hepatogênico"
+          ],
+          "text": "hepatogênico, hepatogênico"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0057",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 30,
+          "token_end": 32,
+          "block": [
+            "da,"
+          ],
+          "repeated_block": [
+            "da"
+          ],
+          "text": "da, da"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0057",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 43,
+          "token_end": 45,
+          "block": [
+            "é,"
+          ],
+          "repeated_block": [
+            "é"
+          ],
+          "text": "é, é"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 34,
+          "token_end": 36,
+          "block": [
+            "da,"
+          ],
+          "repeated_block": [
+            "da"
+          ],
+          "text": "da, da"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 48,
+          "token_end": 50,
+          "block": [
+            "é,"
+          ],
+          "repeated_block": [
+            "é,"
+          ],
+          "text": "é, é,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0058",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 71,
+          "token_end": 73,
+          "block": [
+            "queda"
+          ],
+          "repeated_block": [
+            "queda"
+          ],
+          "text": "queda queda"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0059",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 62,
+          "token_end": 64,
+          "block": [
+            "uma,"
+          ],
+          "repeated_block": [
+            "uma"
+          ],
+          "text": "uma, uma"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0060",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 60,
+          "token_end": 62,
+          "block": [
+            "uma,"
+          ],
+          "repeated_block": [
+            "uma"
+          ],
+          "text": "uma, uma"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0062",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 50,
+          "token_end": 52,
+          "block": [
+            "né?"
+          ],
+          "repeated_block": [
+            "né?"
+          ],
+          "text": "né? né?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0062",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 59,
+          "token_end": 63,
+          "block": [
+            "E",
+            "qual"
+          ],
+          "repeated_block": [
+            "E",
+            "qual"
+          ],
+          "text": "E qual E qual"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0062",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 68,
+          "token_end": 74,
+          "block": [
+            "acredito",
+            "que",
+            "o"
+          ],
+          "repeated_block": [
+            "acredito",
+            "que",
+            "o"
+          ],
+          "text": "acredito que o acredito que o"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0065",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 2,
+          "token_end": 4,
+          "block": [
+            "a"
+          ],
+          "repeated_block": [
+            "a"
+          ],
+          "text": "a a"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 9,
+          "token_end": 11,
+          "block": [
+            "chegaram"
+          ],
+          "repeated_block": [
+            "chegaram"
+          ],
+          "text": "chegaram chegaram"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 22,
+          "block": [
+            "e",
+            "aí"
+          ],
+          "repeated_block": [
+            "e",
+            "aí"
+          ],
+          "text": "e aí e aí"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 67,
+          "token_end": 69,
+          "block": [
+            "de"
+          ],
+          "repeated_block": [
+            "de,"
+          ],
+          "text": "de de,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 71,
+          "token_end": 73,
+          "block": [
+            "Porque"
+          ],
+          "repeated_block": [
+            "porque"
+          ],
+          "text": "Porque porque"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0067",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 79,
+          "token_end": 81,
+          "block": [
+            "Então"
+          ],
+          "repeated_block": [
+            "então"
+          ],
+          "text": "Então então"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0068",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 15,
+          "token_end": 17,
+          "block": [
+            "Na"
+          ],
+          "repeated_block": [
+            "na"
+          ],
+          "text": "Na na"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0069",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 87,
+          "token_end": 91,
+          "block": [
+            "a",
+            "presença,"
+          ],
+          "repeated_block": [
+            "a",
+            "presença"
+          ],
+          "text": "a presença, a presença"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Muito"
+          ],
+          "repeated_block": [
+            "Muito"
+          ],
+          "text": "Muito Muito"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 39,
+          "token_end": 41,
+          "block": [
+            "ter"
+          ],
+          "repeated_block": [
+            "ter"
+          ],
+          "text": "ter ter"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 53,
+          "token_end": 55,
+          "block": [
+            "né?"
+          ],
+          "repeated_block": [
+            "né?"
+          ],
+          "text": "né? né?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 55,
+          "token_end": 61,
+          "block": [
+            "É",
+            "importante",
+            "também"
+          ],
+          "repeated_block": [
+            "É",
+            "importante",
+            "também"
+          ],
+          "text": "É importante também É importante também"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 83,
+          "token_end": 85,
+          "block": [
+            "própria"
+          ],
+          "repeated_block": [
+            "própria"
+          ],
+          "text": "própria própria"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0070",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 93,
+          "token_end": 95,
+          "block": [
+            "A"
+          ],
+          "repeated_block": [
+            "A"
+          ],
+          "text": "A A"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0075",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 35,
+          "token_end": 37,
+          "block": [
+            "Estamos,"
+          ],
+          "repeated_block": [
+            "Estamos,"
+          ],
+          "text": "Estamos, Estamos,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0075",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 37,
+          "token_end": 39,
+          "block": [
+            "né?"
+          ],
+          "repeated_block": [
+            "né?"
+          ],
+          "text": "né? né?"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0075",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 50,
+          "token_end": 52,
+          "block": [
+            "certo."
+          ],
+          "repeated_block": [
+            "certo."
+          ],
+          "text": "certo. certo."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0075",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 53,
+          "token_end": 55,
+          "block": [
+            "e"
+          ],
+          "repeated_block": [
+            "e"
+          ],
+          "text": "e e"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0083",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 6,
+          "block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "repeated_block": [
+            "Dessa",
+            "forma,",
+            "não"
+          ],
+          "text": "Dessa forma, não Dessa forma, não"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0091",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 0,
+          "token_end": 2,
+          "block": [
+            "Então,"
+          ],
+          "repeated_block": [
+            "Então,"
+          ],
+          "text": "Então, Então,"
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0091",
+      "issue": "adjacent_duplication",
+      "classification": "provider_adjacent_duplication",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "duplicate": {
+          "token_start": 18,
+          "token_end": 20,
+          "block": [
+            "obrigado."
+          ],
+          "repeated_block": [
+            "obrigado."
+          ],
+          "text": "obrigado. obrigado."
+        },
+        "stage": "committed"
+      }
+    },
+    {
+      "segment_id": "seg_0003",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "exact_replay",
+        "text": "Boa tarde. Então, meu nome é Zabéla, eu sou enfermeira e vou fazer a sua triagem hoje, tá certo? Então, o senhor está sentindo o quê? Comecei a, a",
+        "previous_segment_id": "seg_0002"
+      }
+    },
+    {
+      "segment_id": "seg_0032",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "exact_replay",
+        "text": "Entendi. Então quer dizer que o senhor Daniel tinha o hábito de perder todo o dia? Humano, não. Não, não é. Não é",
+        "previous_segment_id": "seg_0031"
+      }
+    },
+    {
+      "segment_id": "seg_0033",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": false,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "exact_replay",
+        "text": "Entendi. Então quer dizer que o senhor Daniel tinha o hábito de perder todo o dia? Humano, não. Não, não é. Não é",
+        "previous_segment_id": "seg_0032"
+      }
+    },
+    {
+      "segment_id": "seg_0037",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "exact_replay",
+        "text": "favor,",
+        "previous_segment_id": "seg_0036"
+      }
+    },
+    {
+      "segment_id": "seg_0074",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "exact_replay",
+        "text": "são muito importantes para essa avaliação, né, da gravidade da doença hepática, e a partir daí a gente avalia alguns distúrbios da coagulação. O nosso paciente, o tempo de protrombina, é, ele está aumentado, e o RNI também, ele está em 1,5. Então, com esse RNI acima de 1,5, esse paciente cirrótico tem uma chance maior, a probabilidade maior de ocorrer sangramento no caso dessas varizes esofágias.",
+        "previous_segment_id": "seg_0073"
+      }
+    },
+    {
+      "segment_id": "seg_0079",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "contained_replay",
+        "text": "o sangramento cirúrgico e também a morte por sangramento em pacientes com hemorragia traumática",
+        "previous_segment_id": "seg_0078"
+      }
+    },
+    {
+      "segment_id": "seg_0082",
+      "issue": "segment_replay",
+      "classification": "provider_replay",
+      "origin": "provider",
+      "provider_committed_contains_issue": true,
+      "projected_text_contains_issue": true,
+      "projector_introduced_issue": false,
+      "clinical_risk": "low",
+      "safe_structural_candidate": true,
+      "correctable_by": "structural",
+      "evidence": {
+        "mode": "contained_replay",
+        "text": "foi realizado estudo chamado out it no ano de 2021 que buscou qualificar os efeitos do ácido tranexâmico na morte e eventos tromboembólicos na hemorragia digestiva aguda e esse estudo foi dos maiores ensaios clínicos em sangramento gastrointestinal já realizados e ficou constatado que o ácido tranexâmico não diminuiu as taxas de morte por sangramento gastrointestinal e ainda foi associado a risco aumentado de eventos",
+        "previous_segment_id": "seg_0081"
+      }
+    }
+  ],
+  "limitations": [
+    "Medical-term, number, dose and negation errors require reference alignment.",
+    "Provider/projector attribution is structural evidence, not a quality judgment."
+  ]
+}

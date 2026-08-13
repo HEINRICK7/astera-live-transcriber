@@ -1,0 +1,38 @@
+{
+  "kind": "clinical_sample_annotation_gate",
+  "sample_root": "benchmarks/pt_br/clinical/consultation_002_soak_25min/clinical-quality-samples/run_006",
+  "sample_count": 3,
+  "references_ready": 3,
+  "annotations_validated": 3,
+  "projected_clean_ready": 3,
+  "benchmark_ready": true,
+  "samples": [
+    {
+      "sample_id": "sample_002",
+      "reference_ready": true,
+      "annotations_validated": true,
+      "projected_clean_ready": true,
+      "ready": true,
+      "blocking_reasons": [],
+      "annotation_status": "validated"
+    },
+    {
+      "sample_id": "sample_015",
+      "reference_ready": true,
+      "annotations_validated": true,
+      "projected_clean_ready": true,
+      "ready": true,
+      "blocking_reasons": [],
+      "annotation_status": "validated"
+    },
+    {
+      "sample_id": "sample_019",
+      "reference_ready": true,
+      "annotations_validated": true,
+      "projected_clean_ready": true,
+      "ready": true,
+      "blocking_reasons": [],
+      "annotation_status": "validated"
+    }
+  ]
+}

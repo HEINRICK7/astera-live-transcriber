@@ -1,0 +1,38 @@
+{
+  "sample_id": "sample_006",
+  "reason": "clinical_target",
+  "categories": [
+    "anamnese_vomito"
+  ],
+  "target_terms": [
+    "vômito"
+  ],
+  "matched_terms": [
+    "vômito"
+  ],
+  "observed_aliases": {
+    "vômito": [
+      "vômito"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0025",
+    "revision": 32,
+    "start_ms": 365800,
+    "end_ms": 365800,
+    "source_event_index": 166
+  },
+  "clip": {
+    "start_ms": 343300,
+    "end_ms": 388300,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  }
+}

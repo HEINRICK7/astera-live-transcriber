@@ -1,0 +1,2 @@
+REFERENCE PENDING MANUAL VALIDATION
+Listen to audio.wav and transcribe literally.

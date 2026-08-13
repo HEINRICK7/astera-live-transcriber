@@ -1,0 +1,11 @@
+{
+  "kind": "realtime_capture",
+  "source_audio": "/home/carlos-henrique/Músicas/medical.mp3",
+  "output_dir": "benchmarks/pt_br/clinical/consultation_002_soak_25min/runs/run_005_incremental_backpressure",
+  "events_jsonl": "events.jsonl",
+  "events_json": "events.json",
+  "persistence": "append_flush_fsync_per_event",
+  "summary": "technical-summary.json",
+  "status": "completed",
+  "failure": null
+}

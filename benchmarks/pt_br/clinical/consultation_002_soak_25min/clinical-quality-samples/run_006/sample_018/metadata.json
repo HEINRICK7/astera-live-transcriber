@@ -1,0 +1,43 @@
+{
+  "sample_id": "sample_018",
+  "reason": "clinical_target",
+  "categories": [
+    "varizes_esofagianas"
+  ],
+  "target_terms": [
+    "varizes esofagianas"
+  ],
+  "matched_terms": [
+    "varizes esofagianas"
+  ],
+  "observed_aliases": {
+    "varizes esofagianas": [
+      "varizes esofagianas"
+    ]
+  },
+  "missing_terms": [],
+  "anchor": {
+    "segment_id": "seg_0054",
+    "revision": 30,
+    "start_ms": 853400,
+    "end_ms": 882360,
+    "source_event_index": 645
+  },
+  "clip": {
+    "start_ms": 845380,
+    "end_ms": 890380,
+    "duration_ms": 45000
+  },
+  "reference_status": "pending_manual_validation",
+  "hypothesis_status": {
+    "raw_committed": "snapshot_for_review",
+    "structural": "cumulative_snapshot_not_segment_isolated",
+    "adaptive": "shadow_equals_structural_snapshot",
+    "clean": "not_captured_in_source_run"
+  },
+  "reference_file": "reference.txt (not created yet)",
+  "annotation_file": "clinical_annotations.json",
+  "provider_file": "provider_committed.txt",
+  "structural_file": "projected_text.txt",
+  "clean_file": "projected_text_clean.pending.txt (not scoreable)"
+}

@@ -1,0 +1,15 @@
+{
+  "fixture_id": "pt_br/clinical/consultation_001",
+  "language": "pt-BR",
+  "domain": "clinical_simulation",
+  "expected_duration_seconds": 122.488,
+  "speakers": 2,
+  "reference_status": "validated_manual_reference_supplied",
+  "audio_status": "available_external_path",
+  "consent_status": "to_be_confirmed",
+  "audio_path": "/home/carlos-henrique/Músicas/audio_2min.mp3",
+  "capture_status": "completed",
+  "annotation_status": "validated_against_supplied_reference",
+  "benchmark_status": "official_first_run_completed",
+  "notes": "Reference and clinical annotations were supplied for this fixture. Provider output remains evidence, not ground truth."
+}
